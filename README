@@ -5,4 +5,12 @@ OwO
 This will serve as the main documentation for group 2 and all the group members from group two will add to this file
 as need be. This is where our final commits will go as well as our design documentation and any other formal forms
 of changes that we add into the final project. We will upload our progress into this file as well to keep track of the
-development of the group project. - Chris
+development of the group project.
+
+For this project we have decided on making a desktop application with our existing metric program. This will include a
+GUI, and a launching mechanism whether its from a shortcut or some sort of launching application. The user will be able
+insert a piece of code and or text and the program will give them the metrics of their program. This includes, but is
+not limited to the numbers of characters, lines, spaces and check the type of text/code it is. The program will then
+display the results to the user and give them the metrics in a information box. The information will have the ability
+to be copied or cleared, if the user chooses to clear the code, the program will reset itself so it will prompt the user
+to re-enter a file to be examined. - Chris
