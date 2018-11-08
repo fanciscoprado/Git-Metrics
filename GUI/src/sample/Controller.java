@@ -26,7 +26,7 @@ public class Controller {
         getURL();
         System.out.println(url);
         Counter counter = new Counter();
-        counter.setup(url);
+        counter.setup(url, wordcoutn, linecount, charcount);
         ResultBox resultBox = new ResultBox();
         //resultBox.display(true,true,true);
 
@@ -45,7 +45,7 @@ public class Controller {
     }
 
     public void box2(){
-        if(checkBox1.isSelected())
+        if(checkBox2.isSelected())
             linecount = true;
         else
             linecount = false;
@@ -53,7 +53,7 @@ public class Controller {
     }
 
     public void  box3(){
-        if(checkBox1.isSelected())
+        if(checkBox3.isSelected())
             charcount = true;
         else
             charcount = false;

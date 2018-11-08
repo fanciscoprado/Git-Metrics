@@ -25,21 +25,31 @@ public class ResultBox {
         nameColum.setMinWidth(200);
         nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
 
-        TableColumn<wc, String> wordColum = new TableColumn<>("File Name");
+        TableColumn<wc, String> wordColum = new TableColumn<>("Word Count");
         wordColum.setMinWidth(200);
         wordColum.setCellValueFactory(new PropertyValueFactory<>("wcount"));
 
-        TableColumn<wc, String> nameColum = new TableColumn<>("File Name");
-        nameColum.setMinWidth(200);
-        nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
+        TableColumn<wc, String> lineColumn = new TableColumn<>("Line Count");
+        lineColumn.setMinWidth(200);
+        lineColumn.setCellValueFactory(new PropertyValueFactory<>("lcount"));
 
-        TableColumn<wc, String> nameColum = new TableColumn<>("File Name");
-        nameColum.setMinWidth(200);
-        nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
+        TableColumn<wc, String> charColum = new TableColumn<>("Char Count");
+        charColum.setMinWidth(200);
+        charColum.setCellValueFactory(new PropertyValueFactory<>("ccount"));
 
         table = new TableView<>();
         table.setItems(list);
-        table.getColumns().addAll(nameColum);
+        if(!l && !w && !c)
+            table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum);
+        else {
+            table.getColumns().add(nameColum);
+            if(w)
+                table.getColumns().add(wordColum);
+            if(l)
+                table.getColumns().add(lineColumn);
+            if (c)
+                table.getColumns().add(charColum);
+        }
         layout.getChildren().addAll(table);
 
 

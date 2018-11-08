@@ -10,7 +10,7 @@ import java.util.LinkedList;
 
 
 public class Counter {
-    public void setup(String url) throws IOException {
+    public void setup(String url, boolean w, boolean l, boolean c) throws IOException {
 
         File folder = new File("temp/");
         try {
@@ -25,7 +25,7 @@ public class Counter {
             Print print = new Print();
             //print.results(list);
             ResultBox resultBox = new ResultBox();
-            resultBox.display(true,true,true,list);
+            resultBox.display(w,l,c,list);
             git.getRepository().close(); // Close all the things!
             git.close(); // Close all the things!
             removeall(folder);
