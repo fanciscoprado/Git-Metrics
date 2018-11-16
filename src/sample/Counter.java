@@ -19,10 +19,8 @@ public class Counter {
                     .setDirectory(folder)
                     .call();
 
-            //LinkedList<wc> list = new LinkedList<wc>();
             ObservableList<wc> list = FXCollections.observableArrayList();
             makeList(folder,list);
-            //print.results(list);
             ResultBox resultBox = new ResultBox();
             resultBox.display(w,l,c,list);
             git.getRepository().close(); // Close all the things!
@@ -46,7 +44,8 @@ public class Counter {
             else {
                 wc temp = new wc();
                 temp.counter(fname,file);
-                list.add(temp);
+                if(!temp.skipped)
+                    list.add(temp);
             }
 
 

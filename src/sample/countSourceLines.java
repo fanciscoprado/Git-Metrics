@@ -39,6 +39,7 @@ public class countSourceLines
                 lines++;
             }
         }
+
         readf.close();
         return lines;
     }
