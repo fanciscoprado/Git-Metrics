@@ -74,6 +74,7 @@ public class wc {
 		countSourceLines s = new countSourceLines();
 		ccount = s.getCommentLines(file);
 		slcount = s.getSourceLines(file);
+
 		fr.close();
 		System.out.println(slcount);
 		System.out.println(cccount);

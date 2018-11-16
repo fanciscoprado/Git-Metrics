@@ -21,6 +21,7 @@ public class countSourceLines
                 lines++;
             }
         }
+        readf.close();
         return lines-sourceLines;
     }
     public int getSourceLines(File name) throws IOException
@@ -38,6 +39,7 @@ public class countSourceLines
                 lines++;
             }
         }
+        readf.close();
         return lines;
     }
 }
