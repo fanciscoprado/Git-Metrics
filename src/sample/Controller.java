@@ -28,7 +28,6 @@ public class Controller {
         Counter counter = new Counter();
         counter.setup(url, wordcoutn, linecount, charcount);
         ResultBox resultBox = new ResultBox();
-        //resultBox.display(true,true,true);
 
     }
     //gets url from text field
