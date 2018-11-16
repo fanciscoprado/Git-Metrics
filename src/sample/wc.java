@@ -1,30 +1,22 @@
 //Francisco Prado
 package sample;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 
 
 
 public class wc {
-	public long ccount;
-	public long wcount;
-	public long lcount;
-	public int cccount;
-	public int slcount;
-	static public long total_ccount = 0;
-	static public long total_wcount = 0;
-	static public long total_lcount = 0;
-
-	public int getCccount() {
-		return cccount;
-	}
-
-	public int getSlcount() {
-		return slcount;
-	}
+	private long ccount;
+	private long wcount;
+	private long lcount;
 
 	public String filename;
-	public boolean skipped = false;
+
+	public boolean isSkipped() {
+		return skipped;
+	}
+
+	private boolean skipped = false;
+	
 
 	public long getCcount() {
 		return ccount;
@@ -67,8 +59,6 @@ public class wc {
 		if (i > 0) {
 			extension = fileName.substring(i + 1);
 		}
-		System.out.println(extension);
-
 		if(extension.equals("java")){
 			try {
 			FileReader fr = new FileReader(file);
@@ -78,14 +68,8 @@ public class wc {
 			if (lcount == 0 && ccount != 0)
 				lcount++;
 
-			countSourceLines s = new countSourceLines();
-			cccount = s.getCommentLines(file);
-			slcount = s.getSourceLines(file);
-
 			fr.close();
-			System.out.println(slcount);
-			System.out.println(cccount);
-			System.out.println("comment" + ccount);
+
 
 			} catch (Exception e) {
 			System.out.println("Skipping " + string);

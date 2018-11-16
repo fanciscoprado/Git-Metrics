@@ -19,7 +19,7 @@ public class Counter {
                     .setDirectory(folder)
                     .call();
 
-            ObservableList<wc> list = FXCollections.observableArrayList();
+            ObservableList<Data> list = FXCollections.observableArrayList();
             makeList(folder,list);
             ResultBox resultBox = new ResultBox();
             resultBox.display(w,l,c,list);
@@ -35,16 +35,16 @@ public class Counter {
 
     }
 
-    private void makeList(File folder,ObservableList<wc> list) throws IOException { //Makes linked list of wc objects that contain the metrics
+    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes linked list of wc objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             String fname = file.getName();
             if(!file.isFile())
                 makeList(file,list);
             else {
-                wc temp = new wc();
-                temp.counter(fname,file);
-                if(!temp.skipped)
+                Data temp = new Data();
+                temp.collect(fname,file);
+                if(!temp.isSkipped())
                     list.add(temp);
             }
 
