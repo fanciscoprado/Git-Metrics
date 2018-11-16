@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <VBox>
+      <VBox prefWidth="532.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter URL and select what metrics you want displayed">
                <VBox.margin>
@@ -54,8 +54,14 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Comment line count">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </CheckBox>
                </children>
             </HBox>
+            <CheckBox mnemonicParsing="false" text="Sorce Line Count" />
          </children></VBox>
    </children>
 </AnchorPane>
