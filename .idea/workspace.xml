@@ -194,9 +194,6 @@
       </usages-collector>
     </session>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -235,13 +232,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/wc.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="134">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-=======
             <state relative-caret-position="153">
               <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
->>>>>>> 1c38471e0085712df9b70c7c143dabba23407db3
             </state>
           </provider>
         </entry>
@@ -249,16 +241,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/ResultBox.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="750">
-              <caret line="50" column="95" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-=======
             <state relative-caret-position="34">
               <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
->>>>>>> 1c38471e0085712df9b70c7c143dabba23407db3
             </state>
           </provider>
         </entry>
@@ -297,13 +281,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="290">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-=======
             <state relative-caret-position="340">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
->>>>>>> 1c38471e0085712df9b70c7c143dabba23407db3
             </state>
           </provider>
         </entry>
@@ -739,15 +718,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/sample/ResultBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="95" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
     <entry file="file://$PROJECT_DIR$/src/sample/wc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -769,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
->>>>>>> 1c38471e0085712df9b70c7c143dabba23407db3
         </state>
       </provider>
     </entry>
