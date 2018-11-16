@@ -17,4 +17,5 @@ display the results to the user and give them the metrics in a information box. 
 to be copied or cleared, if the user chooses to clear the code, the program will reset itself so it will prompt the user
 to re-enter a file to be examined. With making an G.U.I for the metric program it will be scalable for other user to use
 as far as functionality is concerned. We plan on using the controller class as well as the general G.U.I function with
-the use of java U.I function.- Chris
+the use of java U.I function.
+
