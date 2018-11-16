@@ -19,3 +19,5 @@ to re-enter a file to be examined. With making an G.U.I for the metric program i
 as far as functionality is concerned. We plan on using the controller class as well as the general G.U.I function with
 the use of java U.I function.
 
+We've added in our git ignore file which allowed us to push and merge much easier since we we're getting a merge error.
+
