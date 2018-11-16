@@ -40,7 +40,7 @@ public class countSourceLines
             }
         }
 
-        readf.close();
+        readf.close(); //i added this because temp folder wont get deleted if files are still open
         return lines;
     }
 }

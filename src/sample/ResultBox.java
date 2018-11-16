@@ -10,7 +10,7 @@ import javafx.geometry.*;
 
 public class ResultBox {
 
-    public static void display(boolean w, boolean l, boolean c, ObservableList<wc> list) {
+    public static void display(boolean w, boolean l, boolean c, ObservableList<Data> list) {
         Stage window = new Stage();
 
         //Block events to other windows
@@ -19,29 +19,29 @@ public class ResultBox {
         window.setMinWidth(250);
         VBox layout = new VBox();
 
-        TableView<wc> table;
+        TableView<Data> table;
 
-        TableColumn<wc, String> nameColum = new TableColumn<>("File Name");
+        TableColumn<Data, String> nameColum = new TableColumn<>("File Name");
         nameColum.setMinWidth(200);
         nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
 
-        TableColumn<wc, String> wordColum = new TableColumn<>("Word Count");
+        TableColumn<Data, String> wordColum = new TableColumn<>("Word Count");
         wordColum.setMinWidth(200);
         wordColum.setCellValueFactory(new PropertyValueFactory<>("wcount"));
 
-        TableColumn<wc, String> lineColumn = new TableColumn<>("Line Count");
+        TableColumn<Data, String> lineColumn = new TableColumn<>("Line Count");
         lineColumn.setMinWidth(200);
         lineColumn.setCellValueFactory(new PropertyValueFactory<>("lcount"));
 
-        TableColumn<wc, String> charColum = new TableColumn<>("Char Count");
+        TableColumn<Data, String> charColum = new TableColumn<>("Char Count");
         charColum.setMinWidth(200);
         charColum.setCellValueFactory(new PropertyValueFactory<>("ccount"));
 
-        TableColumn<wc, String> sorceColumn = new TableColumn<>("Source Count");
+        TableColumn<Data, String> sorceColumn = new TableColumn<>("Source Count");
         sorceColumn.setMinWidth(200);
         sorceColumn.setCellValueFactory(new PropertyValueFactory<>("slcount"));
 
-        TableColumn<wc, String> commentColumn = new TableColumn<>("Comment Count");
+        TableColumn<Data, String> commentColumn = new TableColumn<>("Comment Count");
         commentColumn.setMinWidth(200);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
 
