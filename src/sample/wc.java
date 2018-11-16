@@ -8,9 +8,20 @@ public class wc {
 	public long ccount;
 	public long wcount;
 	public long lcount;
+	public int cccount;
+	public  int slcount;
 	static public long total_ccount = 0;
 	static public long total_wcount = 0;
 	static public long total_lcount = 0;
+
+	public int getCccount() {
+		return cccount;
+	}
+
+	public int getSlcount() {
+		return slcount;
+	}
+
 	public String filename;
 	public boolean skipped = false;
 
@@ -60,7 +71,13 @@ public class wc {
 		total_ccount += ccount;
 		total_lcount += lcount;
 		total_wcount += wcount;
+		countSourceLines s = new countSourceLines();
+		ccount = s.getCommentLines(file);
+		slcount = s.getSourceLines(file);
 		fr.close();
+		System.out.println(slcount);
+		System.out.println(cccount);
+
 		}
 		catch(Exception e){
 			System.out.println("Skipping "+string);

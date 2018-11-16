@@ -4,7 +4,7 @@ import java.io.*;
 
 public class countSourceLines
 {
-    int getCommentLines(File name) throws IOException
+    public int getCommentLines(File name) throws IOException
     {
         int sourceLines = getSourceLines(name);
         Reader readf = new FileReader(name);
@@ -23,7 +23,7 @@ public class countSourceLines
         }
         return lines-sourceLines;
     }
-    int getSourceLines(File name) throws IOException
+    public int getSourceLines(File name) throws IOException
     {
         Reader readf = new FileReader(name);
         StreamTokenizer st = new StreamTokenizer(readf);
