@@ -37,10 +37,18 @@ public class ResultBox {
         charColum.setMinWidth(200);
         charColum.setCellValueFactory(new PropertyValueFactory<>("ccount"));
 
+        TableColumn<wc, String> sorceColumn = new TableColumn<>("Source Count");
+        sorceColumn.setMinWidth(200);
+        sorceColumn.setCellValueFactory(new PropertyValueFactory<>("slcount"));
+
+        TableColumn<wc, String> commentColumn = new TableColumn<>("Comment Count");
+        commentColumn.setMinWidth(200);
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
+
         table = new TableView<>();
         table.setItems(list);
         if(!l && !w && !c)
-            table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum);
+            table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
         else {
             table.getColumns().add(nameColum);
             if(w)
