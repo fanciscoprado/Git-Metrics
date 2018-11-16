@@ -105,29 +105,9 @@ public class wc {
 		// TODO Auto-generated method stub
 		return !Character.isSpace((char) c);
 	}
-	//Prints out word, line, character count
-	private static void report(long c, long w, long l, String s, String arg) {
-		System.out.print(" ");
-		if(arg.equals("-l")){
-			System.out.println(l + " " + s);
-		}
-		else if(arg.equals("-w")) {
-			System.out.println(w + " " + s);
-		}
-		else if (arg.equals("-c")) {
-			System.out.println(c + " " + s);
-		}
-		else
-			System.out.println(l + " " + w +" "+ c + " " + s);
-	}
-	//Report Usage
-	private static void reportUsage() {
-		System.out.println("Usage:");
-		System.out.println(" wc -l <filename> will print the line count of a file");
-		System.out.println(" wc -c <filename> will print the character count");
-		System.out.println(" wc -w <filename> will print the word count");
-		System.out.println(" wc <filename> will print all of the above");
-	}
+
+	//add it under here
+
 
 
 

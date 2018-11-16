@@ -31,6 +31,7 @@ public class Controller {
         //resultBox.display(true,true,true);
 
     }
+    //gets url from text field
     public void getURL(){
         url = uRLfield.getText();
 

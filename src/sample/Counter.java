@@ -22,7 +22,6 @@ public class Counter {
             //LinkedList<wc> list = new LinkedList<wc>();
             ObservableList<wc> list = FXCollections.observableArrayList();
             makeList(folder,list);
-            Print print = new Print();
             //print.results(list);
             ResultBox resultBox = new ResultBox();
             resultBox.display(w,l,c,list);
