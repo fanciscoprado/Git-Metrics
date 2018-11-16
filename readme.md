@@ -1,1 +1,17 @@
-change by francisco
+# Group 2 Project
+This will serve as the main documentation for group 2 and all the group members from group two will add to this file
+as need be. This is where our final commits will go as well as our design documentation and any other formal forms
+of changes that we add into the final project. We will upload our progress into this file as well to keep track of the
+development of the group project. We will periodically update code using git and using V.C within our I.D.E's in order
+to ensure our work is constantly updated between our group to ensure there are very little issues with regards to code
+compatibility.
+
+For this project we have decided on making a desktop application with our existing metric program. This will include a
+GUI, and a launching mechanism whether its from a shortcut or some sort of launching application. The user will be able
+insert a piece of code and or text and the program will give them the metrics of their program. This includes, but is
+not limited to the numbers of characters, lines, spaces and check the type of text/code it is. The program will then
+display the results to the user and give them the metrics in a information box. The information will have the ability
+to be copied or cleared, if the user chooses to clear the code, the program will reset itself so it will prompt the user
+to re-enter a file to be examined. With making an G.U.I for the metric program it will be scalable for other user to use
+as far as functionality is concerned. We plan on using the controller class as well as the general G.U.I function with
+the use of java U.I function.
