@@ -9,3 +9,5 @@ out
 gen
 .idea/workspace.xml
 
+This gitignore .idea/workplace helps with merge errors that were occuring
+
