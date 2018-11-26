@@ -18,13 +18,15 @@ public class Halstead
     {
         return 0;
     }
-    public int getVocab()
+    public int getVocab(int operator, int operand)
     {
-        return 0;
+        int temp = operator + operand;
+        return temp;
     }
-    public int getPLength()
+    public int getPLength(int operatorT, int operandT)
     {
-        return 0;
+        int temp = operatorT + operandT;
+        return temp;
     }
     public int getCPLength()
     {
