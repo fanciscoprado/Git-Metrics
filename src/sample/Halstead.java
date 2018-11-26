@@ -12,34 +12,36 @@ public class Halstead
     String[] CPlusOperators;
     public int getDistinctOperator()
     {
-
+        return 0;
     }
     public int getTotalOperator()
     {
-
+        return 0;
     }
-    public int getVocab()
+    public int getVocab(int operator, int operand)
     {
-
+        int temp = operator + operand;
+        return temp;
     }
-    public int getPLength()
+    public int getPLength(int operatorT, int operandT)
     {
-
+        int temp = operatorT + operandT;
+        return temp;
     }
     public int getCPLength()
     {
-
+        return 0;
     }
     public int getVolume()
     {
-
+        return 0;
     }
     public int getDifficulty()
     {
-
+        return 0;
     }
     public int getEffort()
     {
-
+        return 0;
     }
 }
