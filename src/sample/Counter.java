@@ -6,7 +6,10 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
+
+import org.eclipse.jgit.revwalk.RevCommit;
+
+
 
 
 public class Counter {
@@ -18,7 +21,15 @@ public class Counter {
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-
+           //******************************************************
+            Iterable<RevCommit> commits = git.log().call();
+            int count = 0;
+            for( RevCommit commit : commits ) {
+                System.out.println(commit.getCommitterIdent());
+                count++;
+            }
+            System.out.println(count);
+            //*********************************************
             ObservableList<Data> list = FXCollections.observableArrayList();
             makeList(folder,list);
             ResultBox resultBox = new ResultBox();
@@ -35,7 +46,7 @@ public class Counter {
 
     }
 
-    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes linked list of wc objects that contain the metrics
+    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes linked list of Data objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             String fname = file.getName();
