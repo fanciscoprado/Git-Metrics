@@ -3,7 +3,7 @@ package sample;
 public class Halstead
 {
     /*special case words for java operators*/
-    String[] javaOperators{"break","case","continue","default","do","if","else","enum","for","goto","if","new",
+    String[] javaOperators={"break","case","continue","default","do","if","else","enum","for","goto","if","new",
         "return","asm","operator","private","protected","public","sizeof","struct","switch","union","while",
         "this","namespace","using","try","catch","throw","throws","finally","strictfp","instanceof","interface",
         "extends","implements","abstract","concrete","const_cast","static_cast","dynamic_cast","reinterpret_cast",
@@ -12,34 +12,35 @@ public class Halstead
     String[] CPlusOperators;
     public int getDistinctOperator()
     {
-
+        return 0;
     }
     public int getTotalOperator()
     {
-
+        return 0;
     }
     public int getVocab()
     {
-
+        return 0;
     }
     public int getPLength()
     {
-
+        return 0;
     }
     public int getCPLength()
     {
-
+        return 0;
     }
     public int getVolume()
     {
-
+        return 0;
     }
     public int getDifficulty()
     {
-
+        return 0;
     }
     public int getEffort()
     {
-
+        return 0;
     }
+
 }
