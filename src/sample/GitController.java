@@ -7,41 +7,34 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
-
 import org.eclipse.jgit.revwalk.RevCommit;
 
 
 
 
 public class GitController {
-    public void downloadRepo(String url, boolean w, boolean l, boolean c) throws IOException {
+    File folder = new File("temp/");
+    public Git downloadRepo(String url) throws IOException {
+        Git git = null;
 
-        File folder = new File("temp/");
         try {
-            Git git = Git.cloneRepository()
+            git = Git.cloneRepository()
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-            ObservableList<Data> list = FXCollections.observableArrayList(); //list of data objects
-            LinkedList<CommiterInfo> commiterList = new LinkedList<>(); //list of commiterInfo objects
-            getCommitCount(git, commiterList);
-            makeList(folder,list);
-            ResultBox resultBox = new ResultBox();
-            resultBox.display(w,l,c,list, commiterList);
-            git.getRepository().close(); // Close all the things!
-            git.close(); // Close all the things!
-            list.removeAll();
-            removeall(folder);
+            //LinkedList<CommiterInfo> commiterList = new LinkedList<>(); //list of commiterInfo objects
 
         } catch (GitAPIException e) {
-
+            System.out.println("no good amigo");
             e.printStackTrace();
         }
 
 
+        return git;
     }
-    private void getCommitCount(Git git, LinkedList<CommiterInfo> commiterList) {
+    public LinkedList<CommiterInfo> getCommitCount(Git git) {
         Iterable<RevCommit> commits = null;
+        LinkedList<CommiterInfo> commiterList = new LinkedList<>();
         try {
             commits = git.log().call();
         } catch (GitAPIException e) {
@@ -55,7 +48,7 @@ public class GitController {
         }
 
 
-        System.out.println(count);
+        return commiterList;
     }
 
     private void makeListOfCommiters (LinkedList<CommiterInfo> commiterList,String string){
@@ -76,7 +69,7 @@ public class GitController {
             }
         }
     }
-
+/*
     private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes observable list of Data objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -91,6 +84,7 @@ public class GitController {
             }
         }
     }
+   */
     private void removeall(File folder){ // recusivly delets the git archive downloaded
         File[] listOfFiles = folder.listFiles();
         try {

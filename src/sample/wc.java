@@ -53,13 +53,8 @@ public class wc {
 	public void counter(String string, File file) throws IOException {
 		filename = string;
 
-		String extension = "";
-		String fileName = file.getName();
-		int i = fileName.lastIndexOf('.');
-		if (i > 0) {
-			extension = fileName.substring(i + 1);
-		}
-		if(extension.equals("java")){
+
+
 			try {
 			FileReader fr = new FileReader(file);
 
@@ -75,9 +70,8 @@ public class wc {
 			System.out.println("Skipping " + string);
 			skipped = true;
 			}
-		}
-		else
-			skipped = true;
+
+
 	}
 	//checks if current item is a valid character. If it is it increas wcount and goes on to count ccount
 	private boolean getword(FileReader fr) throws IOException {

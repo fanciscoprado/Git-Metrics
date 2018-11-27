@@ -17,19 +17,32 @@ public class Data {
 
     private String filename;
 
-    public void collect(String fname,File file) throws IOException {
-        filename = fname;
-        wc temp = new wc();
-        temp.counter(fname,file);
-        ccount = temp.getCcount();
-        wcount = temp.getWcount();
-        lcount = temp.getLcount();
-        countSourceLines s = new countSourceLines();
-        cccount = s.getCommentLines(file);
-        slcount = s.getSourceLines(file);
-        skipped = temp.isSkipped();
+    public void setCcount(long ccount) {
+        this.ccount = ccount;
+    }
 
+    public void setWcount(long wcount) {
+        this.wcount = wcount;
+    }
 
+    public void setLcount(long lcount) {
+        this.lcount = lcount;
+    }
+
+    public void setCccount(int cccount) {
+        this.cccount = cccount;
+    }
+
+    public void setSlcount(int slcount) {
+        this.slcount = slcount;
+    }
+
+    public void setSkipped(boolean skipped) {
+        this.skipped = skipped;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
     public boolean isSkipped() {

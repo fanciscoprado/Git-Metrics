@@ -1,14 +1,20 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import org.eclipse.jgit.api.Git;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.LinkedList;
 
 public class Controller {
-    private boolean wordcoutn, linecount, charcount;
+    DataToCollect dataToCollect = new DataToCollect();
+
     String url;
     @FXML
     private TextField uRLfield;
@@ -22,10 +28,16 @@ public class Controller {
     public Button goButton;
 
     public void onClick() throws IOException {
+        GitController gitController = new GitController();
+        FileHandler fileHandler = new FileHandler();
+        DataCollector dataCollector = new DataCollector();
         getURL();
-        GitController counter = new GitController();
-        counter.downloadRepo(url, wordcoutn, linecount, charcount);
-
+        Git git = gitController.downloadRepo(url);
+        LinkedList<CommiterInfo> commiterList = gitController.getCommitCount(git);
+        LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
+        ObservableList<Data> dataList = dataCollector.collectData(fileList);
+        ResultBox resultBox = new ResultBox();
+        resultBox.display(dataList,commiterList);
 
     }
     //gets url from text field
@@ -36,26 +48,26 @@ public class Controller {
 
     public void  box1(){
         if(checkBox1.isSelected())
-            wordcoutn = true;
+            dataToCollect.setWordCount(true);
         else
-            wordcoutn = false;
-        System.out.println(wordcoutn);
+            dataToCollect.setWordCount(false);
+
     }
 
     public void box2(){
         if(checkBox2.isSelected())
-            linecount = true;
+            dataToCollect.setLineCount(true);
         else
-            linecount = false;
-        System.out.println(wordcoutn);
+            dataToCollect.setLineCount(false);
+
     }
 
     public void  box3(){
         if(checkBox3.isSelected())
-            charcount = true;
+            dataToCollect.setCharCount(true);
         else
-            charcount = false;
-        System.out.println(wordcoutn);
+            dataToCollect.setCharCount(false);
+
     }
 
 

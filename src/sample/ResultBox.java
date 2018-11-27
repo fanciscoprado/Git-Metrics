@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 public class ResultBox {
 
-    public static void display(boolean w, boolean l, boolean c, ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
+    public static void display(ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
 
         //Block events to other windows
@@ -52,17 +52,8 @@ public class ResultBox {
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
 
 
-        if(!l && !w && !c)
+
             table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
-        else {
-            table.getColumns().add(nameColum);
-            if(w)
-                table.getColumns().add(wordColum);
-            if(l)
-                table.getColumns().add(lineColumn);
-            if (c)
-                table.getColumns().add(charColum);
-        }
 
         //***********************************************************************pie chart start**********************************
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
