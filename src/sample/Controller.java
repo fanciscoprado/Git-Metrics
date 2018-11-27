@@ -38,6 +38,9 @@ public class Controller {
         ObservableList<Data> dataList = dataCollector.collectData(fileList);
         ResultBox resultBox = new ResultBox();
         resultBox.display(dataList,commiterList);
+        git.getRepository().close();
+        git.close();
+        gitController.close();
 
     }
     //gets url from text field

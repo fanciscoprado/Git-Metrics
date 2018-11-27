@@ -69,22 +69,9 @@ public class GitController {
             }
         }
     }
-/*
-    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes observable list of Data objects that contain the metrics
-        File[] listOfFiles = folder.listFiles();
-        for (File file : listOfFiles) {
-            String fname = file.getName();
-            if(!file.isFile())
-                makeList(file,list);
-            else {
-                Data temp = new Data();
-                temp.collect(fname,file);
-                if(!temp.isSkipped())
-                    list.add(temp);
-            }
-        }
+    public void close(){
+        removeall(folder);
     }
-   */
     private void removeall(File folder){ // recusivly delets the git archive downloaded
         File[] listOfFiles = folder.listFiles();
         try {
