@@ -1,6 +1,8 @@
 package sample;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.*;
 import javafx.scene.*;
@@ -61,7 +63,19 @@ public class ResultBox {
             if (c)
                 table.getColumns().add(charColum);
         }
-        layout.getChildren().addAll(table);
+
+        //***********************************************************************pie chart start**********************************
+        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+        for(CommiterInfo temp: cList){
+            pieChartData.add(new PieChart.Data(temp.getName(),temp.getCommits()));
+        }
+        final PieChart chart = new PieChart(pieChartData);
+        chart.setTitle("Commiters");
+        chart.setLegendSide(Side.LEFT);
+        //************************end pie cahrt************************************************
+
+
+        layout.getChildren().addAll(table, chart);
 
 
         //Display window and wait for it to be closed before returning

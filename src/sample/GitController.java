@@ -22,8 +22,8 @@ public class GitController {
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-            ObservableList<Data> list = FXCollections.observableArrayList();
-            LinkedList<CommiterInfo> commiterList = new LinkedList<>();
+            ObservableList<Data> list = FXCollections.observableArrayList(); //list of data objects
+            LinkedList<CommiterInfo> commiterList = new LinkedList<>(); //list of commiterInfo objects
             getCommitCount(git, commiterList);
             makeList(folder,list);
             ResultBox resultBox = new ResultBox();
