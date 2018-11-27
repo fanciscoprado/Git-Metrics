@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <VBox prefWidth="532.0">
+      <VBox>
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter URL and select what metrics you want displayed">
                <VBox.margin>
@@ -23,11 +23,11 @@
                   <Font name="Arial" size="18.0" />
                </font>
             </Text>
-            <HBox>
+            <HBox prefHeight="25.0">
                <children>
                   <TextField fx:id="uRLfield" onAction="#getURL" prefWidth="370.0" promptText="https://github.com/CSC131Fall2018/Group2.git" />
                   <Region prefWidth="9.0" />
-                  <Button fx:id="goButton" mnemonicParsing="false" onAction="#onClick" text="Button">
+                  <Button fx:id="goButton" mnemonicParsing="false" onAction="#onClick" text="GO">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -39,29 +39,63 @@
             </HBox>
             <HBox prefWidth="200.0">
                <children>
-                  <CheckBox fx:id="checkBox1" mnemonicParsing="false" onAction="#box1" text="Word Count">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </CheckBox>
-                  <CheckBox fx:id="checkBox2" mnemonicParsing="false" onAction="#box2" text="Line Count">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </CheckBox>
-                  <CheckBox fx:id="checkBox3" mnemonicParsing="false" onAction="#box3" text="Character Count">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Comment line count">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </CheckBox>
+                  <VBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Metrics">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox mnemonicParsing="false" text="Comment line count">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox fx:id="checkBox1" mnemonicParsing="false" onAction="#box1" text="Word Count">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox fx:id="checkBox3" mnemonicParsing="false" onAction="#box3" text="Character Count">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox fx:id="checkBox2" mnemonicParsing="false" onAction="#box2" text="Line Count">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox mnemonicParsing="false" text="Sorce Line Count">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                     </children></VBox>
+                  <VBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Types of Files">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></CheckBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
                </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" />
+               </padding>
             </HBox>
-            <CheckBox mnemonicParsing="false" text="Sorce Line Count" />
          </children></VBox>
    </children>
 </AnchorPane>

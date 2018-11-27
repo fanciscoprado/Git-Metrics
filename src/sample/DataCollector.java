@@ -13,8 +13,8 @@ public class DataCollector {
         for(File temp : fileList){
             Data data = new Data();
             data.setFilename(temp.getName());
-            wordCount(data,temp);
-
+            getWordCount(data,temp);
+            getSourceLines(data,temp);
             dataList.add(data);
         }
 
@@ -22,7 +22,7 @@ public class DataCollector {
         return dataList;
     }
 
-    private void wordCount(Data data, File temp){
+    private void getWordCount(Data data, File temp){
         wc counter = new wc();
         try {
             counter.counter(data.getFilename(),temp);
@@ -32,5 +32,17 @@ public class DataCollector {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void getSourceLines(Data data, File temp){
+        countSourceLines counter = new countSourceLines();
+        try {
+            data.setSlcount(counter.getSourceLines(temp));
+            data.setCccount(counter.getCommentLines(temp));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
