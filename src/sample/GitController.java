@@ -30,6 +30,7 @@ public class GitController {
             resultBox.display(w,l,c,list, commiterList);
             git.getRepository().close(); // Close all the things!
             git.close(); // Close all the things!
+            list.removeAll();
             removeall(folder);
 
         } catch (GitAPIException e) {
@@ -52,10 +53,7 @@ public class GitController {
             makeListOfCommiters(commiterList, commit.getAuthorIdent().getName());
             count++;
         }
-        for(CommiterInfo temp: commiterList){
-          System.out.println(temp.getName());
-          System.out.println(temp.getCommits());
-        }
+
 
         System.out.println(count);
     }
@@ -98,7 +96,6 @@ public class GitController {
         try {
             for (File temp : listOfFiles) {
                 if (!temp.delete()) {
-                    //System.out.println(temp.getName());
                     removeall(temp);
                 }
                 if (temp.delete()) {
