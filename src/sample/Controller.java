@@ -23,7 +23,6 @@ public class Controller {
 
     public void onClick() throws IOException {
         getURL();
-        System.out.println(url);
         GitController counter = new GitController();
         counter.downloadRepo(url, wordcoutn, linecount, charcount);
 
