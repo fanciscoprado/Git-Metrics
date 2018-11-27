@@ -6,14 +6,15 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import java.io.File;
 import java.io.IOException;
+import java.util.LinkedList;
 
 import org.eclipse.jgit.revwalk.RevCommit;
 
 
 
 
-public class Counter {
-    public void setup(String url, boolean w, boolean l, boolean c) throws IOException {
+public class GitController {
+    public void downloadRepo(String url, boolean w, boolean l, boolean c) throws IOException {
 
         File folder = new File("temp/");
         try {
@@ -21,15 +22,7 @@ public class Counter {
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-           //******************************************************
-            Iterable<RevCommit> commits = git.log().call();
-            int count = 0;
-            for( RevCommit commit : commits ) {
-                System.out.println(commit.getCommitterIdent());
-                count++;
-            }
-            System.out.println(count);
-            //*********************************************
+            getCommitCount(git);
             ObservableList<Data> list = FXCollections.observableArrayList();
             makeList(folder,list);
             ResultBox resultBox = new ResultBox();
@@ -45,8 +38,45 @@ public class Counter {
 
 
     }
+    private void getCommitCount(Git git) {
+        Iterable<RevCommit> commits = null;
+        try {
+            commits = git.log().call();
+        } catch (GitAPIException e) {
+            e.printStackTrace();
+        }
+        int count = 0;
+        LinkedList<String> yes = new LinkedList<>();
+        for( RevCommit commit : commits ) {
+            makeListOfCommiters(yes, commit.getAuthorIdent().getName());
+            count++;
+        }
+        for(String temp: yes){
+          System.out.println(temp);
+        }
 
-    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes linked list of Data objects that contain the metrics
+        System.out.println(count);
+    }
+
+    private void makeListOfCommiters (LinkedList<String> yes,String string){
+        if(yes.size() ==0)
+            yes.push(string);
+        else {
+            boolean inList = false;
+            for(String temp : yes){
+                if(temp.equals(string)) {
+                    inList = true;
+                    break;
+                }
+            }
+            if(!inList) {
+                yes.push(string);
+                inList = false;
+            }
+        }
+    }
+
+    private void makeList(File folder,ObservableList<Data> list) throws IOException { //Makes observable list of Data objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             String fname = file.getName();
@@ -58,11 +88,7 @@ public class Counter {
                 if(!temp.isSkipped())
                     list.add(temp);
             }
-
-
-
         }
-
     }
     private void removeall(File folder){ // recusivly delets the git archive downloaded
         File[] listOfFiles = folder.listFiles();

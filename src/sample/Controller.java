@@ -5,7 +5,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Controller {
@@ -25,8 +24,8 @@ public class Controller {
     public void onClick() throws IOException {
         getURL();
         System.out.println(url);
-        Counter counter = new Counter();
-        counter.setup(url, wordcoutn, linecount, charcount);
+        GitController counter = new GitController();
+        counter.downloadRepo(url, wordcoutn, linecount, charcount);
         ResultBox resultBox = new ResultBox();
 
     }
