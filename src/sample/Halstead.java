@@ -46,3 +46,12 @@ public class Halstead
     }
 
 }
+
+//Data class, used to define and identify operators
+class halsteadOperator
+{
+    boolean prefixFlag;
+    boolean infixFlag;
+    boolean postfixFlag;
+    String operatorName;
+}
