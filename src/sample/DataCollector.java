@@ -13,20 +13,24 @@ public class DataCollector {
         for(File temp : fileList){
             Data data = new Data();
             data.setFilename(temp.getName());
-            //get word line char count
-            wc counter = new wc();
-            try {
-                counter.counter(data.getFilename(),temp);
-                data.setWcount(counter.getWcount());
-                data.setLcount(counter.getLcount());
-                data.setCcount(counter.getCcount());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            wordCount(data,temp);
+
             dataList.add(data);
         }
 
 
         return dataList;
+    }
+
+    private void wordCount(Data data, File temp){
+        wc counter = new wc();
+        try {
+            counter.counter(data.getFilename(),temp);
+            data.setWcount(counter.getWcount());
+            data.setLcount(counter.getLcount());
+            data.setCcount(counter.getCcount());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
