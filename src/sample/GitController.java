@@ -14,6 +14,7 @@ import org.eclipse.jgit.revwalk.RevCommit;
 
 public class GitController {
     File folder = new File("temp/");
+
     public Git downloadRepo(String url) throws IOException {
         Git git = null;
 
@@ -22,7 +23,6 @@ public class GitController {
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-            //LinkedList<CommiterInfo> commiterList = new LinkedList<>(); //list of commiterInfo objects
 
         } catch (GitAPIException e) {
             System.out.println("no good amigo");

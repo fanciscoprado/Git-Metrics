@@ -8,8 +8,7 @@ public class FileHandler {
     public LinkedList parseFiles(DataToCollect dataToCollect) throws IOException {
         File folder = new File("temp/");
         LinkedList<File> fileList = new LinkedList<>();
-
-           LinkedList<File> flist = makeList(folder, fileList,dataToCollect);
+        LinkedList<File> flist = makeList(folder, fileList,dataToCollect);
 
 
 
