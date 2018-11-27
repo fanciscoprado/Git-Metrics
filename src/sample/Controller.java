@@ -26,7 +26,7 @@ public class Controller {
         System.out.println(url);
         GitController counter = new GitController();
         counter.downloadRepo(url, wordcoutn, linecount, charcount);
-        ResultBox resultBox = new ResultBox();
+
 
     }
     //gets url from text field
