@@ -46,31 +46,33 @@ public class GitController {
             e.printStackTrace();
         }
         int count = 0;
-        LinkedList<String> yes = new LinkedList<>();
+        LinkedList<CommiterInfo> commiterList = new LinkedList<>();
         for( RevCommit commit : commits ) {
-            makeListOfCommiters(yes, commit.getAuthorIdent().getName());
+            makeListOfCommiters(commiterList, commit.getAuthorIdent().getName());
             count++;
         }
-        for(String temp: yes){
-          System.out.println(temp);
+        for(CommiterInfo temp: commiterList){
+          System.out.println(temp.getName());
+          System.out.println(temp.getCommits());
         }
 
         System.out.println(count);
     }
 
-    private void makeListOfCommiters (LinkedList<String> yes,String string){
-        if(yes.size() ==0)
-            yes.push(string);
+    private void makeListOfCommiters (LinkedList<CommiterInfo> commiterList,String string){
+        if(commiterList.size() ==0)
+            commiterList.push(new CommiterInfo(string));
         else {
             boolean inList = false;
-            for(String temp : yes){
-                if(temp.equals(string)) {
+            for(CommiterInfo temp : commiterList){
+                if(temp.getName().equals(string)) {
                     inList = true;
+                    temp.addCommitCount();
                     break;
                 }
             }
             if(!inList) {
-                yes.push(string);
+                commiterList.push(new CommiterInfo(string));
                 inList = false;
             }
         }

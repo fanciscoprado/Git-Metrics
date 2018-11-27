@@ -10,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added = on line 6">
+      <change afterPath="$PROJECT_DIR$/src/sample/CommiterInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUI/sample/Counter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GitController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,25 +146,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="1711" />
+          <entry key="java" value="1900" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1711" />
+          <entry key="JAVA" value="1900" />
           <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="12" />
+          <entry key="java" value="13" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="13" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -273,10 +271,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/GitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+            <state relative-caret-position="433">
+              <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/CommiterInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#191#192#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -365,6 +384,7 @@
         <option value="$PROJECT_DIR$/src/sample/Halstead.java" />
         <option value="$PROJECT_DIR$/src/sample/Counter.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/CommiterInfo.java" />
         <option value="$PROJECT_DIR$/src/sample/GitController.java" />
       </list>
     </option>
@@ -428,7 +448,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543280123422" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543281477684" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -662,7 +682,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18869936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18869936" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -671,7 +691,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2112676" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2112676" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -683,7 +703,7 @@
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.29144096" />
+      <window_info anchor="bottom" id="Terminal" order="14" visible="true" weight="0.29144096" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -812,10 +832,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/CommiterInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/GitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        <state relative-caret-position="433">
+          <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
