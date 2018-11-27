@@ -6,7 +6,7 @@ public class HalsteadTest
 {
     public static void main(String[] args)throws IOException
     {
-        Reader readf = new FileReader("Halstead");
+        Reader readf = new FileReader("src/sample/Halstead.java");
         StreamTokenizer st = new StreamTokenizer(readf);
         st.wordChars('a','z');
         st.wordChars('!','}');
