@@ -8,9 +8,11 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
 
+import java.util.LinkedList;
+
 public class ResultBox {
 
-    public static void display(boolean w, boolean l, boolean c, ObservableList<Data> list) {
+    public static void display(boolean w, boolean l, boolean c, ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
 
         //Block events to other windows
@@ -20,6 +22,8 @@ public class ResultBox {
         VBox layout = new VBox();
 
         TableView<Data> table;
+        table = new TableView<>();
+        table.setItems(list);
 
         TableColumn<Data, String> nameColum = new TableColumn<>("File Name");
         nameColum.setMinWidth(200);
@@ -45,8 +49,7 @@ public class ResultBox {
         commentColumn.setMinWidth(200);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
 
-        table = new TableView<>();
-        table.setItems(list);
+
         if(!l && !w && !c)
             table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
         else {
@@ -62,6 +65,12 @@ public class ResultBox {
 
 
         //Display window and wait for it to be closed before returning
+        displayWindow(layout,window);
+
+    }
+
+
+    private static void displayWindow(VBox layout, Stage window){
         Scene scene = new Scene(layout);
         window.setScene(scene);
         window.showAndWait();

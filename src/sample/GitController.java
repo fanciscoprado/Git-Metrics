@@ -22,11 +22,12 @@ public class GitController {
                     .setURI(url)
                     .setDirectory(folder)
                     .call();
-            getCommitCount(git);
             ObservableList<Data> list = FXCollections.observableArrayList();
+            LinkedList<CommiterInfo> commiterList = new LinkedList<>();
+            getCommitCount(git, commiterList);
             makeList(folder,list);
             ResultBox resultBox = new ResultBox();
-            resultBox.display(w,l,c,list);
+            resultBox.display(w,l,c,list, commiterList);
             git.getRepository().close(); // Close all the things!
             git.close(); // Close all the things!
             removeall(folder);
@@ -38,7 +39,7 @@ public class GitController {
 
 
     }
-    private void getCommitCount(Git git) {
+    private void getCommitCount(Git git, LinkedList<CommiterInfo> commiterList) {
         Iterable<RevCommit> commits = null;
         try {
             commits = git.log().call();
@@ -46,7 +47,7 @@ public class GitController {
             e.printStackTrace();
         }
         int count = 0;
-        LinkedList<CommiterInfo> commiterList = new LinkedList<>();
+
         for( RevCommit commit : commits ) {
             makeListOfCommiters(commiterList, commit.getAuthorIdent().getName());
             count++;
