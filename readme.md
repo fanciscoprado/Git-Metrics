@@ -12,7 +12,8 @@ word count, line count, character count, comment line count and source line coun
 * Michael Nguyen
 * Cameron Kiyomura
 * Jodilyn Peralta
-##**Software Requirements Specification**
+
+# Software Requirements Specification
 **Table of Contents**
 1. **Introduction**
     1.1 Purpose
