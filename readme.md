@@ -16,14 +16,19 @@ word count, line count, character count, comment line count and source line coun
 # Software Requirements Specification
 **Table of Contents**
 1. **Introduction**
-    1.1 Purpose
-    1.2 Scope
+   **1.1** Purpose
+   The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
+   Our intended audience includes other developers and users who may find these contents useful.
+
+   **1.2** Scope
 2. **Overview**
-    2.1 Product Functions
-    2.2 Definitions
-    2.3 Product Constraints
-3. **Requirements**
+   **2.1** Product Functions
+   **2.2** Definitions
+   **2.3** Product Constraints
+3. **External Interface Requirements**
+   **3.1**
 4. **System Features**
+   **4.1**
 
 
 
