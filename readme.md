@@ -12,6 +12,17 @@ word count, line count, character count, comment line count and source line coun
 * Michael Nguyen
 * Cameron Kiyomura
 * Jodilyn Peralta
+##**Software Requirements Specification**
+**Table of Contents**
+1. **Introduction**
+    1.1 Purpose
+    1.2 Scope
+2. **Overview**
+    2.1 Product Functions
+    2.2 Definitions
+    2.3 Product Constraints
+3. **Requirements**
+4. **System Features**
 
 
 
