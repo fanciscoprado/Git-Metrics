@@ -1,4 +1,4 @@
-# Group 2 Project ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+# Group 2 Project  ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 Our goal its to make a metric program that able to show the user the metrics of a website or a file. It will
 tell the use the amount of lines code and text. It will tell the user what kind of operators are present when the program is a java, c or a c++ file.
 The user will then be given in a app window the metrics of their data based on the file that they 
@@ -21,6 +21,8 @@ word count, line count, character count, comment line count and source line coun
    Our intended audience includes other developers and users who may find these contents useful.
 
    **1.2** Scope
+   Our goal is to deliver a platform in which users can get metrics of a file and are able to use this
+   information in a easy and productive way.
 2. **Overview**
    **2.1** Product Functions
    **2.2** Definitions
