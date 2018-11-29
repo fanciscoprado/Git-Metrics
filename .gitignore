@@ -10,5 +10,6 @@ gen
 .idea/workspace.xml
 *.xml
 
-This gitignore .idea/workplace helps with merge errors that were occuring
+>This gitignore .idea/workplace helps with merge errors that were occuring
+*.xml will include all .xlm files that are casuing merge errors with our platfrom between the five of us
 
