@@ -8,7 +8,7 @@ public class Halstead
         "this","namespace","using","try","catch","throw","throws","finally","strictfp","instanceof","interface",
         "extends","implements","abstract","concrete","const_cast","static_cast","dynamic_cast","reinterpret_cast",
         "typeid","template","explicit","true","false","typename","const","friend","volatile","transient","final",
-        "auto","extern","register","static","typedef","virtual,","mutable","inline"};
+        "auto","extern","register","static","typedef","virtual,","mutable","inline","add","remove"};
     String[] CPlusOperators;
     public int getDistinctOperator()
     {
