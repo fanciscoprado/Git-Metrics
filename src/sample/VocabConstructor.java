@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 public class VocabConstructor
 {
@@ -20,7 +17,6 @@ public class VocabConstructor
             , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
             , "^", "0", "0", "^=", "0", "0"};
 
-    File currentFile = new File("src/sample/Halstead.java");
     //collects operators and their positions
     ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();
 
@@ -52,20 +48,21 @@ public class VocabConstructor
                     temp.suffixFlag = false;
                 else
                     temp.suffixFlag = true;
-                System.out.println(temp);
                 vocabList.add(temp);
             }
         }
     }
 
     //Creates an indexed list of all the elements from stream tokenizer
-    public void buildCodeList()throws Exception
+    public void buildCodeList(File currentFile)throws Exception
     {
         BufferedReader readFile = new BufferedReader(new FileReader(currentFile));
         StreamTokenizer fileStream = new StreamTokenizer(readFile);
         fileStream.slashStarComments(true);
         while(fileStream.nextToken() != fileStream.TT_EOF){
-            if(true);
+            if(fileStream.sval==null){
+
+            }
         }
     }
 
@@ -74,16 +71,16 @@ public class VocabConstructor
     {
     }
 
-    public static void main(String[] args)
+    //doesn't need a main - but it is good for testing
+    public static void main(String[] args)throws Exception
     {
         VocabConstructor test = new VocabConstructor();
         test.setVocab();
-        /*for(int i = 0; i < test.vocabList.size(); i++){
+        for(int i = 0; i < test.vocabList.size(); i++){
             System.out.println(test.vocabList.get(i));
-        }*/
-        System.out.println(test.vocabList.get(1));
-        System.out.println(test.vocabList.get(2));
-        System.out.println(test.vocabList.get(3));
+        }
+        File currentFile = new File("src/sample/Halstead.java");
+        test.buildCodeList(currentFile);
     }
 }
 
