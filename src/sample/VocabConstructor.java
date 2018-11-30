@@ -22,7 +22,7 @@ public class VocabConstructor
     ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();
 
     //collects all relevant elements for Halstead metrics
-    ArrayList<String> codeList;
+    ArrayList<String> codeList = new ArrayList<>();
 
     //Fills vocabList with operators - reads from a built-in list right now but should read from a file later.
     public void setVocab()
@@ -82,15 +82,10 @@ public class VocabConstructor
                     codeList.add(tempString.toString());
                     tempString = new StringBuilder();
                 }
-                System.out.println(fileStream.sval);
+                //System.out.println(fileStream.sval);
                 codeList.add(fileStream.sval);
             }
         }
-    }
-
-    //Creates operators out of tokenized elements
-    public void buildOperator(/*StreamfileStream*/)
-    {
     }
 
     //doesn't need a main - but it is good for testing
@@ -101,7 +96,7 @@ public class VocabConstructor
         for(int i = 0; i < test.vocabList.size(); i++){
             System.out.println(test.vocabList.get(i));
         }
-        File currentFile = new File("src/sample/Halstead.java");
+        File currentFile = new File("src/sample/wc.java");
         test.buildCodeList(currentFile);
         for(int i = 0; i < test.codeList.size(); i++){
             System.out.println(test.codeList.get(i));
