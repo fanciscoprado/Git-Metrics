@@ -33,9 +33,10 @@ public class Halstead
         double temp = operators*(Math.log(operators)/Math.log(2))+(operands*(Math.log(operands)/Math.log(2)));
         return temp;
     }
-    public int getVolume()
+    public int getVolume(int PLength, int vocab)
     {
-        return 0;
+        int temp = PLength*(Math.log(vocab)/Math.log(2));
+        return temp;
     }
     public int getDifficulty()
     {
