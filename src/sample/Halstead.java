@@ -1,5 +1,9 @@
 package sample;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Halstead
 {
     /*special case words for java operators*/
@@ -10,6 +14,7 @@ public class Halstead
         "typeid","template","explicit","true","false","typename","const","friend","volatile","transient","final",
         "auto","extern","register","static","typedef","virtual,","mutable","inline"};
     String[] CPlusOperators;
+    Set<halsteadOperator> vocabSet = new HashSet<>();
     public int getDistinctOperator()
     {
         return 0;
@@ -44,14 +49,16 @@ public class Halstead
     {
         return 0;
     }
+    public void setVocabSet()
+    {
 
+    }
 }
 
 //Data class, used to define and identify operators
 class halsteadOperator
 {
     boolean prefixFlag;
-    boolean infixFlag;
     boolean postfixFlag;
     String operatorName;
 }
