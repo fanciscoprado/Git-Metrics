@@ -15,7 +15,7 @@ public class DisplayComiiterData{
             pieChartData.add(new PieChart.Data(temp.getName() + " " + temp.getCommits(),temp.getCommits()));
         }
         final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Commiters");
+        chart.setTitle("Contributers");
         chart.setLegendSide(Side.LEFT);
         return chart;
     }
