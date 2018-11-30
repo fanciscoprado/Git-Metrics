@@ -23,6 +23,7 @@ public class HalsteadOps
             "union","while","this","namespace","using,","try","catch","throw","abstract","concrete","const_cast","static_cast",
             "dynamic_cast","reinterpret_cast","typeid","template","explicit","true","false","typename","const","friend","volatile",
             "final","auto","extern","register","static","typedef","virtual","mutable","inline"};
+    char[] javasplit= {'~','!','#','%','^','&','*','(',')','-','+','=','{','}','[',']',':',';','\"','\'','?','|'};
     public int getDistinctOperator()
     {
         Reader readf = new FileReader("src/sample/Halstead.java");
