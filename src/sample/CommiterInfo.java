@@ -1,12 +1,19 @@
 package sample;
 
+import java.util.LinkedList;
+
 public class CommiterInfo {
 
     private String name = "";
     private int commits = 1;
+    private LinkedList<String> commitMessageList = new LinkedList<>();
+
 
     public CommiterInfo(String name) {
         this.name = name;
+    }
+    public void pushCommit(String message){
+        commitMessageList.push(message);
     }
 
 
