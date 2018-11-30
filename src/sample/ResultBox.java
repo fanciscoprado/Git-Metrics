@@ -13,6 +13,7 @@ import javafx.geometry.*;
 import java.util.LinkedList;
 
 public class ResultBox {
+    Button sceneSwitch;
 
     public static void display(ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
@@ -20,12 +21,13 @@ public class ResultBox {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
+        Scene dataDisplay = new DisplayMetricsData().displayAll(list);
 
 
 
 
 
-            table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
+
 
         //***********************************************************************pie chart start**********************************
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
@@ -38,12 +40,12 @@ public class ResultBox {
         //************************end pie cahrt************************************************
 
 
-        layout.getChildren().addAll(table, chart);
+
 
 
         //Display window and wait for it to be closed before returning
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
+
+        window.setScene(new DisplayMetricsData().displayAll(list));
         window.showAndWait();
 
     }
