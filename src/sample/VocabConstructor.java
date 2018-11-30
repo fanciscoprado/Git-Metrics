@@ -10,6 +10,7 @@ import java.util.Set;
 
 public class VocabConstructor
 {
+    File currentFile = new File("src/sample/Halstead.java");
     Set<halsteadOperator> vocabSet = new HashSet<>();           //collects operators and their positions
     ArrayList<String> codeList;                                 //collects all relevant elements for Halstead metrics
 
@@ -25,6 +26,7 @@ public class VocabConstructor
         int index = -1;
         halsteadOperator temp = new halsteadOperator();
         for (String c : FULL_OPERATOR) {
+            //halsteadOperator has three elements. The String array being read from stores them in this order:
             index++;
             if(index % 3 == 0)
                 temp.operatorName = c;
@@ -47,7 +49,6 @@ public class VocabConstructor
     //Creates an indexed list of all the elements from stream tokenizer
     public void buildCodeList()throws Exception
     {
-        File currentFile = new File("src/sample/Halstead.java");
         BufferedReader readFile = new BufferedReader(new FileReader(currentFile));
         StreamTokenizer fileStream = new StreamTokenizer(readFile);
         fileStream.slashStarComments(true);
@@ -59,7 +60,6 @@ public class VocabConstructor
     //Creates operators out of tokenized elements
     public void buildOperator()
     {
-
     }
 }
 
