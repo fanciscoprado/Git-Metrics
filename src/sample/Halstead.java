@@ -14,7 +14,7 @@ public class Halstead
         "typeid","template","explicit","true","false","typename","const","friend","volatile","transient","final",
         "auto","extern","register","static","typedef","virtual,","mutable","inline"};
     String[] CPlusOperators;
-    Set<halsteadOperator> vocabSet = new HashSet<>();
+    Set<halsteadOperator> vocabSet = new HashSet<>();           //collects operators and their positions
     public int getDistinctOperator()
     {
         return 0;
@@ -49,6 +49,8 @@ public class Halstead
     {
         return 0;
     }
+
+    //Fills vocabSet with operators - reads from a built-in list right now but should read from a file later.
     public void setVocab()
     {
         final String[] FULL_OPERATOR = {"=", "0", "0", "==", "0", "0", "+", "0", "0", "++", "0", "1", "+=", "0", "0"
@@ -58,7 +60,7 @@ public class Halstead
                 , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
                 , "^", "0", "0", "^=", "0", "0"};
         int index = -1;
-        halsteadOperator temp;
+        halsteadOperator temp = new halsteadOperator();
         for (String c : FULL_OPERATOR) {
             index++;
             if(index % 3 == 0)
@@ -74,14 +76,13 @@ public class Halstead
                     temp.postfixFlag = false;
                 else
                     temp.postfixFlag = true;
-
+                vocabSet.add(temp);
             }
-
         }
     }
 }
 
-//Data class, used to define and identify operators
+//Data class: defines and identifies operators
 class halsteadOperator
 {
     boolean prefixFlag;
