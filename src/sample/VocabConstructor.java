@@ -6,30 +6,36 @@ import java.io.FileReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class VocabConstructor
 {
-    File currentFile = new File("src/sample/Halstead.java");
-    Set<halsteadOperator> vocabSet = new HashSet<>();           //collects operators and their positions
-    ArrayList<String> codeList;                                 //collects all relevant elements for Halstead metrics
+    final char[] HALF_OPERATOR = {'=', '+', '-', '*', '/', '%','!', '>', '<', '&', '|', '?', '~', '^', ':'};
 
-    //Fills vocabSet with operators - reads from a built-in list right now but should read from a file later.
+    final String[] BASIC_OPERATOR_LIST = {"=", "0", "0", "==", "0", "0", "+", "0", "0", "++", "0", "1", "+=", "0", "0"
+            , "-", "0", "0", "--", "0", "1", "-=", "0", "0", "*", "0", "0", "*=", "0", "0", "/", "0", "0", "/="
+            , "0", "0", "%", "0", "0", "%=", "0", "0", "!", "0", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
+            , "0", "0", ">>>", "0", "0", "<", "0", "0", "<=", "0", "0", "<<", "0", "0", "&", "0", "0", "&&", "0"
+            , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
+            , "^", "0", "0", "^=", "0", "0"};
+
+    File currentFile = new File("src/sample/Halstead.java");
+    ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();  //collects operators and their positions
+    ArrayList<String> codeList;                                     //collects all relevant elements for Halstead metrics
+
+    //Fills vocabList with operators - reads from a built-in list right now but should read from a file later.
     public void setVocab()
     {
-        final String[] FULL_OPERATOR = {"=", "0", "0", "==", "0", "0", "+", "0", "0", "++", "0", "1", "+=", "0", "0"
-                , "-", "0", "0", "--", "0", "1", "-=", "0", "0", "*", "0", "0", "*=", "0", "0", "/", "0", "0", "/="
-                , "0", "0", "%", "0", "0", "%=", "!", "0", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
-                , "0", "0", ">>>", "0", "0", "<", "0", "0", "<=", "0", "0", "<<", "0", "0", "&", "0", "0", "&&", "0"
-                , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
-                , "^", "0", "0", "^=", "0", "0"};
-        int index = -1;
         halsteadOperator temp = new halsteadOperator();
-        for (String c : FULL_OPERATOR) {
-            //halsteadOperator has three elements. The String array being read from stores them in this order:
-            index++;
-            if(index % 3 == 0)
+        String c;
+        for (int index = 0; index < BASIC_OPERATOR_LIST.length; index++) {
+            c = BASIC_OPERATOR_LIST[index];                 //halsteadOperator has three elements. The String array being
+            if(index % 3 == 0)                              //read from stores them in this order: name, if its a prefix
+            {                                               //and if its a postfix
+                temp = new halsteadOperator();
                 temp.operatorName = c;
+            }
             if((index - 1) % 3 == 0) {
                 if (c.equals("0"))
                     temp.prefixFlag = false;
@@ -38,10 +44,11 @@ public class VocabConstructor
             }
             if((index - 2) % 3 == 0) {
                 if (c.equals("0"))
-                    temp.postfixFlag = false;
+                    temp.suffixFlag = false;
                 else
-                    temp.postfixFlag = true;
-                vocabSet.add(temp);
+                    temp.suffixFlag = true;
+                System.out.println(temp);
+                vocabList.add(temp);
             }
         }
     }
@@ -53,7 +60,7 @@ public class VocabConstructor
         StreamTokenizer fileStream = new StreamTokenizer(readFile);
         fileStream.slashStarComments(true);
         while(fileStream.nextToken() != fileStream.TT_EOF){
-            System.out.println(fileStream.toString());
+            if(true);
         }
     }
 
@@ -61,12 +68,29 @@ public class VocabConstructor
     public void buildOperator()
     {
     }
+
+    public static void main(String[] args)
+    {
+        VocabConstructor test = new VocabConstructor();
+        test.setVocab();
+        /*for(int i = 0; i < test.vocabList.size(); i++){
+            System.out.println(test.vocabList.get(i));
+        }*/
+        System.out.println(test.vocabList.get(1));
+        System.out.println(test.vocabList.get(2));
+        System.out.println(test.vocabList.get(3));
+    }
 }
 
 //Data class: defines and identifies operators
 class halsteadOperator
 {
     boolean prefixFlag;
-    boolean postfixFlag;
+    boolean suffixFlag;
     String operatorName;
+
+    @Override
+    public String toString(){
+        return operatorName + ", " + prefixFlag + ", " + suffixFlag;
+    }
 }
