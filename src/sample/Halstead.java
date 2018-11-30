@@ -43,9 +43,10 @@ public class Halstead
         int temp = (operators/2)*(operandsT/operands);
         return temp;
     }
-    public int getEffort()
+    public double getEffort(double Difficulty, double Volume)
     {
-        return 0;
+        double temp = Difficulty*Volume;
+        return temp;
     }
 
 }
