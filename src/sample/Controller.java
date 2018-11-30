@@ -14,8 +14,6 @@ import java.util.LinkedList;
 
 public class Controller {
     DataToCollect dataToCollect = new DataToCollect();
-
-    String url;
     @FXML
     private TextField uRLfield;
     @FXML
@@ -31,8 +29,7 @@ public class Controller {
         GitController gitController = new GitController();
         FileHandler fileHandler = new FileHandler();
         DataCollector dataCollector = new DataCollector();
-        getURL();
-        Git git = gitController.downloadRepo(url);
+        Git git = gitController.downloadRepo(getURL());
         LinkedList<CommiterInfo> commiterList = gitController.getCommitCount(git);
         LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
         ObservableList<Data> dataList = dataCollector.collectData(fileList);
@@ -44,8 +41,8 @@ public class Controller {
 
     }
     //gets url from text field
-    public void getURL(){
-        url = uRLfield.getText();
+    public String getURL(){
+        return uRLfield.getText();
 
     }
 

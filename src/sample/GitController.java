@@ -1,17 +1,11 @@
 package sample;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import org.eclipse.jgit.revwalk.RevCommit;
-
-
-
-
 public class GitController {
     File folder = new File("temp/");
 
@@ -43,7 +37,7 @@ public class GitController {
         int count = 0;
 
         for( RevCommit commit : commits ) {
-            makeListOfCommiters(commiterList, commit.getAuthorIdent().getName());
+            makeListOfCommiters(commiterList, commit.getAuthorIdent().getName(), commit);
             count++;
         }
 
@@ -51,20 +45,26 @@ public class GitController {
         return commiterList;
     }
 
-    private void makeListOfCommiters (LinkedList<CommiterInfo> commiterList,String string){
-        if(commiterList.size() ==0)
-            commiterList.push(new CommiterInfo(string));
+    private void makeListOfCommiters (LinkedList<CommiterInfo> commiterList,String string, RevCommit commit){
+        CommiterInfo info = new CommiterInfo(string);
+        if(commiterList.size() ==0) {
+            info.pushCommit(commit.getFullMessage());
+            System.out.println(commit.getFullMessage());
+            commiterList.push(info);
+        }
         else {
             boolean inList = false;
             for(CommiterInfo temp : commiterList){
                 if(temp.getName().equals(string)) {
                     inList = true;
+                    temp.pushCommit(commit.getFullMessage());
                     temp.addCommitCount();
                     break;
                 }
             }
             if(!inList) {
-                commiterList.push(new CommiterInfo(string));
+                info.pushCommit(commit.getFullMessage());
+                commiterList.push(info);
                 inList = false;
             }
         }
