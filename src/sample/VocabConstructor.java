@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
+import java.lang.StringBuilder;
 
 public class VocabConstructor
 {
@@ -58,16 +59,24 @@ public class VocabConstructor
     {
         BufferedReader readFile = new BufferedReader(new FileReader(currentFile));
         StreamTokenizer fileStream = new StreamTokenizer(readFile);
+        char tempChar;
+        StringBuilder tempString = new StringBuilder;
         fileStream.slashStarComments(true);
         while(fileStream.nextToken() != fileStream.TT_EOF){
             if(fileStream.sval==null){
-
+                tempChar = (char)fileStream.ttype;
+                for (char c : HALF_OPERATOR) {
+                    if(c == tempChar) {
+                        tempString.append(tempChar);
+                        break;
+                    }
+                }
             }
         }
     }
 
     //Creates operators out of tokenized elements
-    public void buildOperator()
+    public void buildOperator(/*StreamfileStream*/)
     {
     }
 
