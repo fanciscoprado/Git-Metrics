@@ -14,71 +14,40 @@ import java.util.LinkedList;
 
 public class ResultBox {
 
+
     public static void display(ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
-
         //Block events to other windows
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
-        VBox layout = new VBox();
+        Button sceneSwitch1 = new Button("Contributors");
+        Button sceneSwitch2 = new Button("Metrics");
 
-        TableView<Data> table;
-        table = new TableView<>();
-        table.setItems(list);
 
-        TableColumn<Data, String> nameColum = new TableColumn<>("File Name");
-        nameColum.setMinWidth(200);
-        nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
+        VBox layout1 = new VBox();
+        layout1.getChildren().addAll(new DisplayMetricsData().setupTablee(list), sceneSwitch1 );
+        Scene dataDisplay = new Scene(layout1);
 
-        TableColumn<Data, String> wordColum = new TableColumn<>("Word Count");
-        wordColum.setMinWidth(200);
-        wordColum.setCellValueFactory(new PropertyValueFactory<>("wcount"));
+        VBox layout2 = new VBox();
+        layout2.getChildren().addAll(new DisplayComiiterData().displayPiechart(cList), sceneSwitch2);
+        Scene commiterDataDisplay = new Scene(layout2);
 
-        TableColumn<Data, String> lineColumn = new TableColumn<>("Line Count");
-        lineColumn.setMinWidth(200);
-        lineColumn.setCellValueFactory(new PropertyValueFactory<>("lcount"));
-
-        TableColumn<Data, String> charColum = new TableColumn<>("Char Count");
-        charColum.setMinWidth(200);
-        charColum.setCellValueFactory(new PropertyValueFactory<>("ccount"));
-
-        TableColumn<Data, String> sorceColumn = new TableColumn<>("Source Count");
-        sorceColumn.setMinWidth(200);
-        sorceColumn.setCellValueFactory(new PropertyValueFactory<>("slcount"));
-
-        TableColumn<Data, String> commentColumn = new TableColumn<>("Comment Count");
-        commentColumn.setMinWidth(200);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
+        sceneSwitch1.setOnAction(e -> window.setScene(commiterDataDisplay));
+        sceneSwitch2.setOnAction(e -> window.setScene(dataDisplay));
 
 
 
-            table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
-
-        //***********************************************************************pie chart start**********************************
-        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-        for(CommiterInfo temp: cList){
-            pieChartData.add(new PieChart.Data(temp.getName(),temp.getCommits()));
-        }
-        final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Commiters");
-        chart.setLegendSide(Side.LEFT);
-        //************************end pie cahrt************************************************
-
-
-        layout.getChildren().addAll(table, chart);
 
 
         //Display window and wait for it to be closed before returning
-        displayWindow(layout,window);
 
-    }
-
-
-    private static void displayWindow(VBox layout, Stage window){
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
+        window.setScene(dataDisplay);
         window.showAndWait();
+
     }
+
+
+
 
 }
