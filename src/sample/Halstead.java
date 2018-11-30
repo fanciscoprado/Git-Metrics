@@ -48,5 +48,10 @@ public class Halstead
         double temp = Difficulty*Volume;
         return temp;
     }
+    public double getTime(double Effort)
+    {
+        double temp = Effort/18;
+        return temp;
+    }
 
 }
