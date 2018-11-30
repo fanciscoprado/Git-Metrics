@@ -9,7 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/sample/sample.fxml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Need to switch branch. Committing just in case">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Wrote out an issue causing all the elements of vocabList to be the same">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/VocabConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/VocabConstructor.java" afterDir="false" />
     </list>
@@ -247,14 +247,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1821" />
-          <entry key="txt" value="781" />
+          <entry key="java" value="1912" />
+          <entry key="txt" value="857" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1821" />
-          <entry key="PLAIN_TEXT" value="781" />
+          <entry key="JAVA" value="1912" />
+          <entry key="PLAIN_TEXT" value="857" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -301,8 +301,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/VocabConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1117#1135#0" expanded="true" />
@@ -489,7 +489,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543575559849" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543575842570" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Metrics/src/Metrics.java" />
     <property name="project.structure.last.edited" value="Project" />
@@ -674,7 +674,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543567644967</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Wrote out an issue causing all the elements of vocabList to be the same">
+      <created>1543575590689</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543575590689</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -741,7 +748,8 @@
     <MESSAGE value="Small amount of comments and corrections to code related to vocabSet" />
     <MESSAGE value="Moved vocab construction to a new java file to reduce weight on halstead" />
     <MESSAGE value="Need to switch branch. Committing just in case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Need to switch branch. Committing just in case" />
+    <MESSAGE value="Wrote out an issue causing all the elements of vocabList to be the same" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote out an issue causing all the elements of vocabList to be the same" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -862,8 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/VocabConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1117#1135#0" expanded="true" />

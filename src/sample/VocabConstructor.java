@@ -21,8 +21,11 @@ public class VocabConstructor
             , "^", "0", "0", "^=", "0", "0"};
 
     File currentFile = new File("src/sample/Halstead.java");
-    ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();  //collects operators and their positions
-    ArrayList<String> codeList;                                     //collects all relevant elements for Halstead metrics
+    //collects operators and their positions
+    ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();
+
+    //collects all relevant elements for Halstead metrics
+    ArrayList<String> codeList;
 
     //Fills vocabList with operators - reads from a built-in list right now but should read from a file later.
     public void setVocab()
@@ -30,9 +33,11 @@ public class VocabConstructor
         halsteadOperator temp = new halsteadOperator();
         String c;
         for (int index = 0; index < BASIC_OPERATOR_LIST.length; index++) {
-            c = BASIC_OPERATOR_LIST[index];                 //halsteadOperator has three elements. The String array being
-            if(index % 3 == 0)                              //read from stores them in this order: name, if its a prefix
-            {                                               //and if its a postfix
+            //halsteadOperator has three elements. The String array being read from stores them in this order:
+            //name, if its a prefix and if its a postfix
+            c = BASIC_OPERATOR_LIST[index];
+            if(index % 3 == 0)
+            {
                 temp = new halsteadOperator();
                 temp.operatorName = c;
             }
