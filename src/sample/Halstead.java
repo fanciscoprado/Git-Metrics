@@ -56,8 +56,28 @@ public class Halstead
                 , "0", "0", "%", "0", "0", "%=", "!", "0", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
                 , "0", "0", ">>>", "0", "0", "<", "0", "0", "<=", "0", "0", "<<", "0", "0", "&", "0", "0", "&&", "0"
                 , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
-                , "^", "0", "0", "^="};
+                , "^", "0", "0", "^=", "0", "0"};
+        int index = -1;
+        halsteadOperator temp;
+        for (String c : FULL_OPERATOR) {
+            index++;
+            if(index % 3 == 0)
+                temp.operatorName = c;
+            if((index - 1) % 3 == 0) {
+                if (c.equals("0"))
+                    temp.prefixFlag = false;
+                else
+                    temp.prefixFlag = true;
+            }
+            if((index - 2) % 3 == 0) {
+                if (c.equals("0"))
+                    temp.postfixFlag = false;
+                else
+                    temp.postfixFlag = true;
 
+            }
+
+        }
     }
 }
 
