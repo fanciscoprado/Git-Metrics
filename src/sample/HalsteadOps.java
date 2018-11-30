@@ -1,5 +1,9 @@
 package sample;
 
+import java.io.FileReader;
+import java.io.Reader;
+import java.io.StreamTokenizer;
+
 public class HalsteadOps
 {
     /*special case words for java operators*/
@@ -21,6 +25,22 @@ public class HalsteadOps
             "final","auto","extern","register","static","typedef","virtual","mutable","inline"};
     public int getDistinctOperator()
     {
+        Reader readf = new FileReader("src/sample/Halstead.java");
+        StreamTokenizer st = new StreamTokenizer(readf);
+        st.wordChars('a','z');
+        st.wordChars('!','}');
+        st.slashSlashComments(true);
+        st.slashStarComments(true);
+        st.commentChar('/');
+
+
+        while(st.nextToken() != st.TT_EOF)
+        {
+            String temp = st.sval;
+            System.out.println(temp);
+
+
+        }
         return 0;
     }
     public int getTotalOperator()
