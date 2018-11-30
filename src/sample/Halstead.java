@@ -31,6 +31,7 @@ public class Halstead
     public double getCPLength(int operators, int operands)
     {
         double temp = operators*(Math.log(operators)/Math.log(2))+(operands*(Math.log(operands)/Math.log(2)));
+        return temp;
     }
     public int getVolume()
     {
