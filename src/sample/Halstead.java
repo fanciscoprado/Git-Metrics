@@ -53,5 +53,10 @@ public class Halstead
         double temp = Effort/18;
         return temp;
     }
+    public double getBugs(double Volume)
+    {
+        double temp = Volume/3000;
+        return temp;
+    }
 
 }
