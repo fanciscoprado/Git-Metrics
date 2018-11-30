@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92f3ead0-a0ea-41d1-8c98-3e59a6fd2299" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/HalsteadOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/HalsteadOps.java" afterDir="false" />
-    </list>
+    <list default="true" id="92f3ead0-a0ea-41d1-8c98-3e59a6fd2299" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +259,7 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1543563086843" duration="1517000" />
+      <workItem from="1543563086843" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="Started SRS document">
       <created>1543412438706</created>
@@ -295,7 +292,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1528000" />
+    <option name="totallyTimeSpent" value="2123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />

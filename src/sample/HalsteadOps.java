@@ -39,8 +39,20 @@ public class HalsteadOps
 
         while(st.nextToken() != st.TT_EOF)
         {
+            boolean contain = false;
             String temp = st.sval;
-            System.out.println(temp);
+            if(!(temp == null))
+            {
+                contain =  containsAny(temp, javaOperators);
+            }
+            if(contain)
+            {
+                System.out.println(temp);
+            }
+            else
+            {
+                System.out.println(temp);
+            }
 
 
         }
