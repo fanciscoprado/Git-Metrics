@@ -9,14 +9,8 @@ import javafx.scene.layout.VBox;
 
 public class DisplayMetricsData {
 
-    public Scene displayAll(ObservableList<Data> list){
-        VBox layout = new VBox();
-        layout.getChildren().add(setupTablee(list));
-        Scene scene = new Scene(layout);
-        return scene;
 
-    }
-    private TableView<Data> setupTablee(ObservableList<Data> list){
+    public TableView<Data> setupTablee(ObservableList<Data> list){
 
         TableView<Data> table = new TableView<>();
         table.setItems(list);

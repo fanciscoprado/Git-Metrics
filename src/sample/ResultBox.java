@@ -13,7 +13,7 @@ import javafx.geometry.*;
 import java.util.LinkedList;
 
 public class ResultBox {
-    Button sceneSwitch;
+
 
     public static void display(ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
@@ -21,23 +21,20 @@ public class ResultBox {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
-        Scene dataDisplay = new DisplayMetricsData().displayAll(list);
+        Button sceneSwitch1 = new Button("Contributors");
+        Button sceneSwitch2 = new Button("Metrics");
 
 
+        VBox layout1 = new VBox();
+        layout1.getChildren().addAll(new DisplayMetricsData().setupTablee(list), sceneSwitch1 );
+        Scene dataDisplay = new Scene(layout1);
 
+        VBox layout2 = new VBox();
+        layout2.getChildren().addAll(new DisplayComiiterData().displayPiechart(cList), sceneSwitch2);
+        Scene commiterDataDisplay = new Scene(layout2);
 
-
-
-
-        //***********************************************************************pie chart start**********************************
-        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-        for(CommiterInfo temp: cList){
-            pieChartData.add(new PieChart.Data(temp.getName(),temp.getCommits()));
-        }
-        final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Commiters");
-        chart.setLegendSide(Side.LEFT);
-        //************************end pie cahrt************************************************
+        sceneSwitch1.setOnAction(e -> window.setScene(commiterDataDisplay));
+        sceneSwitch2.setOnAction(e -> window.setScene(dataDisplay));
 
 
 
@@ -45,7 +42,7 @@ public class ResultBox {
 
         //Display window and wait for it to be closed before returning
 
-        window.setScene(new DisplayMetricsData().displayAll(list));
+        window.setScene(dataDisplay);
         window.showAndWait();
 
     }
