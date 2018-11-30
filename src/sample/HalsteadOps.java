@@ -30,6 +30,8 @@ public class HalsteadOps
         StreamTokenizer st = new StreamTokenizer(readf);
         st.wordChars('a','z');
         st.wordChars('!','}');
+        st.wordChars(47,57);
+        st.wordChars(0,1);
         st.slashSlashComments(true);
         st.slashStarComments(true);
         st.commentChar('/');
