@@ -19,7 +19,7 @@ public class VocabConstructor
             , "^", "0", "0", "^=", "0", "0"};
 
     //collects operators and their positions
-    ArrayList<halsteadOperator> vocabList = new ArrayList<halsteadOperator>();
+    ArrayList<halsteadOperator> vocabList = new ArrayList<>();
 
     //collects all relevant elements for Halstead metrics
     ArrayList<String> codeList = new ArrayList<>();
@@ -82,7 +82,6 @@ public class VocabConstructor
                     codeList.add(tempString.toString());
                     tempString = new StringBuilder();
                 }
-                //System.out.println(fileStream.sval);
                 codeList.add(fileStream.sval);
             }
         }
