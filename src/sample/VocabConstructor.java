@@ -60,17 +60,30 @@ public class VocabConstructor
         BufferedReader readFile = new BufferedReader(new FileReader(currentFile));
         StreamTokenizer fileStream = new StreamTokenizer(readFile);
         char tempChar;
-        StringBuilder tempString = new StringBuilder;
+        StringBuilder tempString = new StringBuilder();
         fileStream.slashStarComments(true);
         while(fileStream.nextToken() != fileStream.TT_EOF){
             if(fileStream.sval==null){
                 tempChar = (char)fileStream.ttype;
-                for (char c : HALF_OPERATOR) {
-                    if(c == tempChar) {
+                for (int i = 0; i < HALF_OPERATOR.length; i++) {
+                    if(HALF_OPERATOR[i] == tempChar) {
                         tempString.append(tempChar);
                         break;
                     }
+                    if((i+1)==HALF_OPERATOR.length){
+                        if(tempString.length() > 0){
+                            codeList.add(tempString.toString());
+                            tempString = new StringBuilder();
+                        }
+                    }
                 }
+            } else {
+                if(tempString.length() > 0){
+                    codeList.add(tempString.toString());
+                    tempString = new StringBuilder();
+                }
+                System.out.println(fileStream.sval);
+                codeList.add(fileStream.sval);
             }
         }
     }
@@ -90,6 +103,9 @@ public class VocabConstructor
         }
         File currentFile = new File("src/sample/Halstead.java");
         test.buildCodeList(currentFile);
+        for(int i = 0; i < test.codeList.size(); i++){
+            System.out.println(test.codeList.get(i));
+        }
     }
 }
 
