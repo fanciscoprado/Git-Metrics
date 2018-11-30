@@ -1,6 +1,7 @@
 package sample;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.Reader;
 import java.io.StreamTokenizer;
 
@@ -24,8 +25,7 @@ public class HalsteadOps
             "dynamic_cast","reinterpret_cast","typeid","template","explicit","true","false","typename","const","friend","volatile",
             "final","auto","extern","register","static","typedef","virtual","mutable","inline"};
     char[] javasplit= {'~','!','#','%','^','&','*','(',')','-','+','=','{','}','[',']',':',';','\"','\'','?','|'};
-    public int getDistinctOperator()
-    {
+    public int getDistinctOperator() throws IOException {
         Reader readf = new FileReader("src/sample/Halstead.java");
         StreamTokenizer st = new StreamTokenizer(readf);
         st.wordChars('a','z');
@@ -43,7 +43,7 @@ public class HalsteadOps
             String temp = st.sval;
             if(!(temp == null))
             {
-                contain =  containsAny(temp, javaOperators);
+                contain =  containsAny(temp, javasplit);
             }
             if(contain)
             {
