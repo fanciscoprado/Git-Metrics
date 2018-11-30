@@ -47,7 +47,7 @@ public class HalsteadOps
             }
             if(contain)
             {
-                System.out.println(temp);
+                System.out.println("split this");
             }
             else
             {
