@@ -42,7 +42,8 @@ public class DataCollector {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
+    }
+    private void getHalstead(){
+        /* TODO: 12/2/2018 */
     }
 }
