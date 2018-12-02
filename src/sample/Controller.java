@@ -32,7 +32,7 @@ public class Controller {
         Git git = gitController.downloadRepo(getURL());
         LinkedList<CommiterInfo> commiterList = gitController.getCommitCount(git);
         LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
-        ObservableList<Data> dataList = dataCollector.collectData(fileList);
+        ObservableList<Data> dataList = dataCollector.collectData(fileList, dataToCollect);
         ResultBox resultBox = new ResultBox();
         resultBox.display(dataList,commiterList);
         git.getRepository().close();

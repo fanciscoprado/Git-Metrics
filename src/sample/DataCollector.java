@@ -8,13 +8,14 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class DataCollector {
-    public ObservableList<Data> collectData(LinkedList<File> fileList){
+    public ObservableList<Data> collectData(LinkedList<File> fileList, DataToCollect dataToCollect){
         ObservableList<Data> dataList = FXCollections.observableArrayList();
         for(File temp : fileList){
             Data data = new Data();
             data.setFilename(temp.getName());
-            getWordCount(data,temp);
-            getSourceLines(data,temp);
+            getMetrics(temp, dataToCollect, data);
+           // getWordCount(data,temp);
+           // getSourceLines(data,temp);
             dataList.add(data);
         }
 
@@ -22,7 +23,33 @@ public class DataCollector {
         return dataList;
     }
 
-    private void getWordCount(Data data, File temp){
+    private void getMetrics(File temp, DataToCollect dataToCollect, Data data) throws IOException {
+        if(!dataToCollect.isLineCount() && !dataToCollect.isWordCount() && !dataToCollect.isCharCount()){
+            getWLSCount(data,temp);
+        }else {
+            wc counter = new wc();
+            counter.counter(temp.getName(),temp);
+
+            if (dataToCollect.isWordCount())
+                getWordCount(counter);
+            if (dataToCollect.isCharCount())
+                getCharCount(counter);
+            if (dataToCollect.isLineCount())
+                getLineCount(counter);
+
+        }
+    }
+    private void getWordCount(wc counter){
+
+    }
+    private void getCharCount(wc counter){
+
+    }
+    private void getLineCount(wc counter){
+
+    }
+
+    private void getWLSCount(Data data, File temp){
         wc counter = new wc();
         try {
             counter.counter(data.getFilename(),temp);
