@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class DataCollector {
-    public ObservableList<Data> collectData(LinkedList<File> fileList, DataToCollect dataToCollect){
+    public ObservableList<Data> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
         ObservableList<Data> dataList = FXCollections.observableArrayList();
         for(File temp : fileList){
             Data data = new Data();
@@ -31,22 +31,25 @@ public class DataCollector {
             counter.counter(temp.getName(),temp);
 
             if (dataToCollect.isWordCount())
-                getWordCount(counter);
+                getWordCount(counter,data);
             if (dataToCollect.isCharCount())
-                getCharCount(counter);
+                getCharCount(counter,data);
             if (dataToCollect.isLineCount())
-                getLineCount(counter);
+                getLineCount(counter,data);
 
         }
     }
-    private void getWordCount(wc counter){
-
+    private void getWordCount(wc counter, Data data){
+        data.setFilename(counter.getFilename());
+        data.setWcount(counter.getWcount());
     }
-    private void getCharCount(wc counter){
-
+    private void getCharCount(wc counter, Data data){
+        data.setFilename(counter.getFilename());
+        data.setCcount(counter.getCcount());
     }
-    private void getLineCount(wc counter){
-
+    private void getLineCount(wc counter, Data data){
+        data.setFilename(counter.getFilename());
+        data.setLcount(counter.getLcount());
     }
 
     private void getWLSCount(Data data, File temp){
