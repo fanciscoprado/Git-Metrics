@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox>
          <children>
@@ -74,7 +74,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                        <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="MultiFileMode">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin></CheckBox>

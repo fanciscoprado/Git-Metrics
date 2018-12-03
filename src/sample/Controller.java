@@ -2,9 +2,15 @@ package sample;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.eclipse.jgit.api.Git;
 
 import java.io.File;
@@ -23,6 +29,11 @@ public class Controller {
     private CheckBox checkBox3;
     @FXML
     public Button goButton;
+    @FXML
+    private CheckBox checkBox4;
+    @FXML
+    private AnchorPane stage;
+
 
     public void onClick() throws IOException {
         SingleGitRepo singleGitRepo = new SingleGitRepo();
@@ -57,6 +68,13 @@ public class Controller {
         else
             dataToCollect.setCharCount(false);
 
+    }
+
+    public void box4() throws IOException {
+        if(checkBox4.isSelected()){
+            Stage stage = (Stage) checkBox1.getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("MultiFileScene.fxml"))));
+        }
     }
 
 

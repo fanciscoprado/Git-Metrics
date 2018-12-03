@@ -74,7 +74,7 @@
                                         <Font size="18.0" />
                                     </font>
                                 </Text>
-                                <CheckBox mnemonicParsing="false" text="MultiFileMode">
+                                <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="Single File Mode">
                                     <VBox.margin>
                                         <Insets top="5.0" />
                                     </VBox.margin></CheckBox>
