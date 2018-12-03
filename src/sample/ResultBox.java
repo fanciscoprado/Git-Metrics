@@ -1,21 +1,17 @@
 package sample;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.chart.PieChart;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
-import javafx.geometry.*;
 
 import java.util.LinkedList;
 
 public class ResultBox {
 
 
-    public static void display(ObservableList<Data> list, LinkedList<CommiterInfo> cList) {
+    public static void display(ObservableList<DataColected> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
         //Block events to other windows
         window.initModality(Modality.APPLICATION_MODAL);

@@ -8,67 +8,67 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class DataCollector {
-    public ObservableList<Data> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
-        ObservableList<Data> dataList = FXCollections.observableArrayList();
+    public ObservableList<DataColected> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
+        ObservableList<DataColected> dataColectedList = FXCollections.observableArrayList();
         for(File temp : fileList){
-            Data data = new Data();
-            data.setFilename(temp.getName());
-            getMetrics(temp, dataToCollect, data);
-           // getWordCount(data,temp);
-           // getSourceLines(data,temp);
-            dataList.add(data);
+            DataColected dataColected = new DataColected();
+            dataColected.setFilename(temp.getName());
+            getMetrics(temp, dataToCollect, dataColected);
+           // getWordCount(dataColected,temp);
+           // getSourceLines(dataColected,temp);
+            dataColectedList.add(dataColected);
         }
 
 
-        return dataList;
+        return dataColectedList;
     }
 
-    private void getMetrics(File temp, DataToCollect dataToCollect, Data data) throws IOException {
+    private void getMetrics(File temp, DataToCollect dataToCollect, DataColected dataColected) throws IOException {
         if(!dataToCollect.isLineCount() && !dataToCollect.isWordCount() && !dataToCollect.isCharCount()){
-            getWLSCount(data,temp);
+            getWLSCount(dataColected,temp);
         }else {
             wc counter = new wc();
             counter.counter(temp.getName(),temp);
 
             if (dataToCollect.isWordCount())
-                getWordCount(counter,data);
+                getWordCount(counter, dataColected);
             if (dataToCollect.isCharCount())
-                getCharCount(counter,data);
+                getCharCount(counter, dataColected);
             if (dataToCollect.isLineCount())
-                getLineCount(counter,data);
+                getLineCount(counter, dataColected);
 
         }
     }
-    private void getWordCount(wc counter, Data data){
-        data.setFilename(counter.getFilename());
-        data.setWcount(counter.getWcount());
+    private void getWordCount(wc counter, DataColected dataColected){
+        dataColected.setFilename(counter.getFilename());
+        dataColected.setWcount(counter.getWcount());
     }
-    private void getCharCount(wc counter, Data data){
-        data.setFilename(counter.getFilename());
-        data.setCcount(counter.getCcount());
+    private void getCharCount(wc counter, DataColected dataColected){
+        dataColected.setFilename(counter.getFilename());
+        dataColected.setCcount(counter.getCcount());
     }
-    private void getLineCount(wc counter, Data data){
-        data.setFilename(counter.getFilename());
-        data.setLcount(counter.getLcount());
+    private void getLineCount(wc counter, DataColected dataColected){
+        dataColected.setFilename(counter.getFilename());
+        dataColected.setLcount(counter.getLcount());
     }
 
-    private void getWLSCount(Data data, File temp){
+    private void getWLSCount(DataColected dataColected, File temp){
         wc counter = new wc();
         try {
-            counter.counter(data.getFilename(),temp);
-            data.setWcount(counter.getWcount());
-            data.setLcount(counter.getLcount());
-            data.setCcount(counter.getCcount());
+            counter.counter(dataColected.getFilename(),temp);
+            dataColected.setWcount(counter.getWcount());
+            dataColected.setLcount(counter.getLcount());
+            dataColected.setCcount(counter.getCcount());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void getSourceLines(Data data, File temp){
+    private void getSourceLines(DataColected dataColected, File temp){
         countSourceLines counter = new countSourceLines();
         try {
-            data.setSlcount(counter.getSourceLines(temp));
-            data.setCccount(counter.getCommentLines(temp));
+            dataColected.setSlcount(counter.getSourceLines(temp));
+            dataColected.setCccount(counter.getCommentLines(temp));
         } catch (IOException e) {
             e.printStackTrace();
         }

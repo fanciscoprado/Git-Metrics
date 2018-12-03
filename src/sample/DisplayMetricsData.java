@@ -1,41 +1,39 @@
 package sample;
 
 import javafx.collections.ObservableList;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
 
 public class DisplayMetricsData {
 
 
-    public TableView<Data> setupTablee(ObservableList<Data> list){
+    public TableView<DataColected> setupTablee(ObservableList<DataColected> list){
 
-        TableView<Data> table = new TableView<>();
+        TableView<DataColected> table = new TableView<>();
         table.setItems(list);
 
-        TableColumn<Data, String> nameColum = new TableColumn<>("File Name");
+        TableColumn<DataColected, String> nameColum = new TableColumn<>("File Name");
         nameColum.setMinWidth(200);
         nameColum.setCellValueFactory(new PropertyValueFactory<>("filename"));
 
-        TableColumn<Data, String> wordColum = new TableColumn<>("Word Count");
+        TableColumn<DataColected, String> wordColum = new TableColumn<>("Word Count");
         wordColum.setMinWidth(200);
         wordColum.setCellValueFactory(new PropertyValueFactory<>("wcount"));
 
-        TableColumn<Data, String> lineColumn = new TableColumn<>("Line Count");
+        TableColumn<DataColected, String> lineColumn = new TableColumn<>("Line Count");
         lineColumn.setMinWidth(200);
         lineColumn.setCellValueFactory(new PropertyValueFactory<>("lcount"));
 
-        TableColumn<Data, String> charColum = new TableColumn<>("Char Count");
+        TableColumn<DataColected, String> charColum = new TableColumn<>("Char Count");
         charColum.setMinWidth(200);
         charColum.setCellValueFactory(new PropertyValueFactory<>("ccount"));
 
-        TableColumn<Data, String> sorceColumn = new TableColumn<>("Source Count");
+        TableColumn<DataColected, String> sorceColumn = new TableColumn<>("Source Count");
         sorceColumn.setMinWidth(200);
         sorceColumn.setCellValueFactory(new PropertyValueFactory<>("slcount"));
 
-        TableColumn<Data, String> commentColumn = new TableColumn<>("Comment Count");
+        TableColumn<DataColected, String> commentColumn = new TableColumn<>("Comment Count");
         commentColumn.setMinWidth(200);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
 

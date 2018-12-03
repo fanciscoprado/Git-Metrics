@@ -103,7 +103,7 @@ public class VocabConstructor
     }
 }
 
-//Data class: defines and identifies operators
+//DataColected class: defines and identifies operators
 class halsteadOperator
 {
     boolean prefixFlag;

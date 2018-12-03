@@ -3,7 +3,7 @@ package sample;
 import java.io.File;
 import java.io.IOException;
 
-public class Data {
+public class DataColected {
     private long ccount;
     private long wcount;
     private long lcount;

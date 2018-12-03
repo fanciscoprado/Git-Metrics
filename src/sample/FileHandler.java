@@ -15,7 +15,7 @@ public class FileHandler {
         return  flist;
     }
 
-    private LinkedList makeList(File folder, LinkedList<File> list, DataToCollect dataToCollect) throws IOException { //Makes observable list of Data objects that contain the metrics
+    private LinkedList makeList(File folder, LinkedList<File> list, DataToCollect dataToCollect) throws IOException { //Makes observable list of DataColected objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             String fname = file.getName();
