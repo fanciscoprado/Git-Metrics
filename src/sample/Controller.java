@@ -25,18 +25,8 @@ public class Controller {
     public Button goButton;
 
     public void onClick() throws IOException {
-        GitController gitController = new GitController();
-        FileHandler fileHandler = new FileHandler();
-        DataCollector dataCollector = new DataCollector();
-        Git git = gitController.downloadRepo(getURL());
-        LinkedList<CommiterInfo> commiterList = gitController.getCommitCount(git);
-        LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
-        ObservableList<DataColected> dataColectedList = dataCollector.collectData(fileList, dataToCollect);
-        ResultBox resultBox = new ResultBox();
-        resultBox.display(dataColectedList,commiterList);
-        git.getRepository().close();
-        git.close();
-        gitController.close();
+        SingleGitRepo singleGitRepo = new SingleGitRepo();
+        singleGitRepo.start(dataToCollect, getURL());
 
     }
     //gets url from text field
