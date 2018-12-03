@@ -7,9 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.LinkedList;
 
 public class Controller2 extends Controller {
     @FXML
@@ -26,13 +29,34 @@ public class Controller2 extends Controller {
     private CheckBox checkBox4;
     @FXML
     private AnchorPane stage;
+    @FXML
+    private Button addRepo;
+    private LinkedList<String> repoList = new LinkedList<>();
+
     @Override
     public void onClick() throws IOException {
-        MultiGitRepo multiGitRepo = new MultiGitRepo();
-        multiGitRepo.start(dataToCollect,getURL());
-        ResultBox box = new ResultBox();
-        System.out.println("This is scene 2");
-        box.display(multiGitRepo.getDataColectedList(),multiGitRepo.getCommiterList());
+        LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
+        for(String temp : repoList){
+            MultiGitRepo multiGitRepo = new MultiGitRepo();
+            multiGitRepo.start(dataToCollect,getURL());
+            parsedRepoList.push(multiGitRepo);
+        }
+        for(MultiGitRepo temp : parsedRepoList){
+            Stage window = new Stage();
+            //Block events to other windows
+            window.setTitle("Results");
+            VBox layout2 = new VBox();
+            layout2.getChildren().addAll(new DisplayComiiterData().displayPiechart(temp.getCommiterList()) );
+            Scene commiterDataDisplay = new Scene(layout2);
+            window.setScene(commiterDataDisplay);
+            window.show();
+
+
+
+        }
+
+
+
     }
 
     @Override
@@ -41,5 +65,10 @@ public class Controller2 extends Controller {
             Stage stage = (Stage) checkBox1.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("sample.fxml"))));
         }
+    }
+
+    public void addRepoClicked(){
+        System.out.println(getURL());
+        repoList.push(getURL());
     }
 }
