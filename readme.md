@@ -32,10 +32,10 @@ word count, line count, character count, comment line count and source line coun
 
    Our software will allow uses to change the way that they check for metrics and information in their upload files or website. This will allow the user
    to do what they find fit with the info provided.
+   
    **2.2** Definitions
-
-
-   **2.3** Product Constraints
+   
+    **2.3** Product Constraints
 3. **External Interface Requirements**
 
     The GUI makes it much more user friendly to input a file or website than when using the program through a command line.

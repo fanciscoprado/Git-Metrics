@@ -49,7 +49,6 @@ public class GitController {
         CommiterInfo info = new CommiterInfo(string);
         if(commiterList.size() ==0) {
             info.pushCommit(commit.getFullMessage());
-            System.out.println(commit.getFullMessage());
             commiterList.push(info);
         }
         else {
