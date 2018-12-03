@@ -8,6 +8,7 @@ import java.io.StreamTokenizer;
 public class HalsteadOps
 {
     /*special case words for java operators*/
+    //correct the list again
     String[] javaOperators= {"!","!=","%","%=","&","&&","||","&=","(",")","{","}","[","]","*","*=","+","++","+=",",",
             "-","--","-=->",".","...","/","/=",":","::","<","<<","<<=","<=","=","==",">",">=",">>",">>>",">>=>>>=","?",
             "^","^=","|","|=","~",";","=&","\"","\'","#","##","~","break","case",
