@@ -25,12 +25,9 @@ public class Controller {
     public Button goButton;
 
     public void onClick() throws IOException {
-        //SingleGitRepo singleGitRepo = new SingleGitRepo();
-        //singleGitRepo.start(dataToCollect, getURL());
-        MultiGitRepo multiGitRepo = new MultiGitRepo();
-        multiGitRepo.start(dataToCollect,getURL());
-        ResultBox box = new ResultBox();
-        box.display(multiGitRepo.getDataColectedList(),multiGitRepo.getCommiterList());
+        SingleGitRepo singleGitRepo = new SingleGitRepo();
+        singleGitRepo.start(dataToCollect, getURL());
+
     }
     //gets url from text field
     public String getURL(){
