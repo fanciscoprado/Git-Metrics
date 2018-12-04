@@ -1,4 +1,4 @@
-package sample;
+package sample.halstead;
 
 import java.io.FileReader;
 import java.io.IOException;

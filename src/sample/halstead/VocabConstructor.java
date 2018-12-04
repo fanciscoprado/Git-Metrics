@@ -1,4 +1,4 @@
-package sample;
+package sample.halstead;
 
 import sample.halstead.halsteadOperator;
 

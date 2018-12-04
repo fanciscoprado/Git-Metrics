@@ -1,4 +1,4 @@
-package sample;
+package sample.halstead;
 
 public class Halstead
 {

@@ -1,4 +1,4 @@
-package sample;
+package sample.halstead;
 import java.io.IOException;
 import java.io.*;
 import java.io.StreamTokenizer;
