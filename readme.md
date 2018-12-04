@@ -42,6 +42,7 @@ word count, line count, character count, comment line count and source line coun
     The metrics are also placed in boxes making it much easier for the user to see what their file/url has.
    **3.1**
 4. **System Features**
+   
     A fully functioning GUI that allows user to get metrics from a file or a website with ease. The program will then 
     relay this information to the GUI and user will be able to observe the dataColected from their inputted source.
      
