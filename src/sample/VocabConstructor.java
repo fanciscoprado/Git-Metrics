@@ -1,5 +1,7 @@
 package sample;
 
+import sample.halstead.halsteadOperator;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -28,27 +30,27 @@ public class VocabConstructor
     public void setVocab()
     {
         halsteadOperator temp = new halsteadOperator();
-        String c;
+        String s;
         for (int index = 0; index < BASIC_OPERATOR_LIST.length; index++) {
             //halsteadOperator has three elements. The String array being read from stores them in this order:
             //name, if its a prefix and if its a postfix
-            c = BASIC_OPERATOR_LIST[index];
+            s = BASIC_OPERATOR_LIST[index];
             if(index % 3 == 0)
             {
                 temp = new halsteadOperator();
-                temp.operatorName = c;
+                temp.setOperatorName(s);
             }
             if((index - 1) % 3 == 0) {
-                if (c.equals("0"))
-                    temp.prefixFlag = false;
+                if (s.equals("0"))
+                    temp.setPrefixFlag(false);
                 else
-                    temp.prefixFlag = true;
+                    temp.setPrefixFlag(true);
             }
             if((index - 2) % 3 == 0) {
-                if (c.equals("0"))
-                    temp.suffixFlag = false;
+                if (s.equals("0"))
+                    temp.setSuffixFlag(false);
                 else
-                    temp.suffixFlag = true;
+                    temp.setSuffixFlag(true);
                 vocabList.add(temp);
             }
         }
