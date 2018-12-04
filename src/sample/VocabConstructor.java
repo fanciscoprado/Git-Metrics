@@ -102,16 +102,3 @@ public class VocabConstructor
         }
     }
 }
-
-//DataColected class: defines and identifies operators
-class halsteadOperator
-{
-    boolean prefixFlag;
-    boolean suffixFlag;
-    String operatorName;
-
-    @Override
-    public String toString(){
-        return operatorName + ", " + prefixFlag + ", " + suffixFlag;
-    }
-}
