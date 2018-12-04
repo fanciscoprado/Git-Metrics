@@ -85,10 +85,11 @@ public class VocabConstructor
                 codeList.add(fileStream.sval);
             }
         }
+        readFile.close();
     }
 
     //doesn't need a main - but it is good for testing
-    public static void main(String[] args)throws Exception
+    /*public static void main(String[] args)throws Exception
     {
         VocabConstructor test = new VocabConstructor();
         test.setVocab();
@@ -100,5 +101,5 @@ public class VocabConstructor
         for(int i = 0; i < test.codeList.size(); i++){
             System.out.println(test.codeList.get(i));
         }
-    }
+    }*/
 }
