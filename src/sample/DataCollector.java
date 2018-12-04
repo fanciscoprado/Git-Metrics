@@ -64,15 +64,17 @@ public class DataCollector {
     }
 
     private void getSourceLines(DataColected dataColected, File temp){
+        //Replaced countSourceLines with lineCounter
         //countSourceLines counter = new countSourceLines();
         lineCounter counter = new lineCounter();
         int[] lineTally = {0, 0};
         try {
             /*dataColected.setSlcount(counter.getSourceLines(temp));
             dataColected.setCccount(counter.getCommentLines(temp));*/
+            //getNumberOfLines returns an array of two length
             lineTally = counter.getNumberOfLines(temp);
-            dataColected.setSlcount(lineTally[0]);
-            dataColected.setCccount(lineTally[1]);
+            dataColected.setSlcount(lineTally[0]);  //lineTally[0] is Source Lines
+            dataColected.setCccount(lineTally[1]);  //lineTally[1] is Comment Lines
 
         } catch (IOException e) {
             e.printStackTrace();

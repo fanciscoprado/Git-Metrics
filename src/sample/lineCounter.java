@@ -8,13 +8,14 @@ import java.io.IOException;
 class lineCounter {
     //This code has been acquired from https://gist.github.com/shiva27/143229. I have extended their javadoc code
     //to include both an @author and an @see to the page of this code. This code has been slightly modified
-    //to fit my needs.
+    //to fit the needs of the Metrics program
     /**
      * @author shiva27
      * @see <a href="https://gist.github.com/shiva27/1432290">https://gist.github.com/shiva27/1432290</a>
      */
-    public static int[] getNumberOfLines(File currentFile)
+    public int[] getNumberOfLines(File currentFile)
             throws IOException {
+        //Changed from source: getNumberOfLines now declares its own buffered reader
         BufferedReader bReader = new BufferedReader(new FileReader(currentFile));
         int countSource = 0;
         int countComment = 0;
@@ -62,7 +63,7 @@ class lineCounter {
      * @param line
      * @return This method checks if in the given line a comment has begun and has not ended
      */
-    private static boolean commentBegan(String line) {
+    private boolean commentBegan(String line) {
         // If line = /* */, this method will return false
         // If line = /* */ /*, this method will return true
         int index = line.indexOf("/*");
@@ -88,7 +89,7 @@ class lineCounter {
      * @param line
      * @return This method checks if in the given line a comment has ended and no new comment has not begun
      */
-    private static boolean commentEnded(String line) {
+    private boolean commentEnded(String line) {
         // If line = */ /* , this method will return false
         // If line = */ /* */, this method will return true
         int index = line.indexOf("*/");
@@ -117,7 +118,7 @@ class lineCounter {
      * @return This method returns true if there is any valid source code in the given input line. It does not worry if comment has begun or not.
      * This method will work only if we are sure that comment has not already begun previously. Hence, this method should be called only after {@link #commentBegan(String)} is called
      */
-    private static boolean isSourceCodeLine(String line) {
+    private boolean isSourceCodeLine(String line) {
         boolean isSourceCodeLine = false;
         line = line.trim();
         if ("".equals(line) || line.startsWith("//")) {
