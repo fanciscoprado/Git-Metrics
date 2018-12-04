@@ -15,7 +15,7 @@ public class DataCollector {
             dataColected.setFilename(temp.getName());
             getMetrics(temp, dataToCollect, dataColected);
            // getWordCount(dataColected,temp);
-           // getSourceLines(dataColected,temp);
+            getSourceLines(dataColected,temp);
             dataColectedList.add(dataColected);
         }
 
@@ -36,7 +36,6 @@ public class DataCollector {
                 getCharCount(counter, dataColected);
             if (dataToCollect.isLineCount())
                 getLineCount(counter, dataColected);
-
         }
     }
     private void getWordCount(wc counter, DataColected dataColected){
@@ -65,10 +64,16 @@ public class DataCollector {
     }
 
     private void getSourceLines(DataColected dataColected, File temp){
-        countSourceLines counter = new countSourceLines();
+        //countSourceLines counter = new countSourceLines();
+        lineCounter counter = new lineCounter();
+        int[] lineTally = {0, 0};
         try {
-            dataColected.setSlcount(counter.getSourceLines(temp));
-            dataColected.setCccount(counter.getCommentLines(temp));
+            /*dataColected.setSlcount(counter.getSourceLines(temp));
+            dataColected.setCccount(counter.getCommentLines(temp));*/
+            lineTally = counter.getNumberOfLines(temp);
+            dataColected.setSlcount(lineTally[0]);
+            dataColected.setCccount(lineTally[1]);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
