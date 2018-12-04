@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class DataCollector {
+
     public ObservableList<DataColected> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
         ObservableList<DataColected> dataColectedList = FXCollections.observableArrayList();
         for(File temp : fileList){
             DataColected dataColected = new DataColected();
             dataColected.setFilename(temp.getName());
             getMetrics(temp, dataToCollect, dataColected);
-           // getWordCount(dataColected,temp);
             getSourceLines(dataColected,temp);
             dataColectedList.add(dataColected);
         }
