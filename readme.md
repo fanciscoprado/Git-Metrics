@@ -5,7 +5,7 @@ The user will then be given in a app window the metrics of their dataColected ba
 provided. This application will work with both Mac and Windows machines.
 > The program will allow the user to link a website(like a github file) or input a local file into the program
 and then it will give the user the options to select what kind of metric they would like to see. The options we have to far are
-word count, line count, character count, comment line count and source line count.
+word count, line count, character count, comment line count and source line count. The program will show the user in a GUI interface and a pie chart of what data it has gathered.
 ## Members 
 * Christopher Vejsada
 * Francisco Prado
