@@ -12,5 +12,17 @@ public class countDepthOfInheritance {
         String[]keywords = {"class"};
         String words = "";        //temp variable to hold value of token
         String line = null;
+        try
+        {
+            fileName = "GetFiles.java";
+            FileReader fr = new FileReader(fileName);
+            BufferedReader br = new BufferedReader(fr);
+            line = br.readLine();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        return (inheritance);
     }
 }
