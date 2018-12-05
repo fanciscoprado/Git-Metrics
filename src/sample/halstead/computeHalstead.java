@@ -13,8 +13,12 @@ public class computeHalstead {
     //collects all relevant elements for Halstead metrics
     ArrayList<String> codeList = new ArrayList<>();
 
+    public void compute(){
+
+    }
+
     //Creates an indexed list of all the elements from stream tokenizer
-    public void buildCodeList(File currentFile)throws Exception
+    private void buildCodeList(File currentFile)throws Exception
     {
         BufferedReader readFile = new BufferedReader(new FileReader(currentFile));
         StreamTokenizer fileStream = new StreamTokenizer(readFile);

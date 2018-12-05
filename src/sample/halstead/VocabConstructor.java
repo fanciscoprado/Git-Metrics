@@ -6,16 +6,16 @@ public class VocabConstructor
 {
     final String[] BASIC_OPERATOR_LIST = {"=", "0", "0", "==", "0", "0", "+", "0", "0", "++", "0", "1", "+=", "0", "0"
             , "-", "0", "0", "--", "0", "1", "-=", "0", "0", "*", "0", "0", "*=", "0", "0", "/", "0", "0", "/="
-            , "0", "0", "%", "0", "0", "%=", "0", "0", "!", "0", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
+            , "0", "0", "%", "0", "0", "%=", "0", "0", "!", "1", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
             , "0", "0", ">>>", "0", "0", "<", "0", "0", "<=", "0", "0", "<<", "0", "0", "&", "0", "0", "&&", "0"
             , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
             , "^", "0", "0", "^=", "0", "0"};
 
     //collects operators and their positions
-    ArrayList<halsteadOperator> vocabList = new ArrayList<>();
+    private ArrayList<halsteadOperator> vocabList = new ArrayList<>();
 
     //Fills vocabList with operators - reads from a built-in list right now but should read from a file later.
-    public void setVocab()
+    public void setVocabList()
     {
         halsteadOperator temp = new halsteadOperator();
         String s;
@@ -44,11 +44,15 @@ public class VocabConstructor
         }
     }
 
+    public ArrayList<halsteadOperator> getVocabList(){
+        return vocabList;
+    }
+
     //doesn't need a main - but it is good for testing
     /*public static void main(String[] args)throws Exception
     {
         VocabConstructor test = new VocabConstructor();
-        test.setVocab();
+        test.setVocabList();
         for(int i = 0; i < test.vocabList.size(); i++){
             System.out.println(test.vocabList.get(i));
         }
