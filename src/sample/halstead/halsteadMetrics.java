@@ -2,6 +2,20 @@ package sample.halstead;
 
 public class halsteadMetrics
 {
+    private int nOne;
+    private int nTwo;
+    private int N1;
+    private int N2;
+    private int programVocab;
+    private int programLength;
+    private double calculatedProgramLength;
+    private double volume;
+    private double difficulty;
+    private double effort;
+    private double timeRequired;
+    private double bugs;
+
+
     /*
     public int getHalsteadn1(){
         return totalDoc.nOne;
