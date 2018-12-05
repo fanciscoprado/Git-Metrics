@@ -69,7 +69,7 @@ public class Controller2 extends Controller {
     }
 
     public void addRepoClicked() throws IOException {
-        if(repoCount < 3) {
+        if(repoCount < 2) {
             System.out.println(getURL());
             repoList.push(getURL());
             repoCount++;
