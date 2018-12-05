@@ -64,50 +64,50 @@ public class halsteadMetrics
     }
 
     int getnOne(){
-
+        return this.nOne;
     }
 
     int getnTwo(){
-
+        return this.nTwo;
     }
 
     int getN1(){
-
+        return this.N1;
     }
 
     int getN2(){
-
+        return this.N2;
     }
 
     int getProgramVocab(){
-
+        return this.programVocab;
     }
 
     int getProgramLength(){
-
+        return this.programLength;
     }
 
     double getCalculatedProgramLength(){
-
+        return this.calculatedProgramLength;
     }
 
     double getVolume(){
-
+        return this.volume;
     }
 
     double getDifficulty(){
-
+        return this.difficulty;
     }
 
     double getEffort(){
-
+        return this.effort;
     }
 
     double getTimeRequired(){
-
+        return this.timeRequired;
     }
 
     double getBugs(){
-
+        return this.bugs;
     }
 }
