@@ -7,4 +7,12 @@ import java.util.*;
 // Author: amirjamil90 March 15, 2015
 
 public class countCyclomaticComplexity {
+    public int checkForUniquePath(){
+        int complexity = 1;
+        String fileName;
+        String[]keywords = {""};
+        String words = "";
+        String line = null;
+        return (complexity);
+    }
 }
