@@ -6,6 +6,10 @@ import java.io.*;
 import java.util.*;
 
 public class countDepthOfInheritance {
+    //Information that may or may not be implemented in output in the future. Depth of Inheritance of this class: 0.
+    //Counter is the depth.
+    //Low implies less complexity, less possibility for code reuse.
+    //High implies higher complexity, more possibility for code reuse. Higher chance for errors.
     public int checkForInheritance (){
         int inheritance = 1;
         String fileName;
