@@ -1,6 +1,8 @@
 package sample;
 
-//experimental class, don't know if this will work properly. DoI will follow CC algorithm.
+//Experimental class, don't know if this will work properly. DoI will follow CC algorithm.
+//After creating this, an issue was discovered. This does not actually measure the depth of inheritance, but just counts the number of classes.
+//Need to adjust search parameter to filter extensions of classes also.
 
 import java.io.*;
 import java.util.*;
