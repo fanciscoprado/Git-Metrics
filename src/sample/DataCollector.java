@@ -83,4 +83,8 @@ public class DataCollector {
     private void getHalstead(){
         /* TODO: 12/2/2018 */
     }
+
+    private void getCyclomaticComplexity(){
+        //TODO: 12/5/2018
+    }
 }
