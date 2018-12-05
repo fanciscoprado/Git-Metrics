@@ -32,13 +32,14 @@ public class Controller2 extends Controller {
     @FXML
     private Button addRepo;
     private LinkedList<String> repoList = new LinkedList<>();
+    private int repoCount = 0;
 
     @Override
     public void onClick() throws IOException {
         LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
         for(String temp : repoList){
             MultiGitRepo multiGitRepo = new MultiGitRepo();
-            multiGitRepo.start(dataToCollect,getURL());
+            multiGitRepo.start(dataToCollect,temp);
             parsedRepoList.push(multiGitRepo);
         }
         for(MultiGitRepo temp : parsedRepoList){
@@ -67,8 +68,14 @@ public class Controller2 extends Controller {
         }
     }
 
-    public void addRepoClicked(){
-        System.out.println(getURL());
-        repoList.push(getURL());
+    public void addRepoClicked() throws IOException {
+        if(repoCount < 3) {
+            System.out.println(getURL());
+            repoList.push(getURL());
+            repoCount++;
+        }else {
+            System.out.println("To many repos continuing");
+            onClick();
+        }
     }
 }
