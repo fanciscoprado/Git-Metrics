@@ -15,64 +15,53 @@ public class halsteadMetrics
     private double timeRequired;
     private double bugs;
 
-    void setnOne(int val){this.nOne = val;}
-
-    void setnTwo(int val){this.nTwo = val;}
-
-    void setN1(int val){this.N1 = val;}
-
-    void setN2(int val){ }
-
-    void setProgramVocab(int val){ }
-
-    void setProgramLength(int val){ }
-
-    void setCalculatedProgramLength(double val){ }
-
-    void setVolume(double val){ }
-
-    void setDifficulty(double val){ }
-
-    void setEffort(double val){ }
-
-    void setTimeRequired(double val){ }
-
-    void setBugs(double val){ }
-    /*
-    public int getHalsteadn1(){
-        return totalDoc.nOne;
+    void setnOne(int val){
+        this.nOne = val;
     }
-    public int getHalsteadn2(){
-        return totalDoc.nTwo;
+
+    void setnTwo(int val){
+        this.nTwo = val;
     }
-    public int getHalsteadN1(){
-        return totalDoc.N1;
+
+    void setN1(int val){
+        this.N1 = val;
     }
-    public int getHalsteadN2(){
-        return totalDoc.N2;
+
+    void setN2(int val){
+        this.N2 = val;
     }
-    public int getHalsteadVocabulary(){
-        return totalDoc.programVocab;
+
+    void setProgramVocab(int val){
+        this.programVocab = val;
     }
-    public int getHalsteadProgramLength(){
-        return totalDoc.programLength;
+
+    void setProgramLength(int val){
+        this.programLength = val;
     }
-    public int getHalsteadCalculatedProgramLenght(){
-        return (int)totalDoc.calcProgLength;
+
+    void setCalculatedProgramLength(double val){
+        this.calculatedProgramLength = val;
     }
-    public int getHalsteadVolume(){
-        return (int)totalDoc.volume;
+
+    void setVolume(double val){
+        this.volume = val;
     }
-    public int getHalsteadDifficulty(){
-        return (int)totalDoc.difficulty;
+
+    void setDifficulty(double val){
+        this.difficulty = val;
     }
-    public int getHalsteadEffort(){
-        return (int)totalDoc.effort;
+
+    void setEffort(double val){
+        this.effort = val;
     }
-    public int getHalsteadTime(){
-        return (int)totalDoc.timeReq;
+
+    void setTimeRequired(double val){
+        this.timeRequired = val;
     }
-    public int getHalsteadBugs(){
-        return (int)totalDoc.bugs;
-    }*/
+
+    void setBugs(double val){
+        this.bugs = val;
+    }
+
+
 }
