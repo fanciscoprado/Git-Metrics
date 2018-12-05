@@ -44,9 +44,9 @@ word count, line count, character count, comment line count and source line coun
 
       DIT - Depth of Inheritance
 
-       CC - Cyclomatic Complexity
+      CC - Cyclomatic Complexity
 
-       MI - Maintainability Index
+      MI - Maintainability Index
 
    ...
    
