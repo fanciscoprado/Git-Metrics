@@ -31,4 +31,5 @@ public class CommiterInfo {
     public String getName() {
         return name;
     }
+
 }

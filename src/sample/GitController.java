@@ -34,11 +34,10 @@ public class GitController {
         } catch (GitAPIException e) {
             e.printStackTrace();
         }
-        int count = 0;
+
 
         for( RevCommit commit : commits ) {
             makeListOfCommiters(commiterList, commit.getAuthorIdent().getName(), commit);
-            count++;
         }
 
 

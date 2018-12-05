@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -37,6 +38,7 @@ public class Controller2 extends Controller {
 
     @Override
     public void onClick() throws IOException {
+        int totalCommits;
         LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
         for(String temp : repoList){
             MultiGitRepo multiGitRepo = new MultiGitRepo();
@@ -47,8 +49,14 @@ public class Controller2 extends Controller {
         //Block events to other windows
         window.setTitle("Results");
         HBox layout2 = new HBox();
+
         for(MultiGitRepo temp : parsedRepoList){
-            layout2.getChildren().add(new DisplayComparison().display(temp.commiterList));
+            totalCommits = 0;
+            for (CommiterInfo tempe : temp.commiterList){
+                totalCommits = totalCommits+tempe.getCommits();
+            }
+            layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
+            
         }
         Scene commiterDataDisplay = new Scene(layout2);
         window.setScene(commiterDataDisplay);
