@@ -19,6 +19,22 @@ public class countCyclomaticComplexity {
             FileReader fr = new FileReader(fileName);
             BufferedReader br = new BufferedReader(fr);
             line = br.readLine();
+            while (line != null)
+            {
+                StringTokenizer stTokenizer = new StringTokenizer(line);
+                while (stTokenizer.hasMoreTokens())
+                {
+                    words = stTokenizer.nextToken();
+                    for(int i=0; i<keywords.length; i++)
+                    {
+                        if(keywords[i].equals(words))
+                        {
+                            complexity++;
+                        }
+                    }
+                }
+                line = br.readLine();
+            }
         }
         catch (IOException e)
         {
