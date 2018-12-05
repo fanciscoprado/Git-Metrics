@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -42,19 +43,17 @@ public class Controller2 extends Controller {
             multiGitRepo.start(dataToCollect,temp);
             parsedRepoList.push(multiGitRepo);
         }
+        Stage window = new Stage();
+        //Block events to other windows
+        window.setTitle("Results");
+        HBox layout2 = new HBox();
         for(MultiGitRepo temp : parsedRepoList){
-            Stage window = new Stage();
-            //Block events to other windows
-            window.setTitle("Results");
-            VBox layout2 = new VBox();
-            layout2.getChildren().addAll(new DisplayComiiterData().displayPiechart(temp.getCommiterList()) );
-            Scene commiterDataDisplay = new Scene(layout2);
-            window.setScene(commiterDataDisplay);
-            window.show();
-
-
-
+            layout2.getChildren().add(new DisplayComparison().display(temp.commiterList));
         }
+        Scene commiterDataDisplay = new Scene(layout2);
+        window.setScene(commiterDataDisplay);
+        window.show();
+
 
 
 
