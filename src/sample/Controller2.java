@@ -56,6 +56,12 @@ public class Controller2 extends Controller {
                 totalCommits = totalCommits+tempe.getCommits();
             }
             layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
+            Button showMetrics = new Button("Show Metrix");
+            showMetrics.setOnAction( e -> {
+                ResultBox resultBox = new ResultBox();
+                resultBox.display(temp.dataColectedList, temp.getCommiterList());
+            });
+            layout2.getChildren().add(showMetrics);
         }
         Scene commiterDataDisplay = new Scene(layout2);
         window.setScene(commiterDataDisplay);
