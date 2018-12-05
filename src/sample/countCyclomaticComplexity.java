@@ -15,7 +15,7 @@ public class countCyclomaticComplexity {
     public int checkForUniquePath(){
         int complexity = 1;
         String fileName;
-        String[]keywords = {"if","else","while","case","for","switch","do","continue","break","&&","||","?",":","catch","finally","throw","throws","return",};
+        String[]keywords = {"if","else","while","case","for","switch","do","continue","break","&&","||","?",":","catch","finally","throw","throws","return"};
         String words = "";        //temp variable to hold value of token
         String line = null;
         try{
