@@ -7,7 +7,7 @@ public class DataToCollect {
     private boolean doJavaFile = true;
     private boolean doCppFile;
     private boolean doCppH;
-    private boolean doCppHpp;
+
 
 
     public boolean isWordCount() {
@@ -58,11 +58,4 @@ public class DataToCollect {
         this.doCppH = doCppH;
     }
 
-    public boolean isDoCppHpp() {
-        return doCppHpp;
-    }
-
-    public void setDoCppHpp(boolean doCppHpp) {
-        this.doCppHpp = doCppHpp;
-    }
 }
