@@ -10,7 +10,8 @@ public class countCyclomaticComplexity {
     public int checkForUniquePath(){
         int complexity = 1;
         String fileName;
-        String[]keywords = {""};
+        String[]keywords = {"if","else","while","case","for","switch","do","continue","break",
+                "&&","||","?",":","catch","finally","throw","throws","return",};
         String words = "";
         String line = null;
         try{
