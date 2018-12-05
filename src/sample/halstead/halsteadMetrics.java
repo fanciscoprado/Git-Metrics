@@ -63,5 +63,51 @@ public class halsteadMetrics
         this.bugs = val;
     }
 
+    int getnOne(){
 
+    }
+
+    int getnTwo(){
+
+    }
+
+    int getN1(){
+
+    }
+
+    int getN2(){
+
+    }
+
+    int getProgramVocab(){
+
+    }
+
+    int getProgramLength(){
+
+    }
+
+    double getCalculatedProgramLength(){
+
+    }
+
+    double getVolume(){
+
+    }
+
+    double getDifficulty(){
+
+    }
+
+    double getEffort(){
+
+    }
+
+    double getTimeRequired(){
+
+    }
+
+    double getBugs(){
+
+    }
 }
