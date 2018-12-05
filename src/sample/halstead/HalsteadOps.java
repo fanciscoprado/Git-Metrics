@@ -36,6 +36,7 @@ public class HalsteadOps
         st.slashSlashComments(true);
         st.slashStarComments(true);
         st.commentChar('/');
+        st.commentChar('*');
 
 
         while(st.nextToken() != st.TT_EOF)
