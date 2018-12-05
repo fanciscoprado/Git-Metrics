@@ -36,11 +36,17 @@ word count, line count, character count, comment line count and source line coun
    **2.2** Definitions
 
    Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
+
    GUI - Graphic User Interface
+
    SLOC - Source Lines of Code
+
    DIT - Depth of Inheritance
+
    CC - Cyclomatic Complexity
+
    MI - Maintainability Index
+
    ...
    
     **2.3** Product Constraints
@@ -58,17 +64,17 @@ word count, line count, character count, comment line count and source line coun
 
    **4.1** GUI
 
-   4.1.1 Description and Priority
+   4.1.1) Description and Priority
 
    A fully functioning GUI that allows user to get metrics from a file or a website with ease.
-
-
-   4.1.2 Stimulus/Response Sequences
-
-
-   4.1.3 Functional Requirements
    The program will then relay this information to the GUI and user will be able to observe the data colected
    from their inputted source.
+
+
+   4.1.2) Stimulus/Response Sequences
+
+
+   4.1.3) Functional Requirements
 
 5. **Other Non-Functional Requirements**
 
