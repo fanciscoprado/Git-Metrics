@@ -12,7 +12,7 @@ public class countCyclomaticComplexity {
         String fileName;
         String[]keywords = {"if","else","while","case","for","switch","do","continue","break",
                 "&&","||","?",":","catch","finally","throw","throws","return",};
-        String words = "";
+        String words = "";        //temp variable to hold value of token
         String line = null;
         try{
             fileName = "GetFiles.java";
@@ -27,7 +27,7 @@ public class countCyclomaticComplexity {
                     words = stTokenizer.nextToken();
                     for(int i=0; i<keywords.length; i++)
                     {
-                        if(keywords[i].equals(words))
+                        if(keywords[i].equals(words))        //compares token (words) to see if it is a keyword
                         {
                             complexity++;
                         }
