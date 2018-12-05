@@ -36,19 +36,19 @@ word count, line count, character count, comment line count and source line coun
    
    **2.2** Definitions
 
-      Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
+   Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
 
-      GUI - Graphic User Interface
+   >GUI - Graphic User Interface
 
-      SLOC - Source Lines of Code
+   >SLOC - Source Lines of Code
 
-      DIT - Depth of Inheritance
+   >DIT - Depth of Inheritance
 
-      CC - Cyclomatic Complexity
+   CC - Cyclomatic Complexity
 
-      MI - Maintainability Index
+   >MI - Maintainability Index
 
-      ...
+   ...
    
    **2.3** Product Constraints
 
