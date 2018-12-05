@@ -13,6 +13,16 @@ public class countCyclomaticComplexity {
         String[]keywords = {""};
         String words = "";
         String line = null;
+        try{
+            fileName = "GetFiles.java";
+            FileReader fr = new FileReader(fileName);
+            BufferedReader br = new BufferedReader(fr);
+            line = br.readLine();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
         return (complexity);
     }
 }
