@@ -56,7 +56,6 @@ public class Controller2 extends Controller {
                 totalCommits = totalCommits+tempe.getCommits();
             }
             layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
-            
         }
         Scene commiterDataDisplay = new Scene(layout2);
         window.setScene(commiterDataDisplay);
