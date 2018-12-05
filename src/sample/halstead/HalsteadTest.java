@@ -12,6 +12,7 @@ public class HalsteadTest
         st.wordChars('!','}');
         st.slashSlashComments(true);
         st.slashStarComments(true);
+        st.commentChar('*');
         st.commentChar('/');
 
 
