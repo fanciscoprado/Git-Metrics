@@ -19,62 +19,63 @@ word count, line count, character count, comment line count and source line coun
 
    **1.1** Purpose
 
-   The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
-   Our intended audience includes other developers and users who may find these contents useful.
+      The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
+      Our intended audience includes other developers and users who may find these contents useful.
 
    **1.2** Scope
 
-   Our goal is to deliver a platform in which users can get metrics of a file and are able to use this
-   information in a easy and productive way.
+      Our goal is to deliver a platform in which users can get metrics of a file and are able to use this
+      information in a easy and productive way.
+
 2. **Overview**
 
    **2.1** Product Functions
 
-   Our software will allow users to change the way that they check for metrics and information in their upload files or website. This will allow the user
-   to do what they find fit with the info provided.
+      Our software will allow users to change the way that they check for metrics and information in their upload files or website. This will allow the user
+      to do what they find fit with the info provided.
    
    **2.2** Definitions
 
-   Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
+      Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
 
-   GUI - Graphic User Interface
+      GUI - Graphic User Interface
 
-   SLOC - Source Lines of Code
+      SLOC - Source Lines of Code
 
-   DIT - Depth of Inheritance
+      DIT - Depth of Inheritance
 
-   CC - Cyclomatic Complexity
+      CC - Cyclomatic Complexity
 
-   MI - Maintainability Index
+      MI - Maintainability Index
 
-   ...
+      ...
    
-    **2.3** Product Constraints
+   **2.3** Product Constraints
 
-    ???
+       ???
 
 3. **External Interface Requirements**
 
-   **3.1** User Interfaces
+      **3.1** User Interfaces
 
-   The GUI makes it much more user friendly to input a file or website than when using the program through a command line.
-   The metrics are also placed in boxes making it much easier for the user to see what their file/url has.
+      The GUI makes it much more user friendly to input a file or website than when using the program through a command line.
+      The metrics are also placed in boxes making it much easier for the user to see what their file/url has.
 
 4. **System Features**
 
    **4.1** GUI
 
-   4.1.1) Description and Priority
+      4.1.1) Description and Priority
 
-   A fully functioning GUI that allows user to get metrics from a file or a website with ease.
-   The program will then relay this information to the GUI and user will be able to observe the data colected
-   from their inputted source.
-
-
-   4.1.2) Stimulus/Response Sequences
+      A fully functioning GUI that allows user to get metrics from a file or a website with ease.
+      The program will then relay this information to the GUI and user will be able to observe the data colected
+      from their inputted source.
 
 
-   4.1.3) Functional Requirements
+      4.1.2) Stimulus/Response Sequences
+
+
+      4.1.3) Functional Requirements
 
 5. **Other Non-Functional Requirements**
 
