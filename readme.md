@@ -22,7 +22,7 @@ word count, line count, character count, comment line count and source line coun
       The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
       Our intended audience includes other developers and users who may find these contents useful.
 
-**1.2** Intended Audience
+   **1.2** Intended Audience
 
       While anyone is free to use this program, our target audience includes primarily software developers.
 
