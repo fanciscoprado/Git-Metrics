@@ -15,7 +15,29 @@ public class halsteadMetrics
     private double timeRequired;
     private double bugs;
 
+    void setnOne(int val){ }
 
+    void setnTwo(int val){ }
+
+    void setN1(int val){ }
+
+    void setN2(){ }
+
+    void setProgramVocab(){ }
+
+    void setProgramLength(){ }
+
+    void setCalculatedProgramLength(){ }
+
+    void setVolume(){ }
+
+    void setDifficulty(){ }
+
+    void setEffort(){ }
+
+    void setTimeRequired(){ }
+
+    void setBugs(){ }
     /*
     public int getHalsteadn1(){
         return totalDoc.nOne;
