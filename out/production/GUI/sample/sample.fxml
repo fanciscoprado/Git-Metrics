@@ -74,23 +74,29 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="MultiFileMode">
+                        <CheckBox mnemonicParsing="false" text="Java">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin></CheckBox>
-                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                        <CheckBox mnemonicParsing="false" text="C">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin></CheckBox>
-                        <CheckBox mnemonicParsing="false" text="CheckBox">
+                        <CheckBox mnemonicParsing="false" text="C++">
                            <VBox.margin>
                               <Insets top="5.0" />
-                           </VBox.margin></CheckBox>
+                           </VBox.margin>
+                        </CheckBox>
                      </children>
                      <padding>
                         <Insets left="10.0" />
                      </padding>
                   </VBox>
+                  <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="MultiFileMode">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </CheckBox>
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" />
