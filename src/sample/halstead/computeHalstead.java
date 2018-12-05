@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class computeHalstead {
 
-    final char[] HALF_OPERATOR = {'=', '+', '-', '*', '/', '%','!', '>', '<', '&', '|', '?', '~', '^', ':'};
+    final char[] HALF_OPERATOR = {'=', '+', '-', '*', '/', '%','!', '>', '<', '&', '|', '?', '~', '^', ':', '@', '_'};
 
     //collects all relevant elements for Halstead metrics
     ArrayList<String> codeList = new ArrayList<>();
