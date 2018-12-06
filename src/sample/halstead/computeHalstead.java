@@ -13,8 +13,15 @@ public class computeHalstead {
     //collects all relevant elements for Halstead metrics
     ArrayList<String> codeList = new ArrayList<>();
 
-    public void compute(){
-
+    public void compute(File currentFile)throws Exception
+    {
+        buildCodeList(currentFile);
+        //needs to do a lot more than this
+        //it needs a vocab list from vocab constructor
+        //it needs to compare elements from the codeList to the vocab list and delegate operator or operand status
+        //      to individual elements -- or call another method to that.
+        //this class as a whole needs to be able to calculate n1, n2, N1 and N2
+        //calculating secondary and tertiary stats will likely be this classes job as well
     }
 
     //Creates an indexed list of all the elements from stream tokenizer
