@@ -79,12 +79,14 @@ public class vocabularyList
         return vocabList;
     }
 
-    public boolean isOperator(String name){
+    public int isOperator(String name){
+        int index = 0;
         for (halsteadOperator h : vocabList) {
             if(h.getOperatorName().equals(name))
-                return true;
+                return index;
+            index++;
         }
-        return false;
+        return -1;
     }
 
     //doesn't need a main - but it is good for testing
