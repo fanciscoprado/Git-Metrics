@@ -3,6 +3,7 @@ package sample.halstead;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class definitionList {
@@ -17,5 +18,12 @@ public class definitionList {
         }
         bReader.close();
         return lines.toArray(new String[lines.size()]);
+    }
+
+    //made a main for testing, will delete later
+    public static void main(String[] args)throws Exception{
+        definitionList dList= new definitionList();
+        String[] arr = dList.run();
+        System.out.println(Arrays.toString(arr));
     }
 }
