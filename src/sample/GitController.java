@@ -19,7 +19,7 @@ public class GitController {
                     .call();
 
         } catch (GitAPIException e) {
-            System.out.println("no good amigo");
+            //System.out.println("no good amigo");
             return false;
         }
 
@@ -32,7 +32,7 @@ public class GitController {
         try {
             commits = git.log().call();
         } catch (GitAPIException e) {
-            System.out.println("list no bueno");
+            //System.out.println("list no bueno");
         }
 
 

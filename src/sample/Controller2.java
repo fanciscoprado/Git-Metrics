@@ -99,7 +99,7 @@ public class Controller2 extends Controller {
             repoList.push(getURL());
             repoCount++;
         }else {
-            System.out.println("To many repos continuing");
+            new AlertBox().display("Alert!", "To many repos close to continue");
             onClick();
         }
     }
