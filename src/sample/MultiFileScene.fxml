@@ -75,15 +75,15 @@
                                         <Font size="18.0" />
                                     </font>
                                 </Text>
-                                <CheckBox mnemonicParsing="false" text="Java">
+                                <CheckBox fx:id="checkBoxj" mnemonicParsing="false" onAction="#jChecked" text="Java">
                                     <VBox.margin>
                                         <Insets top="5.0" />
                                     </VBox.margin></CheckBox>
-                                <CheckBox mnemonicParsing="false" text="C">
+                                <CheckBox fx:id="checkBoxC" mnemonicParsing="false" onAction="#cChecked" text="C">
                                     <VBox.margin>
                                         <Insets top="5.0" />
                                     </VBox.margin></CheckBox>
-                        <CheckBox mnemonicParsing="false" text="C++">
+                        <CheckBox fx:id="checkBoxCpp" mnemonicParsing="false" onAction="#cppChecked" text="C++">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
