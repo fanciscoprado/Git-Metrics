@@ -40,7 +40,7 @@ public class Controller {
     @FXML
     public CheckBox checkBoxCpp;
     @FXML
-    private Button statusButton;
+    public Button statusButton;
 
 
     public void onClick() throws IOException {

@@ -40,10 +40,13 @@ public class Controller2 extends Controller {
     public void onClick() throws IOException {
         int totalCommits;
         LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
-        for(String temp : repoList){
-            MultiGitRepo multiGitRepo = new MultiGitRepo();
-            multiGitRepo.start(dataToCollect,temp);
-            parsedRepoList.push(multiGitRepo);
+        for(String temp : repoList) {
+                MultiGitRepo multiGitRepo = new MultiGitRepo();
+            if (multiGitRepo.start(dataToCollect, temp))
+                parsedRepoList.push(multiGitRepo);
+            else {
+                statusButton.setText("invalid URL");
+            }
         }
         Stage window = new Stage();
         window.setTitle("Results");
@@ -64,7 +67,9 @@ public class Controller2 extends Controller {
         }
         Scene commiterDataDisplay = new Scene(layout2);
         window.setScene(commiterDataDisplay);
-        window.show();
+        window.showAndWait();
+        repoCount = 0;
+        repoList.clear();
 
 
 
