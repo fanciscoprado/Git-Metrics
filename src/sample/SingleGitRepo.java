@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.collections.ObservableList;
+import jdk.nashorn.internal.runtime.ECMAException;
 import org.eclipse.jgit.api.Git;
 
 import java.io.File;
@@ -16,16 +17,22 @@ public class SingleGitRepo {
     LinkedList<CommiterInfo> commiterList;
 
 
-    public void start(DataToCollect dataToCollect, String url) throws IOException {
+    public void start(DataToCollect dataToCollect, String url) {
 
-        git = gitController.downloadRepo(url);
-        commiterList = gitController.getCommitCount(git);
-        LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
-        dataColectedList = dataCollector.collectData(fileList, dataToCollect);
-        displayResults(dataColectedList,commiterList);
-        git.getRepository().close();
-        git.close();
-        gitController.close();
+        try {
+            git = gitController.downloadRepo(url);
+            commiterList = gitController.getCommitCount(git);
+            LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
+            dataColectedList = dataCollector.collectData(fileList, dataToCollect);
+            displayResults(dataColectedList, commiterList);
+            git.getRepository().close();
+            git.close();
+            gitController.close();
+        } catch (IOException e) {
+            System.out.println("url no bueno");
+        }
+
+
     }
      void displayResults(ObservableList<DataColected> dataColectedList, LinkedList<CommiterInfo> commiterList){
         ResultBox resultBox = new ResultBox();
