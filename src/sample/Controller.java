@@ -48,7 +48,7 @@ public class Controller {
         if(singleGitRepo.start(dataToCollect, getURL()))
             statusButton.setText("           ");
         else {
-            statusButton.setText("invalid url");
+            new AlertBox().display("Alert!", "Invalid URL");
         }
 
     }

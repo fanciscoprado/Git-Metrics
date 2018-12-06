@@ -37,37 +37,44 @@ public class Controller2 extends Controller {
     private int repoCount = 0;
 
     @Override
-    public void onClick() throws IOException {
+    public void onClick(){
+        repoCount = 0;
         int totalCommits;
         LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
+        boolean showResults = true;
         for(String temp : repoList) {
                 MultiGitRepo multiGitRepo = new MultiGitRepo();
-            if (multiGitRepo.start(dataToCollect, temp))
+            if (multiGitRepo.start(dataToCollect, temp)) {
                 parsedRepoList.push(multiGitRepo);
+                showResults = true;
+            }
             else {
-                statusButton.setText("invalid URL");
+                new AlertBox().display("Alert!", "Invalid URL(s) pleas try again");
+                showResults = false;
             }
         }
-        Stage window = new Stage();
-        window.setTitle("Results");
-        HBox layout2 = new HBox();
+        if(showResults) {
+            Stage window = new Stage();
+            window.setTitle("Results");
+            HBox layout2 = new HBox();
 
-        for(MultiGitRepo temp : parsedRepoList){
-            totalCommits = 0;
-            for (CommiterInfo tempe : temp.commiterList){
-                totalCommits = totalCommits+tempe.getCommits();
+            for (MultiGitRepo temp : parsedRepoList) {
+                totalCommits = 0;
+                for (CommiterInfo tempe : temp.commiterList) {
+                    totalCommits = totalCommits + tempe.getCommits();
+                }
+                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
+                Button showMetrics = new Button("Show Metrics");
+                showMetrics.setOnAction(e -> {
+                    ResultBox resultBox = new ResultBox();
+                    resultBox.display(temp.dataColectedList, temp.getCommiterList());
+                });
+                layout2.getChildren().add(showMetrics);
             }
-            layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
-            Button showMetrics = new Button("Show Metrics");
-            showMetrics.setOnAction( e -> {
-                ResultBox resultBox = new ResultBox();
-                resultBox.display(temp.dataColectedList, temp.getCommiterList());
-            });
-            layout2.getChildren().add(showMetrics);
+            Scene commiterDataDisplay = new Scene(layout2);
+            window.setScene(commiterDataDisplay);
+            window.showAndWait();
         }
-        Scene commiterDataDisplay = new Scene(layout2);
-        window.setScene(commiterDataDisplay);
-        window.showAndWait();
         repoCount = 0;
         repoList.clear();
 
@@ -86,6 +93,8 @@ public class Controller2 extends Controller {
 
     public void addRepoClicked() throws IOException {
         if(repoCount < 2) {
+            if(repoCount == 0)
+                repoList.clear();
             System.out.println(getURL());
             repoList.push(getURL());
             repoCount++;
