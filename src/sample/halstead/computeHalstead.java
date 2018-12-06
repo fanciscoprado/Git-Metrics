@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class computeHalstead {
 
@@ -49,12 +51,32 @@ public class computeHalstead {
         }
     }
 
+    public int getnOne(){
+        Set<String> uniqueOperator = new HashSet<>(Operators);
+        return uniqueOperator.size();
+    }
+
+    public int getnTwo(){
+        Set<String> uniqueOperands = new HashSet<>(Operands);
+        return uniqueOperands.size();
+    }
+
+    public int getN1(){
+        return Operators.size();
+    }
+
+    public int getN2(){
+        return Operands.size();
+    }
+
     //Another test, another main
     public static void main(String[] args)throws Exception{
         computeHalstead test = new computeHalstead();
         File testFile = new File("src/sample/halstead/halstead.java");
         test.compute(testFile);
-        System.out.println(test.Operators.size());
-        System.out.println(test.Operands.size());
+        System.out.println("n1 = " + test.getnOne());
+        System.out.println("n2 = " + test.getnTwo());
+        System.out.println("N1 = " + test.getN1());
+        System.out.println("N2 = " + test.getN2());
     }
 }
