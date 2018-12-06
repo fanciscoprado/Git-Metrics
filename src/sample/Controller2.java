@@ -46,7 +46,6 @@ public class Controller2 extends Controller {
             parsedRepoList.push(multiGitRepo);
         }
         Stage window = new Stage();
-        //Block events to other windows
         window.setTitle("Results");
         HBox layout2 = new HBox();
 
@@ -56,7 +55,7 @@ public class Controller2 extends Controller {
                 totalCommits = totalCommits+tempe.getCommits();
             }
             layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
-            Button showMetrics = new Button("Show Metrix");
+            Button showMetrics = new Button("Show Metrics");
             showMetrics.setOnAction( e -> {
                 ResultBox resultBox = new ResultBox();
                 resultBox.display(temp.dataColectedList, temp.getCommiterList());

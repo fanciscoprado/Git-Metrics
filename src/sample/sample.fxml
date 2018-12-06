@@ -94,7 +94,10 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="197.0">
                      <children>
-                        <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="MultiFileMode" />
+                        <CheckBox fx:id="checkBox4" mnemonicParsing="false" onAction="#box4" text="MultiFileMode">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin></CheckBox>
                         <Region prefHeight="158.0" prefWidth="168.0" />
                         <HBox prefHeight="42.0" prefWidth="183.0">
                            <children>
