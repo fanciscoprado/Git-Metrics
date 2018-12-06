@@ -23,6 +23,7 @@ public class VocabConstructor
             //halsteadOperator has three elements. The String array being read from stores them in this order:
             //name, if its a prefix and if its a postfix
             s = operatorList[index];
+            System.out.print(s);
             if(index % 3 == 0)
             {
                 temp = new halsteadOperator();
@@ -42,6 +43,7 @@ public class VocabConstructor
                 vocabList.add(temp);
             }
         }
+        System.out.println();
     }
 
     private String[] readFile(File file)throws Exception
@@ -51,7 +53,10 @@ public class VocabConstructor
         List<String> lines = new ArrayList<String>();
         String line = null;
         while ((line = bReader.readLine()) != null){
-            lines.add(line);
+            String[] splited = line.split("\\s+");
+            for (String s : splited) {
+                lines.add(s);
+            }
         }
         bReader.close();
         reader.close();
@@ -69,9 +74,8 @@ public class VocabConstructor
                 String content = FileUtils.pathToString(file);
                 String[] arr = this.readFile(file);
                 System.out.println(content);
-                System.out.println(Arrays.toString(arr));
-                addVocabElement();
-
+                //System.out.println(Arrays.toString(arr));
+                addVocabElement(arr);
             }
         }
         /*String[] arr = dList.run();
@@ -83,17 +87,12 @@ public class VocabConstructor
     }
 
     //doesn't need a main - but it is good for testing
-    /*public static void main(String[] args)throws Exception
+    public static void main(String[] args)throws Exception
     {
         VocabConstructor test = new VocabConstructor();
-        test.setVocabList();
+        test.buildDefinitions();
         for(int i = 0; i < test.vocabList.size(); i++){
             System.out.println(test.vocabList.get(i));
         }
-        File currentFile = new File("src/sample/wc.java");
-        test.buildCodeList(currentFile);
-        for(int i = 0; i < test.codeList.size(); i++){
-            System.out.println(test.codeList.get(i));
-        }
-    }*/
+    }
 }
