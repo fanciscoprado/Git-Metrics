@@ -11,7 +11,7 @@ public class codeList {
     final char[] HALF_OPERATOR = {'=', '+', '-', '*', '/', '%','!', '>', '<', '&', '|', '?', '~', '^', ':', '@', '_'};
 
     //collects all relevant elements for Halstead metrics
-    ArrayList<String> codeList = new ArrayList<>();
+    private ArrayList<String> codeList = new ArrayList<>();
 
     //Creates an indexed list of all the elements from stream tokenizer
     public void setCodeList(File currentFile)throws Exception
@@ -45,5 +45,9 @@ public class codeList {
             }
         }
         readFile.close();
+    }
+
+    public ArrayList<String> getCodeList(){
+        return codeList;
     }
 }
