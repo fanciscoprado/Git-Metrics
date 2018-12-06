@@ -12,7 +12,7 @@ public class SingleGitRepo {
     GitController gitController = new GitController();
     FileHandler fileHandler = new FileHandler();
     DataCollector dataCollector = new DataCollector();
-    Git git;
+    //Git git;
     ObservableList<DataColected> dataColectedList;
     LinkedList<CommiterInfo> commiterList;
 
@@ -20,16 +20,17 @@ public class SingleGitRepo {
     public void start(DataToCollect dataToCollect, String url) {
 
         try {
-            git = gitController.downloadRepo(url);
-            commiterList = gitController.getCommitCount(git);
-            LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
-            dataColectedList = dataCollector.collectData(fileList, dataToCollect);
-            displayResults(dataColectedList, commiterList);
-            git.getRepository().close();
-            git.close();
-            gitController.close();
+           if(gitController.downloadRepo(url)) {
+               commiterList = gitController.getCommitCount();
+               LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
+               dataColectedList = dataCollector.collectData(fileList, dataToCollect);
+               displayResults(dataColectedList, commiterList);
+               // git.getRepository().close();
+               // git.close();
+               gitController.close();
+           }else ;
         } catch (IOException e) {
-            System.out.println("url no bueno");
+
         }
 
 

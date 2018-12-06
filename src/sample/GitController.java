@@ -8,9 +8,9 @@ import java.util.LinkedList;
 import org.eclipse.jgit.revwalk.RevCommit;
 public class GitController {
     File folder = new File("temp/");
+    Git git = null;
+    public boolean downloadRepo(String url) throws IOException {
 
-    public Git downloadRepo(String url) throws IOException {
-        Git git = null;
 
         try {
             git = Git.cloneRepository()
@@ -20,19 +20,19 @@ public class GitController {
 
         } catch (GitAPIException e) {
             System.out.println("no good amigo");
-            e.printStackTrace();
+            return false;
         }
 
 
-        return git;
+        return true;
     }
-    public LinkedList<CommiterInfo> getCommitCount(Git git) {
+    public LinkedList<CommiterInfo> getCommitCount() {
         Iterable<RevCommit> commits = null;
         LinkedList<CommiterInfo> commiterList = new LinkedList<>();
         try {
             commits = git.log().call();
         } catch (GitAPIException e) {
-            e.printStackTrace();
+            System.out.println("list no bueno");
         }
 
 
@@ -71,6 +71,8 @@ public class GitController {
         removeall(folder);
     }
     private void removeall(File folder){ // recusivly delets the git archive downloaded
+         git.getRepository().close();
+         git.close();
         File[] listOfFiles = folder.listFiles();
         try {
             for (File temp : listOfFiles) {
