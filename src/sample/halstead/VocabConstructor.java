@@ -1,28 +1,28 @@
 package sample.halstead;
 
+import org.eclipse.jgit.util.FileUtils;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class VocabConstructor
 {
-    final String[] BASIC_OPERATOR_LIST = {"=", "0", "0", "==", "0", "0", "+", "0", "0", "++", "0", "1", "+=", "0", "0"
-            , "-", "0", "0", "--", "0", "1", "-=", "0", "0", "*", "0", "0", "*=", "0", "0", "/", "0", "0", "/="
-            , "0", "0", "%", "0", "0", "%=", "0", "0", "!", "1", "0", "!=", "0", "0", ">", "0", "0", ">=", "0", "0", ">>"
-            , "0", "0", ">>>", "0", "0", "<", "0", "0", "<=", "0", "0", "<<", "0", "0", "&", "0", "0", "&&", "0"
-            , "0", "&=", "0", "0", "|", "0", "0", "||", "0", "0", "|=", "0", "0", "?:", "0", "0", "~", "1", "0"
-            , "^", "0", "0", "^=", "0", "0"};
-
-    //collects operators and their positions
+    //collects operators and their positional information
     private ArrayList<halsteadOperator> vocabList = new ArrayList<>();
 
     //Fills vocabList with operators - reads from a built-in list right now but should read from a file later.
-    public void setVocabList()
+    private void addVocabElement(String[] operatorList)
     {
         halsteadOperator temp = new halsteadOperator();
         String s;
-        for (int index = 0; index < BASIC_OPERATOR_LIST.length; index++) {
+        for (int index = 0; index < operatorList.length; index++) {
             //halsteadOperator has three elements. The String array being read from stores them in this order:
             //name, if its a prefix and if its a postfix
-            s = BASIC_OPERATOR_LIST[index];
+            s = operatorList[index];
             if(index % 3 == 0)
             {
                 temp = new halsteadOperator();
@@ -42,6 +42,40 @@ public class VocabConstructor
                 vocabList.add(temp);
             }
         }
+    }
+
+    private String[] readFile(File file)throws Exception
+    {
+        FileReader reader = new FileReader(file);
+        BufferedReader bReader = new BufferedReader(reader);
+        List<String> lines = new ArrayList<String>();
+        String line = null;
+        while ((line = bReader.readLine()) != null){
+            lines.add(line);
+        }
+        bReader.close();
+        reader.close();
+        return lines.toArray(new String[lines.size()]);
+    }
+
+    //made a main for testing, will delete later
+    public void buildDefinitions()throws Exception{
+        File folder = new File("HalLib");
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            File file = listOfFiles[i];
+            if (file.isFile() && file.getName().endsWith(".txt")) {
+                String content = FileUtils.pathToString(file);
+                String[] arr = this.readFile(file);
+                System.out.println(content);
+                System.out.println(Arrays.toString(arr));
+                addVocabElement();
+
+            }
+        }
+        /*String[] arr = dList.run();
+        System.out.println(Arrays.toString(arr));*/
     }
 
     public ArrayList<halsteadOperator> getVocabList(){
