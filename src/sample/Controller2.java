@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -72,6 +73,8 @@ public class Controller2 extends Controller {
                 layout2.getChildren().add(showMetrics);
             }
             Scene commiterDataDisplay = new Scene(layout2);
+            Image image = new Image("icon.png");
+            window.getIcons().add(image);
             window.setScene(commiterDataDisplay);
             window.showAndWait();
         }

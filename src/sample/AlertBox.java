@@ -1,6 +1,7 @@
 package sample;
 
 
+import javafx.scene.image.Image;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
@@ -13,6 +14,8 @@ public class AlertBox {
         Stage window = new Stage();
 
         //Block events to other windows
+        Image image = new Image("icon.png");
+        window.getIcons().add(image);
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
         window.setMinWidth(250);

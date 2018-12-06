@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.collections.ObservableList;
+import javafx.scene.image.Image;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
@@ -14,6 +15,8 @@ public class ResultBox {
     public static void display(ObservableList<DataColected> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
         //Block events to other windows
+        Image image = new Image("icon.png");
+        window.getIcons().add(image);
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
