@@ -17,7 +17,7 @@ public class SingleGitRepo {
     LinkedList<CommiterInfo> commiterList;
 
 
-    public void start(DataToCollect dataToCollect, String url) {
+    public boolean start(DataToCollect dataToCollect, String url) {
 
         try {
            if(gitController.downloadRepo(url)) {
@@ -28,11 +28,12 @@ public class SingleGitRepo {
                // git.getRepository().close();
                // git.close();
                gitController.close();
+               return true;
            }else ;
         } catch (IOException e) {
-
+            return false;
         }
-
+        return false;
 
     }
      void displayResults(ObservableList<DataColected> dataColectedList, LinkedList<CommiterInfo> commiterList){
