@@ -39,14 +39,12 @@ public class Controller {
     public CheckBox checkBoxC;
     @FXML
     public CheckBox checkBoxCpp;
-    @FXML
-    public Button statusButton;
 
 
     public void onClick() throws IOException {
         SingleGitRepo singleGitRepo = new SingleGitRepo();
         if(singleGitRepo.start(dataToCollect, getURL()))
-            statusButton.setText("           ");
+            ;
         else {
             new AlertBox().display("Alert!", "Invalid URL");
         }
