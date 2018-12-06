@@ -1,9 +1,6 @@
 package sample.halstead;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -70,7 +67,7 @@ public class computeHalstead {
     }
 
     //Another test, another main
-    public static void main(String[] args)throws Exception{
+    /*public static void main(String[] args)throws Exception{
         computeHalstead test = new computeHalstead();
         File testFile = new File("src/sample/halstead/halstead.java");
         test.compute(testFile);
@@ -78,5 +75,5 @@ public class computeHalstead {
         System.out.println("n2 = " + test.getnTwo());
         System.out.println("N1 = " + test.getN1());
         System.out.println("N2 = " + test.getN2());
-    }
+    }*/
 }
