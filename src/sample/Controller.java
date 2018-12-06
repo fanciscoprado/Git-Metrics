@@ -33,6 +33,12 @@ public class Controller {
     private CheckBox checkBox4;
     @FXML
     private AnchorPane stage;
+    @FXML
+    public CheckBox checkBoxj;
+    @FXML
+    public CheckBox checkBoxC;
+    @FXML
+    public CheckBox checkBoxCpp;
 
 
     public void onClick() throws IOException {
@@ -75,6 +81,23 @@ public class Controller {
             Stage stage = (Stage) checkBox1.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("MultiFileScene.fxml"))));
         }
+    }
+    public void jChecked(){
+        if(checkBoxj.isSelected())
+            dataToCollect.setDoJavaFile(true);
+        if (!checkBoxj.isSelected())
+            dataToCollect.setDoJavaFile(false);
+    }
+
+    public void cChecked(){
+        if(checkBoxC.isSelected())
+            dataToCollect.setDoC(true);
+        if(!checkBoxC.isSelected())
+            dataToCollect.setDoC(false);
+    }
+
+    public void cppChecked(){
+
     }
 
 

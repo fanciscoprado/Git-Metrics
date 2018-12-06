@@ -48,7 +48,7 @@ public class FileHandler {
             else if ((extension.equals("hpp")))
                 return true;
         }
-        if (dataToCollect.isDoCppH())
+        if (dataToCollect.isDoC())
             if(extension.equals("c"))
                 return true;
         if (dataToCollect.isDoJavaFile())

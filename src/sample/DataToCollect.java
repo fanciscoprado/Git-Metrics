@@ -6,7 +6,7 @@ public class DataToCollect {
     private boolean lineCount;
     private boolean doJavaFile = true;
     private boolean doCppFile;
-    private boolean doCppH;
+    private boolean c;
 
 
 
@@ -50,12 +50,15 @@ public class DataToCollect {
         this.doCppFile = doCppFile;
     }
 
-    public boolean isDoCppH() {
-        return doCppH;
+    public boolean isDoC() {
+        return c;
     }
 
-    public void setDoCppH(boolean doCppH) {
-        this.doCppH = doCppH;
+    public void setDoC(boolean c){
+        this.c = c;
+
     }
+
+
 
 }
