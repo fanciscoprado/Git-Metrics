@@ -53,10 +53,7 @@ public class VocabConstructor
         List<String> lines = new ArrayList<String>();
         String line = null;
         while ((line = bReader.readLine()) != null){
-            String[] splited = line.split("\\s+");
-            for (String s : splited) {
-                lines.add(s);
-            }
+            lines.addAll(Arrays.asList(line.split("\\s+")));
         }
         bReader.close();
         reader.close();
@@ -71,15 +68,10 @@ public class VocabConstructor
         for (int i = 0; i < listOfFiles.length; i++) {
             File file = listOfFiles[i];
             if (file.isFile() && file.getName().endsWith(".txt")) {
-                String content = FileUtils.pathToString(file);
                 String[] arr = this.readFile(file);
-                System.out.println(content);
-                //System.out.println(Arrays.toString(arr));
                 addVocabElement(arr);
             }
         }
-        /*String[] arr = dList.run();
-        System.out.println(Arrays.toString(arr));*/
     }
 
     public ArrayList<halsteadOperator> getVocabList(){
