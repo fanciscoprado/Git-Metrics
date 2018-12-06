@@ -97,7 +97,10 @@ public class Controller {
     }
 
     public void cppChecked(){
-
+        if(checkBoxCpp.isSelected())
+            dataToCollect.setDoCppFile(true);
+        if(!checkBoxCpp.isSelected())
+            dataToCollect.setDoCppFile(false);
     }
 
 
