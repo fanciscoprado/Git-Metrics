@@ -56,6 +56,8 @@ word count, line count, character count, comment line count and source line coun
 
       - GUI - Graphic User Interface
 
+      - Char - Characters
+
       - LOC - Lines of Code
 
       - SLOC - Source Lines of Code
@@ -66,11 +68,12 @@ word count, line count, character count, comment line count and source line coun
 
       - MI - Maintainability Index
 
-   ...
+   ... //remove any unused definitions
    
    **2.3** Product Constraints
 
       Our time frame for completion was approximately 7 weeks.
+
       //add more...
 
    **2.4** User classes/Use cases (??)
@@ -105,5 +108,6 @@ word count, line count, character count, comment line count and source line coun
    **4.2**
 
 5. **Other Non-Functional Requirements**
+
    //don't know if we actually need this...
 
