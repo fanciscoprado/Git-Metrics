@@ -113,4 +113,6 @@ word count, line count, character count, comment line count and source line coun
 5. **Other Non-Functional Requirements**
     
     User system needs to have java installed in order to run the program.
+    Java runtime is required for full functionality of the program. User need to input a full url
+    from github with no restrictions in order to run properly.  
 
