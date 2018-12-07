@@ -84,8 +84,8 @@ public class halsteadMetrics
         return this.programVocab;
     }
 
-    int getProgramLength(int operatorT, int operandT){
-        this.programLength = operatorT + operandT;
+    int getProgramLength(int operatorsT, int operandsT){
+        this.programLength = operatorsT + operandsT;
         return this.programLength;
     }
 
@@ -99,7 +99,8 @@ public class halsteadMetrics
         return this.volume;
     }
 
-    double getDifficulty(){
+    double getDifficulty(int operators, int operands, int operandsT){
+        this.difficulty = (operators/2)*(operandsT/operands);
         return this.difficulty;
     }
 
