@@ -11,4 +11,8 @@ public class calculateMaintainabilityIndex {
     //20-100 = good
     //10-19 = moderate
     //0-9 = low
+    public double calculateMI(){
+        double mI = 1;
+        return (mI);
+    }
 }
