@@ -50,6 +50,24 @@ public class DataColected {
     public void setFilename(String filename) {
         this.filename = filename;
     }
+    /*
+    public void setOperators(int operators)
+    {
+        this.operators = operators;
+    }
+    public void setOperands(int operands)
+    {
+        this.operands = operands;
+    }
+    public void setOperatorsT(int operatorsT)
+    {
+        this.operatorsT = operatorsT;
+    }
+    public void setOperandsT(int operandsT)
+    {
+        this.operandsT = operandsT;
+    }
+     */
 
     public boolean isSkipped() {
         return skipped;
