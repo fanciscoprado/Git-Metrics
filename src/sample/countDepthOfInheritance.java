@@ -1,7 +1,5 @@
 package sample;
 
-//Experimental class, don't know if this will work properly. Algorithm follows CC algorithm.
-
 import java.io.*;
 import java.util.*;
 
