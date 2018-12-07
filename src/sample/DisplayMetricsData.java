@@ -37,6 +37,20 @@ public class DisplayMetricsData {
         commentColumn.setMinWidth(200);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
 
+        /*
+        TableColumn<DataColected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");
+        commentColumn.setMinWidth(200);
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
+
+        TableColumn<DataColected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");
+        commentColumn.setMinWidth(200);
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("maintainabilityindex"));
+
+        TableColumn<DataColected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");
+        commentColumn.setMinWidth(200);
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
+        */
+
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn);
         return table;
 
