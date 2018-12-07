@@ -26,7 +26,28 @@ public class Main extends Application {
     public static void main(String[] args) {
         File file = new File("temp/");
         if(file.exists())
-            new GitController().close();
+            deletTemp(file);
         launch(args);
+    }
+
+
+    public static void deletTemp(File folder){ // recusivly delets the git archive downloaded
+        File[] listOfFiles = folder.listFiles();
+        try {
+            for (File temp : listOfFiles) {
+                if (!temp.delete()) {
+                    deletTemp(temp);
+                }
+                if (temp.delete()) {
+                    System.out.println("deletet" + temp.getName());
+                }
+
+            }
+        }catch (Exception e){
+            System.out.println("could not delet");
+            folder.setWritable(true);
+            folder.delete();
+        }
+        folder.delete();
     }
 }

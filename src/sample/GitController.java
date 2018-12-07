@@ -70,7 +70,7 @@ public class GitController {
     public void close(){
         removeall(folder);
     }
-    private void removeall(File folder){ // recusivly delets the git archive downloaded
+    public void removeall(File folder){ // recusivly delets the git archive downloaded
          git.getRepository().close();
          git.close();
         File[] listOfFiles = folder.listFiles();

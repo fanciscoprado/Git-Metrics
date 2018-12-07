@@ -17,7 +17,7 @@ public class ResultBox {
         //Block events to other windows
        // Image image = new Image("icon.png");
         //window.getIcons().add(image);
-        window.initModality(Modality.APPLICATION_MODAL);
+        //window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
         Button sceneSwitch1 = new Button("Contributors");
@@ -42,7 +42,7 @@ public class ResultBox {
         //Display window and wait for it to be closed before returning
 
         window.setScene(dataDisplay);
-        window.show();
+        window.showAndWait();
 
     }
 

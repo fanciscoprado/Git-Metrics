@@ -19,8 +19,8 @@ public class countCyclomaticComplexity {
         String words = "";        //temp variable to hold value of token
         String line = null;
         try {
-            fileName = "GetFiles.java";
-            FileReader fr = new FileReader(fileName);
+            //fileName = "GetFiles.java";
+            FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             line = br.readLine();
             while (line != null)
