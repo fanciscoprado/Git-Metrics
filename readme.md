@@ -34,8 +34,8 @@ word count, line count, character count, comment line count and source line coun
 
    **2.1** Product Functions
 
-      Our software will allow users to change the way that they check for metrics and information in their upload files or website. This will allow the user
-      to do what they find fit with the info provided.
+      Our software will allow users to check for software metrics and information in their uploaded files or website. This will help aid the user
+      in improving their software with the info provided.
    
    **2.2** Definitions
 
@@ -57,6 +57,12 @@ word count, line count, character count, comment line count and source line coun
 
       - Time frame for completion: Approximately 7 weeks
       - //list more...
+
+   **2.4** User classes/Use cases (??)
+
+   **2.5** Operating Environment
+
+      (platform, OS)
 
 3. **External Interface Requirements**
 
