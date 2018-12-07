@@ -18,7 +18,8 @@ public class DisplayComparison {
         Text totalComment = new Text("Total Comment Count: "+ getTotalComment(dataColected));
         totalSorceline.setFont(new Font(20));
         totalCommits.setFont(new Font(20));
-        layout.getChildren().addAll(totalCommits,totalSorceline);
+        totalComment.setFont(new Font(20));
+        layout.getChildren().addAll(totalCommits,totalSorceline,totalComment);
 
         return layout;
     }
