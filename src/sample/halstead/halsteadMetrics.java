@@ -79,7 +79,8 @@ public class halsteadMetrics
         return this.N2;
     }
 
-    int getProgramVocab(){
+    int getProgramVocab(int operators, int operands){
+        this.programVocab = operators + operands;
         return this.programVocab;
     }
 
