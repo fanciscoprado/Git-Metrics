@@ -2,6 +2,7 @@ package sample.halstead;
 
 public class halsteadMetrics
 {
+    /*all the metrics for halstead requires to use metrics in this order shown below, for it to work*/
     public int getProgramVocab(int operators, int operands){
         return operators + operands;
     }
