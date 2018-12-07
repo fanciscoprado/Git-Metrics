@@ -1,4 +1,5 @@
 package sample;
+package java.lang.Math;
 
 //NEEDS FOLLOWING TO CALCULATE: halstead volume, cyclomatic complexity, count of source lines of code.
 
