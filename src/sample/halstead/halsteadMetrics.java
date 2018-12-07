@@ -91,9 +91,8 @@ public class halsteadMetrics
         return (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
     }
 
-    double getVolume(){
-        this.volume = this.programLength*(Math.log(this.programVocab)/Math.log(2));
-        return this.volume;
+    double getVolume(int Plength, int vocab){
+        return Plength*(Math.log(vocab)/Math.log(2));
     }
 
     double getDifficulty(int operators, int operands, int operandsT){
