@@ -9,6 +9,12 @@ public class DataColected {
     private long lcount;
     private int cccount;
     private int slcount;
+    /*
+    private int operators //distinct operators
+    private int operands //distinct operands
+    private int operatorsT //total number of operators
+    private int operandsT //total number of operands
+     */
     private boolean skipped;
 
     public String getFilename() {
