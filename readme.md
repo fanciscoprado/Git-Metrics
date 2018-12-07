@@ -111,5 +111,6 @@ word count, line count, character count, comment line count and source line coun
    **4.2**
 
 5. **Other Non-Functional Requirements**
-
+    
+    User system needs to have java installed in order to run the program.
 
