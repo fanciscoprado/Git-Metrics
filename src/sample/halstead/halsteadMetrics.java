@@ -96,8 +96,7 @@ public class halsteadMetrics
     }
 
     double getDifficulty(int operators, int operands, int operandsT){
-        this.difficulty = (operators/2)*(operandsT/operands);
-        return this.difficulty;
+        return (operators/2)*(operandsT/operands);
     }
 
     double getEffort(){
