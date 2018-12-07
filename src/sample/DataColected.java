@@ -101,4 +101,10 @@ public class DataColected {
     public int getSlcount() {
         return slcount;
     }
+
+    public int getCyclomaticComplexity() { return cyclomaticcomplexity; }
+
+    public int getMaintainabilityIndex() { return maintainabilityindex; }
+
+    public int getDepthOfInheritance() { return depthofinheritance; }
 }
