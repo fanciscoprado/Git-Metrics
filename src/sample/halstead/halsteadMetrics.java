@@ -107,8 +107,7 @@ public class halsteadMetrics
         return effort/18;
     }
 
-    double getBugs(){
-        this.bugs = this.timeRequired/3000;
-        return this.bugs;
+    double getBugs(double timeRequired){
+        return timeRequired/3000;
     }
 }
