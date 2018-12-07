@@ -17,6 +17,7 @@ public class calculateMaintainabilityIndex {
     public double calculateMI(){
         double mI = 1;
         Math.sqrt(1); //added temporarily to fix error
+        //mI = 171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC);
         return (mI);
     }
 }
