@@ -9,6 +9,9 @@ public class DataColected {
     private long lcount;
     private int cccount;
     private int slcount;
+    private int cyclomaticComplexity;
+    private int maintainabilityIndex;
+    private int depthOfInheritance;
     /*
     private int operators //distinct operators
     private int operands //distinct operands

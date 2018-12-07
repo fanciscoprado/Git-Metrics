@@ -87,7 +87,7 @@ public class DataCollector {
     private void getCyclomaticComplexity(){
         //TODO: 12/5/2018
     }
-    private void getDepthOfInheritance(){
+    private void getDepthOfInheritance() {
         //TODO: 12/5/2018
     }
     private void getMaintainabilityIndex(){
