@@ -86,7 +86,7 @@ public class DataCollector {
     }
 
     private void getCyclomaticComplexity(DataColected cyclomatic, File temp){
-        cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath());
+        cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
     }
     private void getDepthOfInheritance() {
         //TODO: 12/5/2018

@@ -15,8 +15,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-       // Image image = new Image("icon.png");
-       // primaryStage.getIcons().add(image);
+        Image image = new Image("icon.png");
+        primaryStage.getIcons().add(image);
         primaryStage.setTitle("Metrics");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
