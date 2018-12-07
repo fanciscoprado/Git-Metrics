@@ -2,7 +2,6 @@ package sample.halstead;
 
 public class halsteadMetrics
 {
-    
     public int getProgramVocab(int operators, int operands){
         return operators + operands;
     }
