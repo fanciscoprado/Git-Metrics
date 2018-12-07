@@ -17,6 +17,7 @@ public class DataCollector {
             getMetrics(temp, dataToCollect, dataColected);
             getSourceLines(dataColected,temp);
             dataColectedList.add(dataColected);
+            getCyclomaticComplexity(dataColected, temp);
         }
 
 
@@ -84,8 +85,8 @@ public class DataCollector {
         /* TODO: 12/2/2018 */
     }
 
-    private void getCyclomaticComplexity(){
-        //TODO: 12/5/2018
+    private void getCyclomaticComplexity(DataColected cyclomatic, File temp){
+        cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath());
     }
     private void getDepthOfInheritance() {
         //TODO: 12/5/2018
