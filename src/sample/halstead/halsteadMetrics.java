@@ -85,6 +85,7 @@ public class halsteadMetrics
     }
 
     int getProgramLength(){
+        programLength = operatorT + operandT;
         return this.programLength;
     }
 
