@@ -56,7 +56,7 @@ public class Controller2 extends Controller {
                 for (CommiterInfo tempe : temp.commiterList) {
                     totalCommits = totalCommits + tempe.getCommits();
                 }
-                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits));
+                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits,temp.dataColectedList));
                 Button showMetrics = new Button("Show Metrics");
                 showMetrics.setOnAction(e -> {
                     ResultBox resultBox = new ResultBox();
