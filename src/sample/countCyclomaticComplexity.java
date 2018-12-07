@@ -39,9 +39,12 @@ public class countCyclomaticComplexity {
                 }
             line = br.readLine();
             }
+            fr.close();
+            br.close();
         } catch (IOException e) {
            e.printStackTrace();
         }
+
         return (complexity);
     }
 }
