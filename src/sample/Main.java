@@ -31,7 +31,7 @@ public class Main extends Application {
     }
 
 
-    public static void deletTemp(File folder){ // recusivly delets the git archive downloaded
+    public static void deletTemp(File folder){ // recusivly deletes the git archive downloaded
         File[] listOfFiles = folder.listFiles();
         try {
             for (File temp : listOfFiles) {
@@ -39,12 +39,12 @@ public class Main extends Application {
                     deletTemp(temp);
                 }
                 if (temp.delete()) {
-                    System.out.println("deletet" + temp.getName());
+                    System.out.println("delete" + temp.getName());
                 }
 
             }
         }catch (Exception e){
-            System.out.println("could not delet");
+            System.out.println("could not delete");
             folder.setWritable(true);
             folder.delete();
         }
