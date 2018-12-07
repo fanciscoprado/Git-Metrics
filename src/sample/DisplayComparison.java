@@ -13,6 +13,7 @@ public class DisplayComparison {
         VBox layout = new VBox();
         layout.getChildren().add(new DisplayComiiterData().displayPiechart(clist));
         Text totalCommits = new Text("Total commit: " + tCommits);
+        Text totalSorceline = new Text("Total SorceLines: " + "");
         totalCommits.setFont(new Font(20));
         layout.getChildren().add(totalCommits);
 
