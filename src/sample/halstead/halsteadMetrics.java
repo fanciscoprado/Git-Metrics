@@ -84,8 +84,7 @@ public class halsteadMetrics
     }
 
     int getProgramLength(int operatorsT, int operandsT){
-        this.programLength = operatorsT + operandsT;
-        return this.programLength;
+        return operatorsT + operandsT;
     }
 
     double getCalculatedProgramLength(int operators, int operands){
