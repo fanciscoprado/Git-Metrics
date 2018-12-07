@@ -35,18 +35,19 @@ word count, line count, character count, comment line count and source line coun
    **2.1** Product Functions
 
       Our software will allow users to check for software metrics and information in their uploaded files or website. This will help aid the user
-      in improving their software with the info provided. Below is a list of each software metric available in this program:
+      in improving their software with the info provided. Below is a list and brief description of each software metric available in this program:
 
-         - Lines of Code
-         - Number of Words
-         - Number of Characters
-         - Number of Lines
-         - Number of Source Lines
+         - Lines of Code - raw lines of code in the program. (May include blank lines at end bottom of classes.)
+         - Number of Words - raw number of words in the program.
+         - Number of Characters - raw number of characters in the program.
+         - Number of Lines - raw number of lines in the program.
+         - Number of Source Lines of Code - number of lines including source code in the program.
 
-         //Halstead Metrics
-         //Depth of Inheritance
-         //Cyclomatic Complexity
-         //Maintainability Index
+         //Halstead Metrics - calculated value of ?w?
+         //Depth of Inheritance - calculated ?w? value of class inheritance in the program.
+         //Cyclomatic Complexity - raw number of unique paths in the program.
+         //Maintainability Index - calculated value of maintainability of the program.
+         //idk why this is making a box on webpage
 
    
    **2.2** Definitions
