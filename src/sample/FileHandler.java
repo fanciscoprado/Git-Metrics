@@ -6,6 +6,8 @@ import java.util.LinkedList;
 
 public class FileHandler {
     public LinkedList parseFiles(DataToCollect dataToCollect) throws IOException {
+        if(!dataToCollect.isDoJavaFile() && !dataToCollect.isDoCppFile() && !dataToCollect.isDoC())
+            dataToCollect.setDoJavaFile(true);
         File folder = new File("temp/");
         LinkedList<File> fileList = new LinkedList<>();
         LinkedList<File> flist = makeList(folder, fileList,dataToCollect);
