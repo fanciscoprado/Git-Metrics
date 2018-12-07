@@ -37,11 +37,11 @@ word count, line count, character count, comment line count and source line coun
       Our software will allow users to check for software metrics and information in their uploaded files or website. This will help aid the user
       in improving their software with the info provided. Below is a list of each software metric available in this program:
 
-         Lines of Code
-         Number of Words
-         Number of Characters
-         Number of Lines
-         Number of Source Lines
+         - Lines of Code
+         - Number of Words
+         - Number of Characters
+         - Number of Lines
+         - Number of Source Lines
 
          //Halstead Metrics
          //Depth of Inheritance
@@ -69,8 +69,8 @@ word count, line count, character count, comment line count and source line coun
    
    **2.3** Product Constraints
 
-      - Time frame for completion: Approximately 7 weeks
-      - //list more...
+      Our time frame for completion was approximately 7 weeks.
+      //add more...
 
    **2.4** User classes/Use cases (??)
 
