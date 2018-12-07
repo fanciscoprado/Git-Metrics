@@ -105,6 +105,7 @@ public class halsteadMetrics
     }
 
     double getEffort(){
+        this.effort = this.difficulty*this.volume;
         return this.effort;
     }
 
