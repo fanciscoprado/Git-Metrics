@@ -1,19 +1,16 @@
 package sample;
 
-//Experimental class, don't know if this will work properly. DoI will follow CC algorithm.
-//After creating this, an issue was discovered. This does not actually measure the depth of inheritance, but just counts the number of classes.
-//Need to adjust search parameter to filter extensions of classes also.
+//Experimental class, don't know if this will work properly. Algorithm follows CC algorithm.
 
 import java.io.*;
 import java.util.*;
 
 public class countDepthOfInheritance {
     //Information that may or may not be implemented in output in the future. Depth of Inheritance of this class: 1.
-    //Counter is the depth.
     //Low implies less complexity, less possibility for code reuse.
     //High implies higher complexity, more possibility for code reuse. Higher chance for errors.
     public int checkForInheritance (){
-        int inheritance = 1;
+        int inheritance = 1;        //Default inheritance is 1, an extension is 1 level of inheritance
         String fileName;
         String[]keywords = {"extends"};
         String words = "";        //temp variable to hold value of token
