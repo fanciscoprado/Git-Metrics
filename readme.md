@@ -114,5 +114,6 @@ word count, line count, character count, comment line count and source line coun
     
     User system needs to have java installed in order to run the program.
     Java runtime is required for full functionality of the program. User need to input a full url
-    from github with no restrictions in order to run properly.  
+    from github with no restrictions in order to run properly.  If there is a temp file the program will go to delete/rewrite
+    that file in order list the metrics requested in the program. 
 
