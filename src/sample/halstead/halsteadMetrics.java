@@ -95,6 +95,7 @@ public class halsteadMetrics
     }
 
     double getVolume(){
+        this.volume = this.programLength*(Math.log(this.programVocab)/Math.log(2));
         return this.volume;
     }
 
