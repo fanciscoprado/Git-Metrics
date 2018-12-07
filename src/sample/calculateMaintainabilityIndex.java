@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.*;
 import java.lang.Math;
 
 //NEEDS FOLLOWING TO CALCULATE: halstead volume, cyclomatic complexity, count of source lines of code.
@@ -14,7 +15,7 @@ public class calculateMaintainabilityIndex {
     //20-100 = good
     //10-19 = moderate
     //0-9 = low
-    public double calculateMI(){
+    public double calculateMI(File file){
         double mI = 1;
         Math.sqrt(1); //added temporarily to fix error
         //mI = 171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC);
