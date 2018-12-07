@@ -110,6 +110,7 @@ public class halsteadMetrics
     }
 
     double getTimeRequired(){
+        this.timeRequired = this.effort/18;
         return this.timeRequired;
     }
 
