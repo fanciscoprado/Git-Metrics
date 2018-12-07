@@ -15,8 +15,8 @@ public class ResultBox {
     public static void display(ObservableList<DataColected> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
         //Block events to other windows
-        Image image = new Image("icon.png");
-        window.getIcons().add(image);
+       // Image image = new Image("icon.png");
+        //window.getIcons().add(image);
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
