@@ -89,7 +89,7 @@ public class halsteadMetrics
         return this.programLength;
     }
 
-    double getCalculatedProgramLength(){
+    double getCalculatedProgramLength(int operators, int operands){
         this.calculatedProgramLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
         return this.calculatedProgramLength;
     }
