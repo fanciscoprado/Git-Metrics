@@ -90,7 +90,7 @@ word count, line count, character count, comment line count and source line coun
       The GUI makes it much more user friendly to input a file or website than when using the program through a command line.
       The metrics are also placed in boxes making it much easier for the user to see what their file/url has.
 
-4. **System Features**
+4 **System Features**
 
    **4.1** GUI
 
@@ -102,6 +102,9 @@ word count, line count, character count, comment line count and source line coun
 
 
       **4.1.2** Stimulus/Response Sequences
+      
+      The user would need to run the java file within an ide of some sort or run it as
+      and excuatable. 
 
 
       **4.1.3** Functional Requirements
