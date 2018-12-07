@@ -103,9 +103,8 @@ public class halsteadMetrics
         return difficulty*volume;
     }
 
-    double getTimeRequired(){
-        this.timeRequired = this.effort/18;
-        return this.timeRequired;
+    double getTimeRequired(double effort){
+        return effort/18;
     }
 
     double getBugs(){
