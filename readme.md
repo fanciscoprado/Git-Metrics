@@ -20,15 +20,14 @@ word count, line count, character count, comment line count and source line coun
    **1.1** Purpose
 
       The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
-      Our intended audience includes other developers and users who may find these contents useful.
 
    **1.2** Intended Audience
 
-      While anyone is free to use this program, our target audience includes primarily software developers.
+      As a tool for measuring software metrics, our target audience is primarily other software developers.
 
    **1.3** Scope
 
-      Our goal is to deliver a platform in which users can get metrics of a file and are able to use this
+      Our goal is to deliver a platform in which users can measure the metrics of a file and are able to use this
       information in a easy and productive way.
 
 2. **Overview**
@@ -56,7 +55,7 @@ word count, line count, character count, comment line count and source line coun
    
    **2.3** Product Constraints
 
-      - Time frame for completion: Approzimately 7 weeks
+      - Time frame for completion: Approximately 7 weeks
       - //list more...
 
 3. **External Interface Requirements**
