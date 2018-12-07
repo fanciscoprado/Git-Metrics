@@ -79,35 +79,35 @@ public class halsteadMetrics
         return this.N2;
     }*/
 
-    int getProgramVocab(int operators, int operands){
+    public int getProgramVocab(int operators, int operands){
         return operators + operands;
     }
 
-    int getProgramLength(int operatorsT, int operandsT){
+    public int getProgramLength(int operatorsT, int operandsT){
         return operatorsT + operandsT;
     }
 
-    double getCalculatedProgramLength(int operators, int operands){
+    public double getCalculatedProgramLength(int operators, int operands){
         return (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
     }
 
-    double getVolume(int Plength, int vocab){
+    public double getVolume(int Plength, int vocab){
         return Plength*(Math.log(vocab)/Math.log(2));
     }
 
-    double getDifficulty(int operators, int operands, int operandsT){
+    public double getDifficulty(int operators, int operands, int operandsT){
         return (operators/2)*(operandsT/operands);
     }
 
-    double getEffort(double difficulty, double volume){
+    public double getEffort(double difficulty, double volume){
         return difficulty*volume;
     }
 
-    double getTimeRequired(double effort){
+    public double getTimeRequired(double effort){
         return effort/18;
     }
 
-    double getBugs(double timeRequired){
+    public double getBugs(double timeRequired){
         return timeRequired/3000;
     }
 }
