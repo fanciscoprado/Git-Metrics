@@ -84,7 +84,7 @@ public class halsteadMetrics
         return this.programVocab;
     }
 
-    int getProgramLength(){
+    int getProgramLength(int operatorT, int operandT){
         programLength = operatorT + operandT;
         return this.programLength;
     }
