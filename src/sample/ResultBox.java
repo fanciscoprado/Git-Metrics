@@ -42,7 +42,7 @@ public class ResultBox {
         //Display window and wait for it to be closed before returning
 
         window.setScene(dataDisplay);
-        window.showAndWait();
+        window.show();
 
     }
 
