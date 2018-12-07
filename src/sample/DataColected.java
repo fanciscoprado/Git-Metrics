@@ -9,9 +9,9 @@ public class DataColected {
     private long lcount;
     private int cccount;
     private int slcount;
-    private int cyclomaticComplexity;
-    private int maintainabilityIndex;
-    private int depthOfInheritance;
+    private int cyclomaticcomplexity;
+    private int maintainabilityindex;
+    private int depthofinheritance;
     /*
     private int operators //distinct operators
     private int operands //distinct operands
@@ -53,6 +53,12 @@ public class DataColected {
     public void setFilename(String filename) {
         this.filename = filename;
     }
+
+    public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
+
+    public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
+
+    public void setDepthOfInheritance(int depthofinheritance) {this.depthofinheritance = depthofinheritance;}
     /*
     public void setOperators(int operators)
     {
