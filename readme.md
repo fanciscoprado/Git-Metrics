@@ -56,7 +56,8 @@ word count, line count, character count, comment line count and source line coun
    
    **2.3** Product Constraints
 
-       ???/We need to list our limits here
+      - Time frame for completion: Approzimately 7 weeks
+      - //list more...
 
 3. **External Interface Requirements**
 
