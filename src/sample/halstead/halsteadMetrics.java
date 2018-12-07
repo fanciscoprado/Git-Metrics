@@ -99,9 +99,8 @@ public class halsteadMetrics
         return (operators/2)*(operandsT/operands);
     }
 
-    double getEffort(){
-        this.effort = this.difficulty*this.volume;
-        return this.effort;
+    double getEffort(double difficulty, double volume){
+        return difficulty*volume;
     }
 
     double getTimeRequired(){
