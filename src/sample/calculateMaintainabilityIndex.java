@@ -1,5 +1,6 @@
 package sample;
-package java.lang.Math;
+
+import java.lang.Math;
 
 //NEEDS FOLLOWING TO CALCULATE: halstead volume, cyclomatic complexity, count of source lines of code.
 // Original formula: MI = 171 - 5.2 * ln(V) - 0.23 * (G) - 16.2 * ln(LOC)
@@ -15,6 +16,7 @@ public class calculateMaintainabilityIndex {
     //0-9 = low
     public double calculateMI(){
         double mI = 1;
+        Math.sqrt(1); //added temporarily to fix error
         return (mI);
     }
 }
