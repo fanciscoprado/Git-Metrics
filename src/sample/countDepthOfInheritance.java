@@ -25,9 +25,9 @@ public class countDepthOfInheritance {
                 while (stTokenizer.hasMoreTokens())
                 {
                     words = stTokenizer.nextToken();
-                    for(int i=0; i<keywords.length; i++)
+                    for(int i=0; i < keywords.length; i++)
                     {
-                        if(keywords[i].equals(words))        //compares token (words) to see if it is keyword
+                        if (keywords[i].equals(words))        //compares token (words) to see if it is keyword
                         {
                             inheritance++;
                         }
