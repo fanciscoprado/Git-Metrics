@@ -35,13 +35,27 @@ word count, line count, character count, comment line count and source line coun
    **2.1** Product Functions
 
       Our software will allow users to check for software metrics and information in their uploaded files or website. This will help aid the user
-      in improving their software with the info provided.
+      in improving their software with the info provided. Below is a list of each software metric available in this program:
+
+         Lines of Code
+         Number of Words
+         Number of Characters
+         Number of Lines
+         Number of Source Lines
+
+         //Halstead Metrics
+         //Depth of Inheritance
+         //Cyclomatic Complexity
+         //Maintainability Index
+
    
    **2.2** Definitions
 
    Some terms in the SRS may be referred to via acronym, so we will be pre-defining any here.
 
       - GUI - Graphic User Interface
+
+      - LOC - Lines of Code
 
       - SLOC - Source Lines of Code
 
@@ -87,6 +101,8 @@ word count, line count, character count, comment line count and source line coun
 
       **4.1.3** Functional Requirements
 
-5. **Other Non-Functional Requirements**
+   **4.2**
 
+5. **Other Non-Functional Requirements**
+   //don't know if we actually need this...
 
