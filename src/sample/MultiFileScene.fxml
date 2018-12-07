@@ -42,34 +42,6 @@
                     <children>
                         <VBox>
                             <children>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Metrics">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Text>
-                                <CheckBox mnemonicParsing="false" text="Comment line count">
-                                    <VBox.margin>
-                                        <Insets top="5.0" />
-                                    </VBox.margin></CheckBox>
-                                <CheckBox fx:id="checkBox1" mnemonicParsing="false" onAction="#box1" text="Word Count">
-                                    <VBox.margin>
-                                        <Insets top="5.0" />
-                                    </VBox.margin></CheckBox>
-                                <CheckBox fx:id="checkBox3" mnemonicParsing="false" onAction="#box3" text="Character Count">
-                                    <VBox.margin>
-                                        <Insets top="5.0" />
-                                    </VBox.margin></CheckBox>
-                                <CheckBox fx:id="checkBox2" mnemonicParsing="false" onAction="#box2" text="Line Count">
-                                    <VBox.margin>
-                                        <Insets top="5.0" />
-                                    </VBox.margin></CheckBox>
-                                <CheckBox mnemonicParsing="false" text="Sorce Line Count">
-                                    <VBox.margin>
-                                        <Insets top="5.0" />
-                                    </VBox.margin></CheckBox>
-                            </children></VBox>
-                        <VBox>
-                            <children>
                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Types of Files">
                                     <font>
                                         <Font size="18.0" />

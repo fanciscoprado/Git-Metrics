@@ -19,19 +19,11 @@ import java.util.LinkedList;
 
 public class Controller2 extends Controller {
     @FXML
-    private CheckBox checkBox1;
-    @FXML
     private TextField uRLfield;
-    @FXML
-    private CheckBox checkBox2;
-    @FXML
-    private CheckBox checkBox3;
     @FXML
     public Button goButton;
     @FXML
     private CheckBox checkBox4;
-    @FXML
-    private AnchorPane stage;
     @FXML
     private Button addRepo;
     private LinkedList<String> repoList = new LinkedList<>();
@@ -89,7 +81,7 @@ public class Controller2 extends Controller {
     @Override
     public void box4() throws IOException {
         if(checkBox4.isSelected()) {
-            Stage stage = (Stage) checkBox1.getScene().getWindow();
+            Stage stage = (Stage) checkBox4.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("sample.fxml"))));
         }
     }

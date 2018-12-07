@@ -22,17 +22,9 @@ public class Controller {
     @FXML
     private TextField uRLfield;
     @FXML
-    private CheckBox checkBox1;
-    @FXML
-    private CheckBox checkBox2;
-    @FXML
-    private CheckBox checkBox3;
-    @FXML
     public Button goButton;
     @FXML
     private CheckBox checkBox4;
-    @FXML
-    private AnchorPane stage;
     @FXML
     public CheckBox checkBoxj;
     @FXML
@@ -56,33 +48,10 @@ public class Controller {
 
     }
 
-    public void  box1(){
-        if(checkBox1.isSelected())
-            dataToCollect.setWordCount(true);
-        else
-            dataToCollect.setWordCount(false);
-
-    }
-
-    public void box2(){
-        if(checkBox2.isSelected())
-            dataToCollect.setLineCount(true);
-        else
-            dataToCollect.setLineCount(false);
-
-    }
-
-    public void  box3(){
-        if(checkBox3.isSelected())
-            dataToCollect.setCharCount(true);
-        else
-            dataToCollect.setCharCount(false);
-
-    }
 
     public void box4() throws IOException {
         if(checkBox4.isSelected()){
-            Stage stage = (Stage) checkBox1.getScene().getWindow();
+            Stage stage = (Stage) checkBox4.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("MultiFileScene.fxml"))));
         }
     }
