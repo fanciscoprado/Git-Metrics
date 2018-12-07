@@ -12,37 +12,32 @@ public class countCyclomaticComplexity {
     //CC 11-20 = harder to maintain; moderate
     //CC 21+ = consider refactoring/redesigning; risky
     //CC 50+ = unstable, high chance for errors
-    public int checkForUniquePath(){
+    public int checkForUniquePath(File file){
         int complexity = 1;
         String fileName;
-        String[]keywords = {"if","else","while","case","for","switch","do","continue","break","&&","||","?",":","catch","finally","throw","throws","return"};
+        String[] keywords = {"if", "else", "while", "case", "for", "switch", "do", "continue", "break", "&&", "||", "?", ":", "catch", "finally", "throw", "throws", "return"};
         String words = "";        //temp variable to hold value of token
         String line = null;
-        try{
+        try {
             fileName = "GetFiles.java";
             FileReader fr = new FileReader(fileName);
             BufferedReader br = new BufferedReader(fr);
             line = br.readLine();
-            while (line != null)
-            {
+            while (line != null) {
                 StringTokenizer stTokenizer = new StringTokenizer(line);
-                while (stTokenizer.hasMoreTokens())
-                {
+                while (stTokenizer.hasMoreTokens()) {
                     words = stTokenizer.nextToken();
-                    for(int i=0; i<keywords.length; i++)
-                    {
-                        if(keywords[i].equals(words))        //compares token (words) to see if it is a keyword
+                    for (int i = 0; i < keywords.length; i++) {
+                        if (keywords[i].equals(words))        //compares token (words) to see if it is a keyword
                         {
-                            complexity++;
+                             complexity++;
                         }
-                    }
+                  }
                 }
-                line = br.readLine();
-            }
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
+            line = br.readLine();
+           }
+        } catch (IOException e) {
+           e.printStackTrace();
         }
         return (complexity);
     }
