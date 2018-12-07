@@ -112,5 +112,4 @@ word count, line count, character count, comment line count and source line coun
 
 5. **Other Non-Functional Requirements**
 
-   //don't know if we actually need this...
 
