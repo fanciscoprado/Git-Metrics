@@ -2,7 +2,7 @@ package sample.halstead;
 
 public class halsteadMetrics
 {
-    private int nOne;
+    /*private int nOne;
     private int nTwo;
     private int N1;
     private int N2;
@@ -77,11 +77,10 @@ public class halsteadMetrics
 
     int getN2(){
         return this.N2;
-    }
+    }*/
 
     int getProgramVocab(int operators, int operands){
-        this.programVocab = operators + operands;
-        return this.programVocab;
+        return operators + operands;
     }
 
     int getProgramLength(int operatorsT, int operandsT){
