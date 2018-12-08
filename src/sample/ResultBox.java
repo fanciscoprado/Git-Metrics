@@ -20,6 +20,8 @@ public class ResultBox {
         //window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Results");
         window.setMinWidth(250);
+        Image image = new Image("icon.png");
+        window.getIcons().add(image);
         Button sceneSwitch1 = new Button("Contributors");
         Button sceneSwitch2 = new Button("Metrics");
 
