@@ -19,7 +19,6 @@ public class GitController {
                     .call();
 
         } catch (Exception e) {
-            //System.out.println("no good amigo");
             return false;
         }
 

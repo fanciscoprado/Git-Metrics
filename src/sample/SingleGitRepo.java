@@ -12,7 +12,7 @@ public class SingleGitRepo {
     GitController gitController = new GitController();
     FileHandler fileHandler = new FileHandler();
     DataCollector dataCollector = new DataCollector();
-    //Git git;
+
     ObservableList<DataColected> dataColectedList;
     LinkedList<CommiterInfo> commiterList;
 
@@ -25,8 +25,6 @@ public class SingleGitRepo {
                LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
                dataColectedList = dataCollector.collectData(fileList, dataToCollect);
                displayResults(dataColectedList, commiterList);
-               // git.getRepository().close();
-               // git.close();
                gitController.close();
                return true;
            }else ;

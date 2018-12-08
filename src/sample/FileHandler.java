@@ -20,7 +20,6 @@ public class FileHandler {
     private LinkedList makeList(File folder, LinkedList<File> list, DataToCollect dataToCollect) throws IOException { //Makes observable list of DataColected objects that contain the metrics
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
-            String fname = file.getName();
             if(!file.isFile())
                 makeList(file,list,dataToCollect);
             else {//add file to list
