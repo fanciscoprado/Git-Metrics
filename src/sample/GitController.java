@@ -9,7 +9,7 @@ import org.eclipse.jgit.revwalk.RevCommit;
 public class GitController {
     File folder = new File("temp/");
     Git git = null;
-    public boolean downloadRepo(String url) throws IOException {
+    public boolean downloadRepo(String url) {
 
 
         try {
@@ -18,7 +18,7 @@ public class GitController {
                     .setDirectory(folder)
                     .call();
 
-        } catch (GitAPIException e) {
+        } catch (Exception e) {
             //System.out.println("no good amigo");
             return false;
         }

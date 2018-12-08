@@ -39,7 +39,7 @@ public class Controller2 extends Controller {
                 MultiGitRepo multiGitRepo = new MultiGitRepo();
             if (multiGitRepo.start(dataToCollect, temp)) {
                 parsedRepoList.push(multiGitRepo);
-                showResults = true;
+
             }
             else {
                 new AlertBox().display("Alert!", "Invalid URL(s) pleas try again");
