@@ -107,6 +107,11 @@ public class DataCollected {
         return slcount;
     }
 
+    public int getVocab()
+    {
+        vocab = operators + operands;
+        return vocab;
+    }
     public int getOperators() {
         return operators;
     }
