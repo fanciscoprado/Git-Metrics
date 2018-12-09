@@ -53,31 +53,27 @@ public class DataCollected {
         this.filename = filename;
     }
 
+    public void setOperators(int operators) {
+        this.operators = operators;
+    }
+
+    public void setOperands(int operands) {
+        this.operands = operands;
+    }
+
+    public void setOperatorsT(int operatorsT) {
+        this.operatorsT = operatorsT;
+    }
+
+    public void setOperandsT(int operandsT) {
+        this.operandsT = operandsT;
+    }
+
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
     public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
 
     public void setDepthOfInheritance(int depthofinheritance) {this.depthofinheritance = depthofinheritance;}
-
-    public void setOperators(int operators)
-    {
-        this.operators = operators;
-    }
-
-    public void setOperands(int operands)
-    {
-        this.operands = operands;
-    }
-
-    public void setOperatorsT(int operatorsT)
-    {
-        this.operatorsT = operatorsT;
-    }
-
-    public void setOperandsT(int operandsT)
-    {
-        this.operandsT = operandsT;
-    }
 
     public boolean isSkipped() {
         return skipped;
@@ -101,6 +97,22 @@ public class DataCollected {
 
     public int getSlcount() {
         return slcount;
+    }
+
+    public int getOperators() {
+        return operators;
+    }
+
+    public int getOperands() {
+        return operands;
+    }
+
+    public int getOperatorsT() {
+        return operatorsT;
+    }
+
+    public int getOperandsT() {
+        return operandsT;
     }
 
     public int getCyclomaticComplexity() { return cyclomaticcomplexity; }
