@@ -112,6 +112,11 @@ public class DataCollected {
         vocab = operators + operands;
         return vocab;
     }
+    public int getPLength()
+    {
+        PLength = operatorsT + operandsT;
+        return PLength;
+    }
     public int getOperators() {
         return operators;
     }
