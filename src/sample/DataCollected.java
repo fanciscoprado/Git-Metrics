@@ -142,6 +142,11 @@ public class DataCollected {
         time = effort/18;
         return time;
     }
+    public double getBugs()
+    {
+        bugs = volume/3000;
+        return bugs;
+    }
     public int getOperators() {
         return operators;
     }
