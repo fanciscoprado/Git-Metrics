@@ -127,6 +127,11 @@ public class DataCollected {
         volume = PLength*(Math.log(vocab)/Math.log(2));
         return volume;
     }
+    public double getDifficulty
+    {
+        difficulty = (operators/2)*(operandsT/operands);
+        return difficulty;
+    }
     public int getOperators() {
         return operators;
     }
