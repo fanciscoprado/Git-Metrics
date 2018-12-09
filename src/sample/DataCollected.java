@@ -117,6 +117,11 @@ public class DataCollected {
         PLength = operatorsT + operandsT;
         return PLength;
     }
+    public double getCPLength()
+    {
+        CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
+        return CPLength;
+    }
     public int getOperators() {
         return operators;
     }
