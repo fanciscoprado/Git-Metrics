@@ -137,7 +137,7 @@ public class DataCollected {
         effort = difficulty*volume;
         return effort;
     }
-    public double getTime
+    public double getTime()
     {
         time = effort/18;
         return time;
