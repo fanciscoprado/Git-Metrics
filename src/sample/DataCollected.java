@@ -12,12 +12,11 @@ public class DataCollected {
     private int cyclomaticcomplexity;
     private int maintainabilityindex;
     private int depthofinheritance;
-    /*
-    private int operators //distinct operators
-    private int operands //distinct operands
-    private int operatorsT //total number of operators
-    private int operandsT //total number of operands
-     */
+    private int operators; //distinct operators
+    private int operands; //distinct operands
+    private int operatorsT; //total number of operators
+    private int operandsT; //total number of operands
+
     private boolean skipped;
 
     public String getFilename() {
@@ -59,24 +58,26 @@ public class DataCollected {
     public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
 
     public void setDepthOfInheritance(int depthofinheritance) {this.depthofinheritance = depthofinheritance;}
-    /*
+
     public void setOperators(int operators)
     {
         this.operators = operators;
     }
+
     public void setOperands(int operands)
     {
         this.operands = operands;
     }
+
     public void setOperatorsT(int operatorsT)
     {
         this.operatorsT = operatorsT;
     }
+
     public void setOperandsT(int operandsT)
     {
         this.operandsT = operandsT;
     }
-     */
 
     public boolean isSkipped() {
         return skipped;

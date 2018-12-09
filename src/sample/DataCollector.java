@@ -81,8 +81,9 @@ public class DataCollector {
             e.printStackTrace();
         }
     }
-    private void getHalstead(){
+    private void getHalstead(DataCollected dataCollected, File temp){
         /* TODO: 12/2/2018 */
+
     }
 
     private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
