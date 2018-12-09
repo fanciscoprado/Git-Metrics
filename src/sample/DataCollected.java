@@ -122,6 +122,11 @@ public class DataCollected {
         CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
         return CPLength;
     }
+    public double getVolume()
+    {
+        volume = PLength*(Math.log(vocab)/Math.log(2));
+        return volume;
+    }
     public int getOperators() {
         return operators;
     }
