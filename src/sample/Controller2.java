@@ -7,11 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -56,11 +52,11 @@ public class Controller2 extends Controller {
                 for (CommiterInfo tempe : temp.commiterList) {
                     totalCommits = totalCommits + tempe.getCommits();
                 }
-                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits,temp.dataColectedList));
+                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits,temp.dataCollectedList));
                 Button showMetrics = new Button("Show Metrics");
                 showMetrics.setOnAction(e -> {
                     ResultBox resultBox = new ResultBox();
-                    resultBox.display(temp.dataColectedList, temp.getCommiterList());
+                    resultBox.display(temp.dataCollectedList, temp.getCommiterList());
                 });
                 layout2.getChildren().add(showMetrics);
             }

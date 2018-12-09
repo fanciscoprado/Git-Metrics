@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class MultiGitRepo extends SingleGitRepo {
     @Override
-    public void displayResults(ObservableList<DataColected> dataColectedList, LinkedList<CommiterInfo> commiterList) {
+    public void displayResults(ObservableList<DataCollected> dataCollectedList, LinkedList<CommiterInfo> commiterList) {
         ;
     }
 

@@ -12,7 +12,7 @@ import java.util.LinkedList;
 public class ResultBox {
 
 
-    public static void display(ObservableList<DataColected> list, LinkedList<CommiterInfo> cList) {
+    public static void display(ObservableList<DataCollected> list, LinkedList<CommiterInfo> cList) {
         Stage window = new Stage();
         window.setTitle("Results");
         window.setMinWidth(250);

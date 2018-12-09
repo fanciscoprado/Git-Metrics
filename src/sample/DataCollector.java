@@ -9,73 +9,73 @@ import java.util.LinkedList;
 
 public class DataCollector {
 
-    public ObservableList<DataColected> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
-        ObservableList<DataColected> dataColectedList = FXCollections.observableArrayList();
+    public ObservableList<DataCollected> collectData(LinkedList<File> fileList, DataToCollect dataToCollect) throws IOException {
+        ObservableList<DataCollected> dataCollectedList = FXCollections.observableArrayList();
         for(File temp : fileList){
-            DataColected dataColected = new DataColected();
-            dataColected.setFilename(temp.getName());
-            getMetrics(temp, dataToCollect, dataColected);
-            getSourceLines(dataColected,temp);
-            dataColectedList.add(dataColected);
-            getCyclomaticComplexity(dataColected, temp);
+            DataCollected dataCollected = new DataCollected();
+            dataCollected.setFilename(temp.getName());
+            getMetrics(temp, dataToCollect, dataCollected);
+            getSourceLines(dataCollected,temp);
+            dataCollectedList.add(dataCollected);
+            getCyclomaticComplexity(dataCollected, temp);
         }
 
 
-        return dataColectedList;
+        return dataCollectedList;
     }
 
-    private void getMetrics(File temp, DataToCollect dataToCollect, DataColected dataColected) throws IOException {
+    private void getMetrics(File temp, DataToCollect dataToCollect, DataCollected dataCollected) throws IOException {
         if(!dataToCollect.isLineCount() && !dataToCollect.isWordCount() && !dataToCollect.isCharCount()){
-            getWLSCount(dataColected,temp);
+            getWLSCount(dataCollected,temp);
         }else {
             wc counter = new wc();
             counter.counter(temp.getName(),temp);
 
             if (dataToCollect.isWordCount())
-                getWordCount(counter, dataColected);
+                getWordCount(counter, dataCollected);
             if (dataToCollect.isCharCount())
-                getCharCount(counter, dataColected);
+                getCharCount(counter, dataCollected);
             if (dataToCollect.isLineCount())
-                getLineCount(counter, dataColected);
+                getLineCount(counter, dataCollected);
         }
     }
-    private void getWordCount(wc counter, DataColected dataColected){
-        dataColected.setFilename(counter.getFilename());
-        dataColected.setWcount(counter.getWcount());
+    private void getWordCount(wc counter, DataCollected dataCollected){
+        dataCollected.setFilename(counter.getFilename());
+        dataCollected.setWcount(counter.getWcount());
     }
-    private void getCharCount(wc counter, DataColected dataColected){
-        dataColected.setFilename(counter.getFilename());
-        dataColected.setCcount(counter.getCcount());
+    private void getCharCount(wc counter, DataCollected dataCollected){
+        dataCollected.setFilename(counter.getFilename());
+        dataCollected.setCcount(counter.getCcount());
     }
-    private void getLineCount(wc counter, DataColected dataColected){
-        dataColected.setFilename(counter.getFilename());
-        dataColected.setLcount(counter.getLcount());
+    private void getLineCount(wc counter, DataCollected dataCollected){
+        dataCollected.setFilename(counter.getFilename());
+        dataCollected.setLcount(counter.getLcount());
     }
 
-    private void getWLSCount(DataColected dataColected, File temp){
+    private void getWLSCount(DataCollected dataCollected, File temp){
         wc counter = new wc();
         try {
-            counter.counter(dataColected.getFilename(),temp);
-            dataColected.setWcount(counter.getWcount());
-            dataColected.setLcount(counter.getLcount());
-            dataColected.setCcount(counter.getCcount());
+            counter.counter(dataCollected.getFilename(),temp);
+            dataCollected.setWcount(counter.getWcount());
+            dataCollected.setLcount(counter.getLcount());
+            dataCollected.setCcount(counter.getCcount());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void getSourceLines(DataColected dataColected, File temp){
+    private void getSourceLines(DataCollected dataCollected, File temp){
         //Replaced countSourceLines with lineCounter
         //countSourceLines counter = new countSourceLines();
         lineCounter counter = new lineCounter();
         int[] lineTally = {0, 0};
         try {
-            /*dataColected.setSlcount(counter.getSourceLines(temp));
-            dataColected.setCccount(counter.getCommentLines(temp));*/
+            /*dataCollected.setSlcount(counter.getSourceLines(temp));
+            dataCollected.setCccount(counter.getCommentLines(temp));*/
             //getNumberOfLines returns an array of two length
             lineTally = counter.getNumberOfLines(temp);
-            dataColected.setSlcount(lineTally[0]);  //lineTally[0] is Source Lines
-            dataColected.setCccount(lineTally[1]);  //lineTally[1] is Comment Lines
+            dataCollected.setSlcount(lineTally[0]);  //lineTally[0] is Source Lines
+            dataCollected.setCccount(lineTally[1]);  //lineTally[1] is Comment Lines
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -85,7 +85,7 @@ public class DataCollector {
         /* TODO: 12/2/2018 */
     }
 
-    private void getCyclomaticComplexity(DataColected cyclomatic, File temp){
+    private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
         cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
     }
     private void getDepthOfInheritance() {

@@ -1,6 +1,6 @@
 package sample.halstead;
 
-//DataColected class: defines and identifies operators
+//DataCollected class: defines and identifies operators
 public class halsteadOperator
 {
     private boolean prefixFlag;

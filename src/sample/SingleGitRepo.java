@@ -1,8 +1,6 @@
 package sample;
 
 import javafx.collections.ObservableList;
-import jdk.nashorn.internal.runtime.ECMAException;
-import org.eclipse.jgit.api.Git;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +11,7 @@ public class SingleGitRepo {
     FileHandler fileHandler = new FileHandler();
     DataCollector dataCollector = new DataCollector();
 
-    ObservableList<DataColected> dataColectedList;
+    ObservableList<DataCollected> dataCollectedList;
     LinkedList<CommiterInfo> commiterList;
 
 
@@ -23,8 +21,8 @@ public class SingleGitRepo {
            if(gitController.downloadRepo(url)) {
                commiterList = gitController.getCommitCount();
                LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
-               dataColectedList = dataCollector.collectData(fileList, dataToCollect);
-               displayResults(dataColectedList, commiterList);
+               dataCollectedList = dataCollector.collectData(fileList, dataToCollect);
+               displayResults(dataCollectedList, commiterList);
                gitController.close();
                return true;
            }else ;
@@ -34,14 +32,14 @@ public class SingleGitRepo {
         return false;
 
     }
-     void displayResults(ObservableList<DataColected> dataColectedList, LinkedList<CommiterInfo> commiterList){
+     void displayResults(ObservableList<DataCollected> dataCollectedList, LinkedList<CommiterInfo> commiterList){
         ResultBox resultBox = new ResultBox();
-        resultBox.display(dataColectedList,commiterList);
+        resultBox.display(dataCollectedList,commiterList);
 
     }
 
-    public ObservableList<DataColected> getDataColectedList() {
-        return dataColectedList;
+    public ObservableList<DataCollected> getDataCollectedList() {
+        return dataCollectedList;
     }
 
     public LinkedList<CommiterInfo> getCommiterList() {
