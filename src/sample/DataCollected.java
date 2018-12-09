@@ -132,6 +132,11 @@ public class DataCollected {
         difficulty = (operators/2)*(operandsT/operands);
         return difficulty;
     }
+    public double getEffort()
+    {
+        effort = difficulty*volume;
+        return effort;
+    }
     public int getOperators() {
         return operators;
     }
