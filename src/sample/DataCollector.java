@@ -2,6 +2,7 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sample.halstead.Halstead;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class DataCollector {
             dataCollected.setFilename(temp.getName());
             getMetrics(temp, dataToCollect, dataCollected);
             getSourceLines(dataCollected,temp);
+            getHalstead(dataCollected,temp);
             dataCollectedList.add(dataCollected);
             getCyclomaticComplexity(dataCollected, temp);
         }
@@ -83,7 +85,16 @@ public class DataCollector {
     }
     private void getHalstead(DataCollected dataCollected, File temp){
         /* TODO: 12/2/2018 */
-
+        Halstead halMetrics = new Halstead();
+        try {
+            halMetrics.compute(temp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        dataCollected.setOperators(halMetrics.getnOne());
+        dataCollected.setOperands(halMetrics.getnTwo());
+        dataCollected.setOperatorsT(halMetrics.getN1());
+        dataCollected.setOperandsT(halMetrics.getN2());
     }
 
     private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
