@@ -16,6 +16,14 @@ public class DataCollected {
     private int operands; //distinct operands
     private int operatorsT; //total number of operators
     private int operandsT; //total number of operands
+    private int vocab;
+    private int PLength;
+    private double CPLength;
+    private double volume;
+    private double difficulty;
+    private double effort;
+    private double time;
+    private double bugs;
 
     private boolean skipped;
 
