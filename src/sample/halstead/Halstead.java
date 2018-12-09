@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class computeHalstead {
+public class Halstead {
 
     private List<String> Operators = new ArrayList<>();
     private List<String> Operands = new ArrayList<>();
@@ -68,7 +68,7 @@ public class computeHalstead {
 
     //Another test, another main
     /*public static void main(String[] args)throws Exception{
-        computeHalstead test = new computeHalstead();
+        Halstead test = new Halstead();
         File testFile = new File("src/sample/halstead/halstead.java");
         test.compute(testFile);
         System.out.println("n1 = " + test.getnOne());
