@@ -26,7 +26,8 @@ word count, line count, character count, comment line count and source line coun
    **1.2** Intended Audience
 
       As a tool for measuring software metrics, our target audience is primarily other software developers. This will allow the user to check a git repo and see what kind of
-      contributions are being made by the contrubiters in the repo.
+      contributions are being made by the contrubiters in the repo. This will allow users and project leaders see what kind of contributions users are making to their repos
+      in a user friendly pie chart.
 
    **1.3** Scope
 
