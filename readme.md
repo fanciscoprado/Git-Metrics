@@ -45,12 +45,10 @@ word count, line count, character count, comment line count and source line coun
          - Number of Characters - raw number of characters in the program.
          - Number of Lines - raw number of lines in the program.
          - Number of Source Lines of Code - number of lines including source code in the program.
-
-         //Halstead Metrics - calculated value of operators in the program.
-         //Depth of Inheritance - calculated ?w? value of class inheritance in the program.
-         //Cyclomatic Complexity - raw number of unique paths in the program.
-         //Maintainability Index - calculated value of maintainability of the program.
-         //idk why this is making a box on webpage
+         - Halstead Metrics - calculated value of operators in the program.
+         - Depth of Inheritance - raw number of class inheritance or class extensions in the program.
+         - Cyclomatic Complexity - raw number of unique paths in the program. (Keywords defined in class.)
+         - Maintainability Index - calculated value of maintainability of the program. (Value bounds defined in class 'calculateMaintainabilityIndex'.)
 
    
    **2.2** Definitions
@@ -80,9 +78,7 @@ word count, line count, character count, comment line count and source line coun
 
    **2.5** Operating Environment
 
-      This program will run on Windows machines and Mac. 
-      Linux will work as well but the user will need to delete the temp file created because of directory change. 
-      (platform, OS)
+      This program is designed to run on Windows machines and Mac.
 
 3. **External Interface Requirements**
 
