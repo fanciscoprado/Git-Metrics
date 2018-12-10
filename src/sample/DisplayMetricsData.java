@@ -53,10 +53,10 @@ public class DisplayMetricsData {
         halN2Column.setMinWidth(100);
         halN2Column.setCellValueFactory(new PropertyValueFactory<>("operandsT"));
 
-        /*
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
         commentColumn.setMinWidth(100);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
+        /*
 
         TableColumn<DataCollected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");     //maintainability index
         commentColumn.setMinWidth(100);
