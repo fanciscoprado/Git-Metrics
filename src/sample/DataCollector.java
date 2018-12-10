@@ -119,8 +119,9 @@ public class DataCollector {
 
     }
 
-    private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
-        cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
+    private void getCyclomaticComplexity(DataCollected dataCollected, File temp){
+        countCyclomaticComplexity cyclomatic = new countCyclomaticComplexity();
+        dataCollected.setCyclomaticComplexity(cyclomatic.checkForUniquePath(temp));
     }
     private void getDepthOfInheritance(DataCollected inheritance, File temp) {
         inheritance.setDepthOfInheritance(new countDepthOfInheritance().checkForInheritance(temp));
