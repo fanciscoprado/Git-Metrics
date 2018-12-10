@@ -18,10 +18,10 @@ public class DataCollected {
     private int operandsT; //total number of operands
     private int vocab;
     private int PLength;
-    private double CPLength;
-    private double volume;
-    private double difficulty;
-    private double effort;
+    private String CPLength;
+    private String volume;
+    private String difficulty;
+    private String effort;
     private double time;
     private double bugs;
 
@@ -77,6 +77,30 @@ public class DataCollected {
         this.operandsT = operandsT;
     }
 
+    public void setVocab(int vocab) {
+        this.vocab = vocab;
+    }
+
+    public void setPLength(int PLength) {
+        this.PLength = PLength;
+    }
+
+    public void setCPLength(String CPLength) {
+        this.CPLength = CPLength;
+    }
+
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public  void setEffort(String effort) {
+        this.effort = effort;
+    }
+
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
     public void setMaintainabilityIndex(double maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
@@ -107,46 +131,6 @@ public class DataCollected {
         return slcount;
     }
 
-    public int getVocab()
-    {
-        vocab = operators + operands;
-        return vocab;
-    }
-    public int getPLength()
-    {
-        PLength = operatorsT + operandsT;
-        return PLength;
-    }
-    public double getCPLength()
-    {
-        CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
-        return CPLength;
-    }
-    public double getVolume()
-    {
-        volume = PLength*(Math.log(vocab)/Math.log(2));
-        return volume;
-    }
-    public double getDifficulty()
-    {
-        difficulty = (operators/2)*(operandsT/operands);
-        return difficulty;
-    }
-    public double getEffort()
-    {
-        effort = difficulty*volume;
-        return effort;
-    }
-    public double getTime()
-    {
-        time = effort/18;
-        return time;
-    }
-    public double getBugs()
-    {
-        bugs = volume/3000;
-        return bugs;
-    }
     public int getOperators() {
         return operators;
     }
@@ -161,6 +145,46 @@ public class DataCollected {
 
     public int getOperandsT() {
         return operandsT;
+    }
+
+    public int getVocab()
+    {
+        return vocab;
+    }
+
+    public int getPLength()
+    {
+        return PLength;
+    }
+
+    public String getCPLength()
+    {
+        return CPLength;
+    }
+
+    public String getVolume()
+    {
+        return volume;
+    }
+
+    public String getDifficulty()
+    {
+        return difficulty;
+    }
+
+    public String getEffort()
+    {
+        return effort;
+    }
+
+    public double getTime()
+    {
+        return time;
+    }
+
+    public double getBugs()
+    {
+        return bugs;
     }
 
     public int getCyclomaticComplexity() { return cyclomaticcomplexity; }

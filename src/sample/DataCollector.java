@@ -94,6 +94,36 @@ public class DataCollector {
         dataCollected.setOperands(halMetrics.getnTwo());
         dataCollected.setOperatorsT(halMetrics.getN1());
         dataCollected.setOperandsT(halMetrics.getN2());
+        dataCollected.setVocab(dataCollected.getOperators()+dataCollected.getOperands());
+        dataCollected.setPLength(dataCollected.getOperatorsT()+dataCollected.getOperandsT());
+        dataCollected.setCPLength(String.format("%.3f", dataCollected.getOperators() * (Math.log(
+                dataCollected.getOperators())/Math.log(2)) + (dataCollected.getOperands() *
+                (Math.log(dataCollected.getOperands())/Math.log(2)))));
+        dataCollected.setVolume(String.format("%.3f", dataCollected.getPLength() *
+                (Math.log(dataCollected.getVocab())/Math.log(2))));
+        dataCollected.setDifficulty(String.format("%.3f", ((double)dataCollected.getOperators()/2) *
+                ((double)dataCollected.getOperandsT() / (double)dataCollected.getOperands())));
+        dataCollected.setEffort(String.format("%.3f", Float.valueOf(dataCollected.getDifficulty()) *
+                Float.valueOf(dataCollected.getVolume())));
+        /*
+        String.format("%.3f", )
+    public double getEffort()
+    {
+        effort = difficulty*volume;
+        return effort;
+    }
+    public double getTime()
+    {
+        time = effort/18;
+        return time;
+    }
+    public double getBugs()
+    {
+        bugs = volume/3000;
+        return bugs;
+    }
+         */
+
     }
 
     private void getCyclomaticComplexity(DataCollected dataCollected, File temp){
