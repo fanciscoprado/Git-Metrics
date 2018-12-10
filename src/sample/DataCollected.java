@@ -109,7 +109,9 @@ public class DataCollected {
         this.bugs = bugs;
     }
 
-    public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
+    public void setCyclomaticComplexity(int cyclomaticcomplexity) {
+        this.cyclomaticcomplexity = cyclomaticcomplexity;
+    }
 
     public void setMaintainabilityIndex(double maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
 
@@ -195,7 +197,7 @@ public class DataCollected {
         return bugs;
     }
 
-    public int getCyclomaticComplexity() { return cyclomaticcomplexity; }
+    public int getCyclomaticcomplexity() { return cyclomaticcomplexity; }
 
     public double getMaintainabilityIndex() { return maintainabilityindex; }
 
