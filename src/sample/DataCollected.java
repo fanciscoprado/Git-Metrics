@@ -107,46 +107,6 @@ public class DataCollected {
         return slcount;
     }
 
-    public int getVocab()
-    {
-        vocab = operators + operands;
-        return vocab;
-    }
-    public int getPLength()
-    {
-        PLength = operatorsT + operandsT;
-        return PLength;
-    }
-    public double getCPLength()
-    {
-        CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
-        return CPLength;
-    }
-    public double getVolume()
-    {
-        volume = PLength*(Math.log(vocab)/Math.log(2));
-        return volume;
-    }
-    public double getDifficulty()
-    {
-        difficulty = (operators/2)*(operandsT/operands);
-        return difficulty;
-    }
-    public double getEffort()
-    {
-        effort = difficulty*volume;
-        return effort;
-    }
-    public double getTime()
-    {
-        time = effort/18;
-        return time;
-    }
-    public double getBugs()
-    {
-        bugs = volume/3000;
-        return bugs;
-    }
     public int getOperators() {
         return operators;
     }
@@ -161,6 +121,46 @@ public class DataCollected {
 
     public int getOperandsT() {
         return operandsT;
+    }
+
+    public int getVocab()
+    {
+        return vocab;
+    }
+
+    public int getPLength()
+    {
+        return PLength;
+    }
+
+    public double getCPLength()
+    {
+        return CPLength;
+    }
+
+    public double getVolume()
+    {
+        return volume;
+    }
+
+    public double getDifficulty()
+    {
+        return difficulty;
+    }
+
+    public double getEffort()
+    {
+        return effort;
+    }
+
+    public double getTime()
+    {
+        return time;
+    }
+
+    public double getBugs()
+    {
+        return bugs;
     }
 
     public int getCyclomaticComplexity() { return cyclomaticcomplexity; }

@@ -94,6 +94,51 @@ public class DataCollector {
         dataCollected.setOperands(halMetrics.getnTwo());
         dataCollected.setOperatorsT(halMetrics.getN1());
         dataCollected.setOperandsT(halMetrics.getN2());
+        //dataCollected.
+
+        /*
+            public int getVocab()
+    {
+        vocab = operators + operands;
+        return vocab;
+    }
+    public int getPLength()
+    {
+        PLength = operatorsT + operandsT;
+        return PLength;
+    }
+    public double getCPLength()
+    {
+        CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
+        return CPLength;
+    }
+    public double getVolume()
+    {
+        volume = PLength*(Math.log(vocab)/Math.log(2));
+        return volume;
+    }
+    public double getDifficulty()
+    {
+        difficulty = (operators/2)*(operandsT/operands);
+        return difficulty;
+    }
+    public double getEffort()
+    {
+        effort = difficulty*volume;
+        return effort;
+    }
+    public double getTime()
+    {
+        time = effort/18;
+        return time;
+    }
+    public double getBugs()
+    {
+        bugs = volume/3000;
+        return bugs;
+    }
+         */
+
     }
 
     private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
