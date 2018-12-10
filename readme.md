@@ -131,6 +131,12 @@ word count, line count, character count, comment line count and source line coun
          -4. User clicks "close window."
          -5. User has to input correct URL.
 
+      Exception cases:
+         -1. Too many repositories
+            - User attemps to download more than 2 repositories using the multifile function.
+            - Program displays "Too many repos close to continue" message.
+            - Program downloads first two URLs and displays them.
+
 5. **Other Non-Functional Requirements**
     
     User system needs to have java installed in order to run the program.
