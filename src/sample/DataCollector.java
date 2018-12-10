@@ -105,13 +105,9 @@ public class DataCollector {
                 ((double)dataCollected.getOperandsT() / (double)dataCollected.getOperands())));
         dataCollected.setEffort(String.format("%.3f", Float.valueOf(dataCollected.getDifficulty()) *
                 Float.valueOf(dataCollected.getVolume())));
+        dataCollected.setTime(String.format("%.3f", Float.valueOf(dataCollected.getEffort())/18));
         /*
         String.format("%.3f", )
-    public double getEffort()
-    {
-        effort = difficulty*volume;
-        return effort;
-    }
     public double getTime()
     {
         time = effort/18;
