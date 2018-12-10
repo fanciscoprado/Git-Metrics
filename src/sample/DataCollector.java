@@ -18,10 +18,9 @@ public class DataCollector {
             getMetrics(temp, dataToCollect, dataCollected);
             getSourceLines(dataCollected,temp);
             getHalstead(dataCollected,temp);
-            dataCollectedList.add(dataCollected);
             getCyclomaticComplexity(dataCollected, temp);
+            dataCollectedList.add(dataCollected);
         }
-
 
         return dataCollectedList;
     }

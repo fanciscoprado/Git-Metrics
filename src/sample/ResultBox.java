@@ -24,7 +24,7 @@ public class ResultBox {
 
         VBox layout1 = new VBox();
         layout1.getChildren().addAll(new DisplayMetricsData().setupTablee(list), sceneSwitch1 );
-        Scene dataDisplay = new Scene(layout1);
+        Scene dataDisplay = new Scene(layout1, 1000, 500);
 
         VBox layout2 = new VBox();
         layout2.getChildren().addAll(new DisplayComiiterData().displayPiechart(cList), sceneSwitch2);
