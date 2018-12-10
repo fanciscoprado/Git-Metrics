@@ -10,7 +10,7 @@ public class DataCollected {
     private int cccount;
     private int slcount;
     private int cyclomaticcomplexity;
-    private int maintainabilityindex;
+    private double maintainabilityindex;
     private int depthofinheritance;
     private int operators; //distinct operators
     private int operands; //distinct operands
@@ -79,7 +79,7 @@ public class DataCollected {
 
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
-    public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
+    public void setMaintainabilityIndex(double maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
 
     public void setDepthOfInheritance(int depthofinheritance) {this.depthofinheritance = depthofinheritance;}
 
