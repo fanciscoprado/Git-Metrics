@@ -123,6 +123,14 @@ word count, line count, character count, comment line count and source line coun
          -4. User clicks "GO."
          -5. Program executes and displays software metrics.
 
+      Main failure scenario:
+         -1. User inputs invalid link.
+         -2. User clicks "GO."
+         -3. Error is thrown.
+         -4. "Invalid URL" message is displayed.
+         -4. User clicks "close window."
+         -5. User has to input correct URL.
+
 5. **Other Non-Functional Requirements**
     
     User system needs to have java installed in order to run the program.
