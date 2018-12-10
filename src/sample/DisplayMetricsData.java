@@ -86,16 +86,16 @@ public class DisplayMetricsData {
         halbugs.setCellValueFactory(new PropertyValueFactory<>("bugs"));
 
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
-        commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
+        cyclomaticComplexityColumn.setMinWidth(100);
+        cyclomaticComplexityColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
 
         TableColumn<DataCollected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");     //maintainability index
-        commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("maintainabilityindex"));
+        maintainabilityIndexColumn.setMinWidth(100);
+        maintainabilityIndexColumn.setCellValueFactory(new PropertyValueFactory<>("maintainabilityindex"));
 
         TableColumn<DataCollected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");        //depth of inheritance
-        commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
+        depthOfInheritanceColumn.setMinWidth(100);
+        depthOfInheritanceColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
                 halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength, halCPLength, halVolume, halDifficulty,
