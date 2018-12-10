@@ -15,7 +15,7 @@ public class CommitListDisplay {
     Button button;
     ListView<String> listView;
     public void display(){
-
+        window = new Stage();
         window.setTitle("ListView Demo");
         button = new Button("Submit");
 

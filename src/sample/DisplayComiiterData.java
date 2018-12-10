@@ -23,6 +23,8 @@ public class DisplayComiiterData{
                 .forEach(data -> {
                     data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, e ->{
                         System.out.println(data.getName());
+                        CommitListDisplay ehh = new CommitListDisplay();
+                        ehh.display();
                     });
                 });
         return chart;
