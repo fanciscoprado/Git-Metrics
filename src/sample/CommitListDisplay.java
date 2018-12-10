@@ -24,7 +24,6 @@ public class CommitListDisplay {
         for(String temp : commiterInfo.getCommitMessageList()){
             listView.getItems().add(temp);
         }
-        //listView.getItems().addAll("Iron Man", "Titanic", "Contact", "Surrogates");
 
         listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         VBox layout = new VBox(10);

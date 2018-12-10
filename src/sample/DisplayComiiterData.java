@@ -22,7 +22,6 @@ public class DisplayComiiterData{
                 .stream()
                 .forEach(data -> {
                     data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, e ->{
-                        System.out.println(data.getName());
                         CommitListDisplay ehh = new CommitListDisplay();
                         for(CommiterInfo temp: cList){
                             if(temp.getName().equals(data.getName())){
