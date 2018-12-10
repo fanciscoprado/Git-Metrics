@@ -32,4 +32,7 @@ public class CommiterInfo {
         return name;
     }
 
+    public LinkedList<String> getCommitMessageList(){
+        return commitMessageList;
+    }
 }
