@@ -53,21 +53,23 @@ public class DisplayMetricsData {
         halN2Column.setMinWidth(100);
         halN2Column.setCellValueFactory(new PropertyValueFactory<>("operandsT"));
 
-        TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");
+        /*
+        TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
         commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomatic complexity"));  //cyclomatic complexity
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
 
-        TableColumn<DataCollected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");
+        TableColumn<DataCollected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");     //maintainability index
         commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("maintainability index"));  //maintainability index
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("maintainabilityindex"));
 
-        TableColumn<DataCollected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");
+        TableColumn<DataCollected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");        //depth of inheritance
         commentColumn.setMinWidth(100);
-        commentColumn.setCellValueFactory(new PropertyValueFactory<>("depth of inheritance"));    //depth of inheritance
+        commentColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
+        */
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
-                halnTwoColumn, halN1Column, halN2Column, cyclomaticComplexityColumn, maintainabilityIndexColumn,
-                depthOfInheritanceColumn);
+                halnTwoColumn, halN1Column, halN2Column/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
+                depthOfInheritanceColumn*/);
         return table;
 
     }
