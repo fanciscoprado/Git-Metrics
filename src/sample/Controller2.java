@@ -48,11 +48,8 @@ public class Controller2 extends Controller {
             HBox layout2 = new HBox();
 
             for (MultiGitRepo temp : parsedRepoList) {
-                totalCommits = 0;
-                for (CommiterInfo tempe : temp.commiterList) {
-                    totalCommits = totalCommits + tempe.getCommits();
-                }
-                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, totalCommits,temp.dataCollectedList));
+
+                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, getTotallCommits(temp),temp.dataCollectedList));
                 Button showMetrics = new Button("Show Metrics");
                 showMetrics.setOnAction(e -> {
                     ResultBox resultBox = new ResultBox();
@@ -94,4 +91,14 @@ public class Controller2 extends Controller {
             onClick();
         }
     }
+
+    private int getTotallCommits(MultiGitRepo temp){
+        int totalCommits = 0;
+        for (CommiterInfo tempe : temp.commiterList) {
+            totalCommits = totalCommits + tempe.getCommits();
+        }
+        return totalCommits;
+    }
+
+
 }
