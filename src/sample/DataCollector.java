@@ -96,6 +96,9 @@ public class DataCollector {
         dataCollected.setOperandsT(halMetrics.getN2());
         dataCollected.setVocab(dataCollected.getOperators()+dataCollected.getOperands());
         dataCollected.setPLength(dataCollected.getOperatorsT()+dataCollected.getOperandsT());
+        dataCollected.setCPLength(String.format("%.3f", dataCollected.getOperators() * (Math.log(
+                dataCollected.getOperators())/Math.log(2)) + (dataCollected.getOperands() *
+                (Math.log(dataCollected.getOperands())/Math.log(2)))));
 
         /*
     public double getCPLength()

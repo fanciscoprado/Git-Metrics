@@ -18,7 +18,7 @@ public class DataCollected {
     private int operandsT; //total number of operands
     private int vocab;
     private int PLength;
-    private double CPLength;
+    private String CPLength;
     private double volume;
     private double difficulty;
     private double effort;
@@ -85,7 +85,7 @@ public class DataCollected {
         this.PLength = PLength;
     }
 
-    public void setCPLength(double CPLength) {
+    public void setCPLength(String CPLength) {
         this.CPLength = CPLength;
     }
 
@@ -145,7 +145,7 @@ public class DataCollected {
         return PLength;
     }
 
-    public double getCPLength()
+    public String getCPLength()
     {
         return CPLength;
     }

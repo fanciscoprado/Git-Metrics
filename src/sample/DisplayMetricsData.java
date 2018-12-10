@@ -62,8 +62,8 @@ public class DisplayMetricsData {
         halPLength.setCellValueFactory(new PropertyValueFactory<>("PLength"));
 
         TableColumn<DataCollected, String> halCPLength = new TableColumn<>("Calc Length");
-        halPLength.setMinWidth(100);
-        halPLength.setCellValueFactory(new PropertyValueFactory<>("CPLength"));
+        halCPLength.setMinWidth(100);
+        halCPLength.setCellValueFactory(new PropertyValueFactory<>("CPLength"));
 
         /*
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
@@ -80,7 +80,7 @@ public class DisplayMetricsData {
         */
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
-                halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
+                halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength, halCPLength/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
                 depthOfInheritanceColumn*/);
         return table;
 
