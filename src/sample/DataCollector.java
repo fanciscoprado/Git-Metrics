@@ -106,20 +106,8 @@ public class DataCollector {
         dataCollected.setEffort(String.format("%.3f", Float.valueOf(dataCollected.getDifficulty()) *
                 Float.valueOf(dataCollected.getVolume())));
         dataCollected.setTime(String.format("%.3f", Float.valueOf(dataCollected.getEffort())/18));
-        /*
-        String.format("%.3f", )
-    public double getTime()
-    {
-        time = effort/18;
-        return time;
-    }
-    public double getBugs()
-    {
-        bugs = volume/3000;
-        return bugs;
-    }
-         */
 
+        dataCollected.setBugs(String.format("%.3f", Float.valueOf(dataCollected.getVolume())/3000));
     }
 
     private void getCyclomaticComplexity(DataCollected dataCollected, File temp){
