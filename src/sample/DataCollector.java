@@ -101,8 +101,10 @@ public class DataCollector {
                 (Math.log(dataCollected.getOperands())/Math.log(2)))));
         dataCollected.setVolume(String.format("%.3f", dataCollected.getPLength() *
                 (Math.log(dataCollected.getVocab())/Math.log(2))));
+        dataCollected.setDifficulty(String.format("%.3f", ((double)dataCollected.getOperators()/2) *
+                ((double)dataCollected.getOperandsT() / (double)dataCollected.getOperands())));
         /*
-        String.format("%.3f", ++)
+        String.format("%.3f", )
     public double getDifficulty()
     {
         difficulty = (operators/2)*(operandsT/operands);
