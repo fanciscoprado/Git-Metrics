@@ -86,7 +86,8 @@ word count, line count, character count, comment line count and source line coun
       **3.1** User Interfaces
 
       The GUI makes it much more user friendly to input a file or website than when using the program through a command line.
-      The metrics are also placed in boxes making it much easier for the user to see what their file/url has.
+      The metrics are also placed in boxes making it much easier for the user to see what their file/url has. There is also a pie chart that will show
+      the user the breakdown of the commits in the repo/repos they link.
 
 4 **System Features**
 
