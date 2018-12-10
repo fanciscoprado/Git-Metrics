@@ -113,6 +113,7 @@ word count, line count, character count, comment line count and source line coun
       it would be if not the file will default to a text file called (temp).
 
    **4.2** Use Case: Downloading a Repository
+
       Actor: User
       Primary goal of the actor: Get software metrics on their desired git hub repository.
       Participating Actor: Program
