@@ -19,7 +19,7 @@ public class DataCollected {
     private int vocab;
     private int PLength;
     private String CPLength;
-    private double volume;
+    private String volume;
     private double difficulty;
     private double effort;
     private double time;
@@ -89,6 +89,10 @@ public class DataCollected {
         this.CPLength = CPLength;
     }
 
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
+
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
     public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
@@ -150,7 +154,7 @@ public class DataCollected {
         return CPLength;
     }
 
-    public double getVolume()
+    public String getVolume()
     {
         return volume;
     }
