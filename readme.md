@@ -73,6 +73,7 @@ word count, line count, character count, comment line count and source line coun
    **2.3** Product Constraints
 
       Our time frame for completion was approximately 7 weeks.
+      Most of us were new to using V.C so getting past merge issues was a small setback
 
       //add more...
 
@@ -103,7 +104,7 @@ word count, line count, character count, comment line count and source line coun
 
       **4.1.2** Stimulus/Response Sequences
       
-      The user would need to run the java file within an ide of some sort or run it as
+      The user would need to run the java file within an IDE of some sort or run it as
       and excuatable. 
 
 
