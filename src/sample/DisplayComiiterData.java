@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Side;
 import javafx.scene.chart.PieChart;
+import javafx.scene.input.MouseEvent;
 
 
 import java.util.LinkedList;
@@ -17,6 +18,13 @@ public class DisplayComiiterData{
         final PieChart chart = new PieChart(pieChartData);
         chart.setTitle("Contributers");
         chart.setLegendSide(Side.LEFT);
+        chart.getData()
+                .stream()
+                .forEach(data -> {
+                    data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, e ->{
+                        System.out.println(data.getName());
+                    });
+                });
         return chart;
     }
 }
