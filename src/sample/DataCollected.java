@@ -77,8 +77,12 @@ public class DataCollected {
         this.operandsT = operandsT;
     }
 
-    public void setVocab(int vocab){
+    public void setVocab(int vocab) {
         this.vocab = vocab;
+    }
+
+    public void setPLength(int PLength) {
+        this.PLength = PLength;
     }
 
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}

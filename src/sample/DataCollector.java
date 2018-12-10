@@ -97,11 +97,6 @@ public class DataCollector {
         dataCollected.setVocab(dataCollected.getOperators()+dataCollected.getOperands());
 
         /*
-            public int getVocab()
-    {
-        vocab = operators + operands;
-        return vocab;
-    }
     public int getPLength()
     {
         PLength = operatorsT + operandsT;
