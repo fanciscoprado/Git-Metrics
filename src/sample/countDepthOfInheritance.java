@@ -9,14 +9,12 @@ public class countDepthOfInheritance {
     //High implies higher complexity, more possibility for code reuse. Higher chance for errors.
     public int checkForInheritance (File file){
         int inheritance = 1;        //Default inheritance is 1, an extension is 1 level of inheritance
-        String fileName;
         String[]keywords = {"extends", "inherits"};
         String words = "";        //temp variable to hold value of token
         String line = null;
         try
         {
-            fileName = "GetFiles.java";
-            FileReader fr = new FileReader(fileName);
+            FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             line = br.readLine();
             while (line != null)
