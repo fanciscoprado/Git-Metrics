@@ -78,7 +78,8 @@ word count, line count, character count, comment line count and source line coun
 
    **2.5** Operating Environment
 
-      This program is designed to run on Windows machines and Mac.
+      This program is designed to run on Windows machines and Mac. Will work with linux but the user needs to delete the temp folder if the main method doesn't catch it on the recursive
+      call.
 
 3. **External Interface Requirements**
 
@@ -116,4 +117,5 @@ word count, line count, character count, comment line count and source line coun
     Java runtime is required for full functionality of the program. User need to input a full url
     from github with no restrictions in order to run properly.  If there is a temp file the program will go to delete/rewrite
     that file in order list the metrics requested in the program. 
+    Proper copying for git url is also required. 
 
