@@ -19,11 +19,14 @@ word count, line count, character count, comment line count and source line coun
 
    **1.1** Purpose
 
-      The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
+      The purpose of this SRS document is to provide a detailed overview of our metrics software. Our program will allow user to check a git repo and view metrics from the repo they link. This will
+      allow the user to see what kind of contributions are being made by the user in the repo. They will be able to view metrics such as word count and line count so they can stay on top of project deadlines
+      and constraints.
 
    **1.2** Intended Audience
 
-      As a tool for measuring software metrics, our target audience is primarily other software developers.
+      As a tool for measuring software metrics, our target audience is primarily other software developers. This will allow the user to check a git repo and see what kind of
+      contributions are being made by the contrubiters in the repo.
 
    **1.3** Scope
 
@@ -71,6 +74,7 @@ word count, line count, character count, comment line count and source line coun
       Our time frame for completion was approximately 7 weeks.
       Most of us were new to using V.C so getting past merge issues was a small setback.
       Some of the metrics gathering seems to work differently on different systems.
+      Only works with Java, C and C++ source files.
 
    **2.5** Operating Environment
 
