@@ -45,6 +45,6 @@ public class countCyclomaticComplexity {
            e.printStackTrace();
         }
 
-        return (complexity);
+        return complexity;
     }
 }
