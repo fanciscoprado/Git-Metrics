@@ -76,6 +76,7 @@ word count, line count, character count, comment line count and source line coun
       Our time frame for completion was approximately 7 weeks.
       Most of us were new to using V.C so getting past merge issues was a small setback.
       Some of the metrics gathering seems to work differently on different systems.
+      Only works with Java, C and C++ source files.
 
    **2.5** Operating Environment
 
