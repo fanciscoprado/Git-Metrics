@@ -14,14 +14,17 @@ public class CommitListDisplay {
     Scene scene;
     Button button;
     ListView<String> listView;
-    public void display(){
+    public void display(CommiterInfo commiterInfo){
         window = new Stage();
         window.setTitle("ListView Demo");
         button = new Button("Submit");
 
         listView = new ListView<>();
 
-        listView.getItems().addAll("Iron Man", "Titanic", "Contact", "Surrogates");
+        for(String temp : commiterInfo.getCommitMessageList()){
+            listView.getItems().add(temp);
+        }
+        //listView.getItems().addAll("Iron Man", "Titanic", "Contact", "Surrogates");
 
         listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         VBox layout = new VBox(10);

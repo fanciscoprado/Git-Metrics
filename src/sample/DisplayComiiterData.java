@@ -24,7 +24,15 @@ public class DisplayComiiterData{
                     data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, e ->{
                         System.out.println(data.getName());
                         CommitListDisplay ehh = new CommitListDisplay();
-                        ehh.display();
+                        for(CommiterInfo temp: cList){
+                            if(temp.getName().equals(data.getName())){
+                                ehh.display(temp);
+                                break;
+                            }
+                        }
+
+
+
                     });
                 });
         return chart;
