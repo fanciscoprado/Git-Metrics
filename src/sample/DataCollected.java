@@ -85,6 +85,10 @@ public class DataCollected {
         this.PLength = PLength;
     }
 
+    public void setCPLength(double CPLength) {
+        this.CPLength = CPLength;
+    }
+
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
     public void setMaintainabilityIndex(int maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}

@@ -98,11 +98,6 @@ public class DataCollector {
         dataCollected.setPLength(dataCollected.getOperatorsT()+dataCollected.getOperandsT());
 
         /*
-    public int getPLength()
-    {
-        PLength = operatorsT + operandsT;
-        return PLength;
-    }
     public double getCPLength()
     {
         CPLength = (operators*(Math.log(operators)/Math.log(2)))+(operands*(Math.log(operands)/Math.log(2)));
