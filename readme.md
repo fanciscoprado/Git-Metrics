@@ -80,7 +80,8 @@ word count, line count, character count, comment line count and source line coun
 
    **2.5** Operating Environment
 
-      This program will run on Windows machines and Mac.
+      This program will run on Windows machines and Mac. 
+      Linux will work as well but the user will need to delete the temp file created because of directory change. 
       (platform, OS)
 
 3. **External Interface Requirements**
