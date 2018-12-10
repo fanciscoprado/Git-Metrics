@@ -99,6 +99,8 @@ public class DataCollector {
         dataCollected.setCPLength(String.format("%.3f", dataCollected.getOperators() * (Math.log(
                 dataCollected.getOperators())/Math.log(2)) + (dataCollected.getOperands() *
                 (Math.log(dataCollected.getOperands())/Math.log(2)))));
+        dataCollected.setVolume(String.format("%.3f", dataCollected.getPLength() *
+                (Math.log(dataCollected.getVocab())/Math.log(2))));
         /*
         String.format("%.3f", ++)
     public double getVolume()
