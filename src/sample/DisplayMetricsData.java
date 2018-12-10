@@ -54,8 +54,8 @@ public class DisplayMetricsData {
         halN2Column.setCellValueFactory(new PropertyValueFactory<>("operandsT"));
 
         TableColumn<DataCollected, String> halVocab = new TableColumn<>("Vocabulary");
-        halN2Column.setMinWidth(100);
-        halN2Column.setCellValueFactory(new PropertyValueFactory<>("vocab"));
+        halVocab.setMinWidth(100);
+        halVocab.setCellValueFactory(new PropertyValueFactory<>("vocab"));
 
         /*
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
