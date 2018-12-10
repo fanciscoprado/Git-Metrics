@@ -67,17 +67,12 @@ word count, line count, character count, comment line count and source line coun
       - CC - Cyclomatic Complexity
 
       - MI - Maintainability Index
-
-   ... //remove any unused definitions
    
    **2.3** Product Constraints
 
       Our time frame for completion was approximately 7 weeks.
-      Most of us were new to using V.C so getting past merge issues was a small setback
-
-      //add more...
-
-   **2.4** User classes/Use cases (??)
+      Most of us were new to using V.C so getting past merge issues was a small setback.
+      Some of the metrics gathering seems to work differently on different systems.
 
    **2.5** Operating Environment
 
