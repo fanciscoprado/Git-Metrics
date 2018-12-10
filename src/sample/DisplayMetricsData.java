@@ -101,7 +101,7 @@ public class DisplayMetricsData {
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
                 halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength, halCPLength, halVolume, halDifficulty,
-                halEffort, halTime/*, cyclomaticComplexityColumn, maintainabilityIndexColumn, depthOfInheritanceColumn*/);
+                halEffort, halTime, halbugs/*, cyclomaticComplexityColumn, maintainabilityIndexColumn, depthOfInheritanceColumn*/);
         return table;
 
     }
