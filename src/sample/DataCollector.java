@@ -97,7 +97,7 @@ public class DataCollector {
     }
 
     private void getCyclomaticComplexity(DataCollected dataCollected, File temp){
-        dataCollected.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
+        dataCollected.setCyclomaticComplexity(countCyclomaticComplexity.checkForUniquePath(temp));
     }
     private void getDepthOfInheritance(DataCollected inheritance, File temp) {
         inheritance.setDepthOfInheritance(new countDepthOfInheritance().checkForInheritance(temp));
