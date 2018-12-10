@@ -96,7 +96,7 @@ word count, line count, character count, comment line count and source line coun
 
       A fully functioning GUI that allows user to get metrics from a file or a website with ease.
       The program will then relay this information to the GUI and user will be able to observe the data colected
-      from their inputted source.
+      from their inputted source. The user will also have the ability to select a pie chart to show a breakdown of the metrics gathered.
 
 
       **4.1.2** Stimulus/Response Sequences
