@@ -56,7 +56,6 @@ public class DisplayMetricsData {
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
         commentColumn.setMinWidth(100);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cyclomaticcomplexity"));
-        /*
 
         TableColumn<DataCollected, String> maintainabilityIndexColumn = new TableColumn<>("Maintainability Index");     //maintainability index
         commentColumn.setMinWidth(100);
@@ -65,7 +64,6 @@ public class DisplayMetricsData {
         TableColumn<DataCollected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");        //depth of inheritance
         commentColumn.setMinWidth(100);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
-        */
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
                 halnTwoColumn, halN1Column, halN2Column/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
