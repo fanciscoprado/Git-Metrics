@@ -137,6 +137,12 @@ word count, line count, character count, comment line count and source line coun
             - Program displays "Too many repos close to continue" message.
             - Program downloads first two URLs and displays them.
 
+         -2. No file type selected
+            - No file type is selected by the user.
+            - Program defaults to Java file type.
+            - Program executes.
+
+
 5. **Other Non-Functional Requirements**
     
     User system needs to have java installed in order to run the program.
