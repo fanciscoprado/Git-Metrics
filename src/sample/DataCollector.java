@@ -95,6 +95,7 @@ public class DataCollector {
         dataCollected.setOperatorsT(halMetrics.getN1());
         dataCollected.setOperandsT(halMetrics.getN2());
         dataCollected.setVocab(dataCollected.getOperators()+dataCollected.getOperands());
+        dataCollected.setPLength(dataCollected.getOperatorsT()+dataCollected.getOperandsT());
 
         /*
     public int getPLength()

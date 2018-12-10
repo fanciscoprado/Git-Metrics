@@ -76,7 +76,7 @@ public class DisplayMetricsData {
         */
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
-                halnTwoColumn, halN1Column, halN2Column, halVocab/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
+                halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
                 depthOfInheritanceColumn*/);
         return table;
 
