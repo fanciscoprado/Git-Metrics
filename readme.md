@@ -79,7 +79,8 @@ word count, line count, character count, comment line count and source line coun
    **2.5** Operating Environment
 
       This program is designed to run on Windows machines and Mac. Will work with linux but the user needs to delete the temp folder if the main method doesn't catch it on the recursive
-      call.
+      call. The main method has a delete feature do user needs to make sure they dont have a critcal file called temp where the project is stored
+      and exucted.
 
 3. **External Interface Requirements**
 
