@@ -19,6 +19,8 @@ public class DataCollector {
             getSourceLines(dataCollected,temp);
             getHalstead(dataCollected,temp);
             getCyclomaticComplexity(dataCollected, temp);
+            getDepthOfInheritance(dataCollected, temp);
+            getMaintainabilityIndex(dataCollected,temp);
             dataCollectedList.add(dataCollected);
         }
 
@@ -114,10 +116,12 @@ public class DataCollector {
         countCyclomaticComplexity cyclomatic = new countCyclomaticComplexity();
         dataCollected.setCyclomaticComplexity(cyclomatic.checkForUniquePath(temp));
     }
-    private void getDepthOfInheritance(DataCollected inheritance, File temp) {
-        inheritance.setDepthOfInheritance(new countDepthOfInheritance().checkForInheritance(temp));
+    private void getDepthOfInheritance(DataCollected dataCollected, File temp) {
+        countDepthOfInheritance depth = new countDepthOfInheritance();
+        dataCollected.setDepthOfInheritance(depth.checkForInheritance(temp));
     }
-    private void getMaintainabilityIndex(DataCollected maintain, File temp){
-        maintain.setMaintainabilityIndex(new calculateMaintainabilityIndex().calculateMI(temp));
+    private void getMaintainabilityIndex(DataCollected dataCollected, File temp){
+        calculateMaintainabilityIndex maintain = new calculateMaintainabilityIndex();
+        dataCollected.setMaintainabilityIndex(maintain.calculateMI(temp));
     }
 }
