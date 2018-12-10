@@ -96,8 +96,8 @@ public class DataCollector {
         dataCollected.setOperandsT(halMetrics.getN2());
     }
 
-    private void getCyclomaticComplexity(DataCollected cyclomatic, File temp){
-        cyclomatic.setCyclomaticComplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
+    private void getCyclomaticComplexity(DataCollected dataCollected, File temp){
+        dataCollected.setcyclomaticcomplexity(new countCyclomaticComplexity().checkForUniquePath(temp));
     }
     private void getDepthOfInheritance(DataCollected inheritance, File temp) {
         inheritance.setDepthOfInheritance(new countDepthOfInheritance().checkForInheritance(temp));
