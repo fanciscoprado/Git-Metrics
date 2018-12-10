@@ -34,7 +34,8 @@ public class CommitListDisplay {
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().addAll(name,listView);
 
-        scene = new Scene(layout, 300, 250);
+        scene = new Scene(layout, 450, 250);
+
         window.setScene(scene);
         window.show();
 
