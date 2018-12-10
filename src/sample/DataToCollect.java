@@ -34,6 +34,8 @@ public class DataToCollect {
         this.lineCount = lineCount;
     }
 
+    //public boolean setOperands(){return Operands;}
+
     public boolean isDoJavaFile() {
         return doJavaFile;
     }
