@@ -21,7 +21,7 @@ public class DataCollected {
     private String CPLength;
     private String volume;
     private String difficulty;
-    private double effort;
+    private String effort;
     private double time;
     private double bugs;
 
@@ -97,6 +97,10 @@ public class DataCollected {
         this.difficulty = difficulty;
     }
 
+    public  void setEffort(String effort) {
+        this.effort = effort;
+    }
+
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
 
     public void setMaintainabilityIndex(double maintainabilityindex) {this.maintainabilityindex = maintainabilityindex;}
@@ -168,7 +172,7 @@ public class DataCollected {
         return difficulty;
     }
 
-    public double getEffort()
+    public String getEffort()
     {
         return effort;
     }
