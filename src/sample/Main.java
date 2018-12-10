@@ -23,7 +23,7 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //
         File file = new File("temp/");
         if(file.exists())
             deletTemp(file);
