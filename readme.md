@@ -112,7 +112,16 @@ word count, line count, character count, comment line count and source line coun
       The user needs to input a file or a website into the GUI, the user would need to specify what kinda of file
       it would be if not the file will default to a text file called (temp).
 
-   **4.2**
+   **4.2** Use Case: Downloading a Repository
+      Actor: User
+      Primary goal of the actor: Get software metrics on their desired git hub repository.
+      Participating Actor: Program
+      Main success scenario:
+         -1. User decides if they would like to download a single or multiple (2) repositories.
+         -2. User copy and pastes git hub URL link into the search field.
+         -3. User selects the type of file that their repository is written in.
+         -4. User clicks "GO."
+         -5. Program executes and displays software metrics.
 
 5. **Other Non-Functional Requirements**
     
