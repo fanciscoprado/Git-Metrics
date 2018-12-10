@@ -23,7 +23,7 @@ public class DataCollected {
     private String difficulty;
     private String effort;
     private String time;
-    private double bugs;
+    private String bugs;
 
     private boolean skipped;
 
@@ -103,6 +103,10 @@ public class DataCollected {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public void setBugs(String bugs) {
+        this.bugs = bugs;
     }
 
     public void setCyclomaticComplexity(int cyclomaticcomplexity) {this.cyclomaticcomplexity = cyclomaticcomplexity;}
@@ -186,7 +190,7 @@ public class DataCollected {
         return time;
     }
 
-    public double getBugs()
+    public String getBugs()
     {
         return bugs;
     }
