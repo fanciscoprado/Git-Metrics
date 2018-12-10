@@ -105,7 +105,7 @@ word count, line count, character count, comment line count and source line coun
 
       **4.1.3** Functional Requirements
       The user needs to input a file or a website into the GUI, the user would need to specify what kinda of file
-      it would be if not the file will default to a text file.
+      it would be if not the file will default to a text file called (temp).
 
    **4.2**
 
