@@ -199,7 +199,7 @@ public class DataCollected {
 
     public int getCyclomaticcomplexity() { return cyclomaticcomplexity; }
 
-    public double getMaintainabilityIndex() { return maintainabilityindex; }
+    public double getMaintainabilityindex() { return maintainabilityindex; }
 
-    public int getDepthOfInheritance() { return depthofinheritance; }
+    public int getDepthofinheritance() { return depthofinheritance; }
 }
