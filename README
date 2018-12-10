@@ -20,4 +20,5 @@ as far as functionality is concerned. We plan on using the controller class as w
 the use of java U.I function.
 
 We've added in our git ignore file which allowed us to push and merge much easier since we we're getting a merge error.
+The program will take in two git repos and will allow uses to compare the two together on a pie chart.
 
