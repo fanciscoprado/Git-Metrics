@@ -21,7 +21,7 @@ word count, line count, character count, comment line count and source line coun
 
       The purpose of this SRS document is to provide a detailed overview of our metrics software. Our program will allow user to check a git repo and view metrics from the repo they link. This will
       allow the user to see what kind of contributions are being made by the user in the repo. They will be able to view metrics such as word count and line count so they can stay on top of project deadlines
-      and constraints.
+      and constraints. The program will allow a user to compare data in their repos and analysis at their will.
 
    **1.2** Intended Audience
 
