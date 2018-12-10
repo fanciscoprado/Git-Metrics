@@ -7,7 +7,7 @@ import java.util.*;
 // Author: amirjamil90 March 15, 2015
 
 public class countCyclomaticComplexity {
-    //Information that may or may not be implemented in output in the future. Cyclomatic Complexity of this method: 7.
+    //Information that may or may not be implemented in output in the future.
     //CC <10 = easy to maintain; normal program
     //CC 11-20 = harder to maintain; moderate
     //CC 21+ = consider refactoring/redesigning; risky

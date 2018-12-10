@@ -33,6 +33,8 @@ public class countDepthOfInheritance {
                 }
                 line = br.readLine();
             }
+            fr.close();
+            br.close();
         }
         catch (IOException e){
             e.printStackTrace();
