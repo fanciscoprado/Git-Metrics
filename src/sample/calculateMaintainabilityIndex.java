@@ -5,7 +5,9 @@ import java.lang.Math;
 
 //NEEDS FOLLOWING TO CALCULATE: halstead volume, cyclomatic complexity, count of source lines of code.
 // Original formula: MI = 171 - 5.2 * ln(V) - 0.23 * (G) - 16.2 * ln(LOC)
+//                   mI = 171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC);
 // Microsoft Visual Studio formula: MI = MAX(0,(171 - 5.2 * ln(Halstead Volume) - 0.23 * (Cyclomatic Complexity) - 16.2 * ln(Lines of Code))*100 / 171)
+//                                  mI = MAX(0, (171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC)) * 100 / 171);
 
 //Formula(s) for calculating maintainability index found here: http://www.projectcodemeter.com/cost_estimation/help/GL_maintainability.htm
 
@@ -15,11 +17,10 @@ public class calculateMaintainabilityIndex {
     //20-100 = good
     //10-19 = moderate
     //0-9 = low
-    public double calculateMI(File file){
+    public double calculateMI(DataCollected dataCollected){
         double mI = 1.0;
-        //Float.valueOf(dataCollected.getVolume());
-        Math.sqrt(1); //added temporarily to fix error
-        //mI = 171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC);
+
+        mI = 171-5.2 * Math.log(Float.valueOf(dataCollected.getVolume())) - 0.23 * (dataCollected.getCyclomaticcomplexity()) - 16.2 * Math.log(dataCollected.getSlcount());
         //mI = MAX(0, (171-5.2 * Math.log(V) - 0.23 * (CC) - 16.2 * Math.log(SLOC)) * 100 / 171);
         return mI;
     }

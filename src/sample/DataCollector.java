@@ -122,6 +122,6 @@ public class DataCollector {
     }
     private void getMaintainabilityIndex(DataCollected dataCollected, File temp){
         calculateMaintainabilityIndex maintain = new calculateMaintainabilityIndex();
-        dataCollected.setMaintainabilityIndex(maintain.calculateMI(temp));
+        dataCollected.setMaintainabilityIndex(maintain.calculateMI(dataCollected));
     }
 }
