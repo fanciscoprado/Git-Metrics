@@ -117,5 +117,6 @@ word count, line count, character count, comment line count and source line coun
     Java runtime is required for full functionality of the program. User need to input a full url
     from github with no restrictions in order to run properly.  If there is a temp file the program will go to delete/rewrite
     that file in order list the metrics requested in the program. 
-    Proper copying for git url is also required. 
+    Proper copying for git url is also required. Also the git repo needs proper file format, for example no python can be read in the repo
+    for the time being.
 
