@@ -69,6 +69,10 @@ public class DisplayMetricsData {
         halVolume.setMinWidth(100);
         halVolume.setCellValueFactory(new PropertyValueFactory<>("volume"));
 
+        TableColumn<DataCollected, String> halDifficulty = new TableColumn<>("Difficulty");
+        halDifficulty.setMinWidth(100);
+        halDifficulty.setCellValueFactory(new PropertyValueFactory<>("difficulty"));
+
         /*
         TableColumn<DataCollected, String> cyclomaticComplexityColumn = new TableColumn<>("Cyclomatic Complexity");     //cyclomatic complexity
         commentColumn.setMinWidth(100);
