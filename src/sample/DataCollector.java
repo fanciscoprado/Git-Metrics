@@ -103,11 +103,6 @@ public class DataCollector {
                 (Math.log(dataCollected.getVocab())/Math.log(2))));
         /*
         String.format("%.3f", ++)
-    public double getVolume()
-    {
-        volume = PLength*(Math.log(vocab)/Math.log(2));
-        return volume;
-    }
     public double getDifficulty()
     {
         difficulty = (operators/2)*(operandsT/operands);
