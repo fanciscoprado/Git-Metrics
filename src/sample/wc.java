@@ -16,7 +16,6 @@ public class wc {
 	}
 
 	private boolean skipped = false;
-	
 
 	public long getCcount() {
 		return ccount;
