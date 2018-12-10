@@ -66,8 +66,8 @@ public class DisplayMetricsData {
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
 
         table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
-                halnTwoColumn, halN1Column, halN2Column/*, cyclomaticComplexityColumn, maintainabilityIndexColumn,
-                depthOfInheritanceColumn*/);
+                halnTwoColumn, halN1Column, halN2Column, cyclomaticComplexityColumn, maintainabilityIndexColumn,
+                depthOfInheritanceColumn);
         return table;
 
     }
