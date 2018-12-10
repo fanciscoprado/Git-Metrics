@@ -19,7 +19,8 @@ public class DataCollected {
     private int vocab;
     private int PLength;
     private String CPLength;
-    private String volume;
+    private String volume;\
+    private double complexity;
     private double difficulty;
     private double effort;
     private double time;
@@ -182,6 +183,8 @@ public class DataCollected {
     public int getCyclomaticComplexity() { return cyclomaticcomplexity; }
 
     public double getMaintainabilityIndex() { return maintainabilityindex; }
+
+    public double getComplexity() { return complexity;}
 
     public int getDepthOfInheritance() { return depthofinheritance; }
 }
