@@ -12,11 +12,13 @@ import java.util.LinkedList;
 public class DisplayComiiterData{
     public PieChart displayPiechart(LinkedList<CommiterInfo> cList){
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+        int totalCommits=0;
         for(CommiterInfo temp: cList){
+            totalCommits += temp.getCommits();
             pieChartData.add(new PieChart.Data(temp.getName() /*+ " " + temp.getCommits()*/,temp.getCommits()));
         }
         final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Contributers");
+        chart.setTitle("Repo Total commits: " + totalCommits);
         chart.setLegendSide(Side.LEFT);
         chart.getData()
                 .stream()
