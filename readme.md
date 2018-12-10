@@ -19,7 +19,9 @@ word count, line count, character count, comment line count and source line coun
 
    **1.1** Purpose
 
-      The purpose of this SRS document is to provide a detailed overview of our metrics software. This SRS will cover all aspects of the software.
+      The purpose of this SRS document is to provide a detailed overview of our metrics software. Our program will allow user to check a git repo and view metrics from the repo they link. This will
+      allow the user to see what kind of contributions are being made by the user in the repo. They will be able to view metrics such as word count and line count so they can stay on top of project deadlines
+      and constraints.
 
    **1.2** Intended Audience
 
