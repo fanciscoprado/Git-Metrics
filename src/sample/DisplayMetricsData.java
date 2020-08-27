@@ -36,7 +36,7 @@ public class DisplayMetricsData {
         TableColumn<DataCollected, String> commentColumn = new TableColumn<>("Comment Count");
         commentColumn.setMinWidth(100);
         commentColumn.setCellValueFactory(new PropertyValueFactory<>("cccount"));
-
+/*
         TableColumn<DataCollected, String> halnOneColumn = new TableColumn<>("n1 Count");
         halnOneColumn.setMinWidth(100);
         halnOneColumn.setCellValueFactory(new PropertyValueFactory<>("operators"));
@@ -96,10 +96,10 @@ public class DisplayMetricsData {
         TableColumn<DataCollected, String> depthOfInheritanceColumn = new TableColumn<>("Depth of Inheritance");        //depth of inheritance
         depthOfInheritanceColumn.setMinWidth(100);
         depthOfInheritanceColumn.setCellValueFactory(new PropertyValueFactory<>("depthofinheritance"));
-
-        table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn, halnOneColumn,
-                halnTwoColumn, halN1Column, halN2Column, halVocab, halPLength, halCPLength, halVolume, halDifficulty,
-                halEffort, halTime, halbugs, cyclomaticComplexityColumn, maintainabilityIndexColumn, depthOfInheritanceColumn);
+*/
+        table.getColumns().addAll(nameColum, lineColumn,wordColum,charColum, commentColumn, sorceColumn /*, halnOneColumn,
+                halnTwoColumn , halN1Column, halN2Column, halVocab, halPLength, halCPLength, halVolume, halDifficulty,
+                halEffort, halTime, halbugs, cyclomaticComplexityColumn, maintainabilityIndexColumn, depthOfInheritanceColumn */);
         return table;
 
     }

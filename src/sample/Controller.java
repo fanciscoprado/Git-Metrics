@@ -35,7 +35,7 @@ public class Controller {
 
     public void onClick() throws IOException {
         SingleGitRepo singleGitRepo = new SingleGitRepo();
-        if(singleGitRepo.start(dataToCollect, getURL()))
+        if(singleGitRepo.start(dataToCollect, getURL(),"",""))
             ;
         else {
             new AlertBox().display("Alert!", "Invalid URL");

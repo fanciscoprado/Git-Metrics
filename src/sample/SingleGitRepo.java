@@ -15,10 +15,10 @@ public class SingleGitRepo {
     LinkedList<CommiterInfo> commiterList;
 
 
-    public boolean start(DataToCollect dataToCollect, String url) {
+    public boolean start(DataToCollect dataToCollect, String url, String user, String pswd) {
 
         try {
-           if(gitController.downloadRepo(url)) {
+           if(gitController.downloadRepo(url,user,pswd)) {
                commiterList = gitController.getCommitCount();
                LinkedList<File> fileList = fileHandler.parseFiles(dataToCollect);
                dataCollectedList = dataCollector.collectData(fileList, dataToCollect);

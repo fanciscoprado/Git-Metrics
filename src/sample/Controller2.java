@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,6 +18,10 @@ public class Controller2 extends Controller {
     @FXML
     private TextField uRLfield;
     @FXML
+    private TextField userName;
+    @FXML
+    private TextField password;
+    @FXML
     public Button goButton;
     @FXML
     private CheckBox checkBox4;
@@ -26,79 +31,56 @@ public class Controller2 extends Controller {
     private int repoCount = 0;
 
     @Override
-    public void onClick(){
-        repoCount = 0;
-        int totalCommits;
-        LinkedList<MultiGitRepo> parsedRepoList = new LinkedList<>();
-        boolean showResults = true;
-        for(String temp : repoList) {
-                MultiGitRepo multiGitRepo = new MultiGitRepo();
-            if (multiGitRepo.start(dataToCollect, temp)) {
-                parsedRepoList.push(multiGitRepo);
-
-            }
-            else {
-                new AlertBox().display("Alert!", "Invalid URL(s) pleas try again");
-                showResults = false;
-            }
+    public void onClick() throws IOException {
+        SingleGitRepo singleGitRepo = new SingleGitRepo();
+        if(singleGitRepo.start(dataToCollect, getURL(),getUser(),getPassword()))
+            ;
+        else {
+            new AlertBox().display("Alert!", "Invalid URL");
         }
-        if(showResults) {
-            Stage window = new Stage();
-            window.setTitle("Results");
-            HBox layout2 = new HBox();
-
-            for (MultiGitRepo temp : parsedRepoList) {
-
-                layout2.getChildren().add(new DisplayComparison().display(temp.commiterList, getTotallCommits(temp),temp.dataCollectedList));
-                Button showMetrics = new Button("Show Metrics");
-                showMetrics.setOnAction(e -> {
-                    ResultBox resultBox = new ResultBox();
-                    resultBox.display(temp.dataCollectedList, temp.getCommiterList());
-                });
-                layout2.getChildren().add(showMetrics);
-            }
-            Scene commiterDataDisplay = new Scene(layout2);
-            Image image = new Image("icon.png");
-            window.getIcons().add(image);
-            window.setScene(commiterDataDisplay);
-            window.showAndWait();
-        }
-        repoCount = 0;
-        repoList.clear();
-
-
-
 
     }
+    //gets url from text field
+    public String getURL(){
+        return uRLfield.getText();
 
+    }
     @Override
     public void box4() throws IOException {
-        if(checkBox4.isSelected()) {
+        if(!checkBox4.isSelected()) {
             Stage stage = (Stage) checkBox4.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("sample.fxml"))));
         }
     }
-
-    public void addRepoClicked() throws IOException {
-        if(repoCount < 2) {
-            if(repoCount == 0)
-                repoList.clear();
-            System.out.println(getURL());
-            repoList.push(getURL());
-            repoCount++;
-        }else {
-            new AlertBox().display("Alert!", "To many repos close to continue");
-            onClick();
-        }
+    public void jChecked(){
+        if(checkBoxj.isSelected())
+            dataToCollect.setDoJavaFile(true);
+        if (!checkBoxj.isSelected())
+            dataToCollect.setDoJavaFile(false);
     }
 
-    private int getTotallCommits(MultiGitRepo temp){
-        int totalCommits = 0;
-        for (CommiterInfo tempe : temp.commiterList) {
-            totalCommits = totalCommits + tempe.getCommits();
-        }
-        return totalCommits;
+    public void cChecked(){
+        if(checkBoxC.isSelected())
+            dataToCollect.setDoC(true);
+        if(!checkBoxC.isSelected())
+            dataToCollect.setDoC(false);
+    }
+
+    public void cppChecked(){
+        if(checkBoxCpp.isSelected())
+            dataToCollect.setDoCppFile(true);
+        if(!checkBoxCpp.isSelected())
+            dataToCollect.setDoCppFile(false);
     }
 
 
+    public String getPassword() {
+
+        return password.getText();
+    }
+
+    public String getUser() {
+
+        return userName.getText();
+    }
 }

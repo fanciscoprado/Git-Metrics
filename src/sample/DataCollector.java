@@ -17,10 +17,10 @@ public class DataCollector {
             dataCollected.setFilename(temp.getName());
             getMetrics(temp, dataToCollect, dataCollected);
             getSourceLines(dataCollected,temp);
-            getHalstead(dataCollected,temp);
-            getCyclomaticComplexity(dataCollected, temp);
-            getDepthOfInheritance(dataCollected, temp);
-            getMaintainabilityIndex(dataCollected,temp);
+            //getHalstead(dataCollected,temp);
+            //getCyclomaticComplexity(dataCollected, temp);
+            //getDepthOfInheritance(dataCollected, temp);
+            //getMaintainabilityIndex(dataCollected,temp);
             dataCollectedList.add(dataCollected);
         }
 

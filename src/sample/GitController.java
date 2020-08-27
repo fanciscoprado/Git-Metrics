@@ -6,17 +6,28 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
+
 public class GitController {
     File folder = new File("temp/");
     Git git = null;
-    public boolean downloadRepo(String url) {
+    public boolean downloadRepo(String url,String user, String pswd) {
 
 
         try {
-            git = Git.cloneRepository()
-                    .setURI(url)
-                    .setDirectory(folder)
-                    .call();
+            if(user.isEmpty()) {
+
+                git = Git.cloneRepository()
+                        .setURI(url)
+                        .setDirectory(folder)
+                        .call();
+            }else {
+                git = Git.cloneRepository()
+                        .setURI(url)
+                        .setCredentialsProvider( new UsernamePasswordCredentialsProvider( user, pswd ) )
+                        .setDirectory(folder)
+                        .call();
+            }
 
         } catch (Exception e) {
             return false;
